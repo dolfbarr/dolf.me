@@ -10,5 +10,5 @@ ___
 - [ ] RRS feed
 - [ ] Cypress tests
 - [ ] Linters
-- [ ] Netlify
+- [x] Netlify
 - [ ] Domain
