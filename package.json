@@ -1,0 +1,20 @@
+{
+  "name": "dolf.me",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "concurrently 'eleventy --serve' 'npm run styles:watch'",
+    "build": "npm run clean && eleventy && npm run styles -- --output-style compressed",
+    "clean": "rm -rf _site",
+    "styles": "node-sass --output _site/styles/ src/styles/ -r",
+    "styles:watch": "npm run styles && npm run styles -- -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dolf Barr <dolf.barr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "concurrently": "^6.0.0",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "node-sass": "^5.0.0"
+  }
+}
