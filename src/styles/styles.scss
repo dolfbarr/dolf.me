@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 @import 'variables.scss';
 
 * {
@@ -126,26 +127,30 @@ strong, b {
     padding-bottom: 1em;
     padding-top: 1em;
     margin-top: 1em;
-    font-size: 0.85em;
     display: flex;
     width: 100%;
 
     &__contacts {
       display: flex;
+      align-items: center;
     }
 
     &__section {
       flex: 1;
+      display: flex;
+      align-items: center;
     }
 
     &__icon {
       text-decoration: none;
-      background-size: cover;
-      width: 1.25em;
-      height: 1.25em;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 2.8em;
+      height: 2.8em;
       display: inline-block;
       filter: invert(45%) sepia(84%) saturate(1511%) hue-rotate(183deg) brightness(100%) contrast(90%);
-      margin: 0.25em;
+
 
       &--twitter {background-image: url('/assets/icons/twitter.svg');}
       &--linkedin {background-image: url('/assets/icons/linkedin.svg');}

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
 <head>
-  <title>{{ data.author }}</title>
+  <title>{{ data.author | title }}</title>
+  <meta name="description" content="{{ data.description }}">
 
   {% include 'head.njk' %}
 
