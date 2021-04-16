@@ -129,10 +129,10 @@ strong, b {
     margin-top: 1em;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 
     &__contacts {
-      display: flex;
-      align-items: center;
+      height: 2.8em;
     }
 
     &__section {
