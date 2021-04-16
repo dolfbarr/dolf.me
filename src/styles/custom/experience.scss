@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.experience {
+  &__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+
+    &--item {
+      display: block;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 1.1em;
+  }
+
+  &__description {
+    margin-bottom: 0.32em;
+  }
+
+  &__dates {
+    color: $lighter-text-color;
+  }
+}

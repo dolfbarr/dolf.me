@@ -4,7 +4,7 @@ ___
 ## TODO
 
 - [ ] Blog
-- [ ] Resume
+- [x] Resume
 - [ ] Projects
 - [ ] Dark theme
 - [ ] RRS feed

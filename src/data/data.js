@@ -9,6 +9,7 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/dolfbarr',
     email: 'dolf.barr@gmail.com'
   },
+  totalYearsOfExperience: Math.abs((new Date(Date.now() - new Date('Nov 2013'))).getUTCFullYear() - 1970),
   work: {
     link: 'https://invitae.com',
     name: 'Invitae Corp',
