@@ -12,3 +12,4 @@ ___
 - [ ] Linters
 - [x] Netlify
 - [ ] Domain
+- [ ] Github Actions
