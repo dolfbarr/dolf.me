@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "concurrently 'eleventy --serve' 'npm run styles:watch'",
-    "build": "npm run clean && npm run styles && eleventy",
+    "build": "npm run clean  && eleventy && npm run styles",
     "clean": "rm -rf _site",
     "styles": "node-sass --output _site/styles/ src/styles/ -r --output-style 'compressed'",
     "styles:watch": "npm run styles && npm run styles -- -w --source-map-root file://${PWD}/ --source-map-embed true",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Dolf Barr <dolf.barr@gmail.com>",
   "license": "MIT",

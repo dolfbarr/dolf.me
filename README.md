@@ -10,6 +10,5 @@ ___
 - [ ] RRS feed
 - [ ] Cypress tests
 - [ ] Linters
-- [x] Netlify
-- [ ] Domain
-- [ ] Github Actions
+- [x] Domain
+- [x] Github Actions
