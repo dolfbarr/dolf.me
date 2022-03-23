@@ -1,6 +1,6 @@
 module.exports = {
   author: 'Dolf Barr',
-  description: 'Dolf Barr, a frontend engineer based in Saint Petersburg',
+  description: 'Dolf Barr, a frontend engineer based in Belgrade',
   contacts: {
     twitter: 'https://twitter.com/dolfbarr',
     github: 'https://github.com/dolfbarr',
