@@ -133,6 +133,15 @@ strong, b {
 
     &__contacts {
       height: 2.8em;
+
+      @media (max-width: $mobile-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 -0.5em;
+        margin-top: 1em;
+        height: auto;
+      }
     }
 
     &__section {
@@ -152,6 +161,7 @@ strong, b {
       filter: invert(29%) sepia(80%) saturate(1573%) hue-rotate(185deg) brightness(102%) contrast(103%);
 
       &--twitter {background-image: url('/assets/icons/twitter.svg');}
+      &--instagram {background-image: url('/assets/icons/instagram.svg');}
       &--linkedin {background-image: url('/assets/icons/linkedin.svg');}
       &--stack-overflow {background-image: url('/assets/icons/stack-overflow.svg');}
       &--mail {background-image: url('/assets/icons/mail.svg');}

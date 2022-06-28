@@ -2,7 +2,7 @@
   "name": "dolf.me",
   "version": "0.1.0",
   "scripts": {
-    "serve": "concurrently 'eleventy --serve' 'npm run styles:watch'",
+    "start": "concurrently 'eleventy --serve' 'npm run styles:watch'",
     "build": "npm run clean  && eleventy && npm run styles",
     "clean": "rm -rf _site",
     "styles": "node-sass --output _site/styles/ src/styles/ -r --output-style 'compressed'",
