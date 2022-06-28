@@ -7,7 +7,10 @@
     "clean": "rm -rf _site",
     "styles": "node-sass --output _site/styles/ src/styles/ -r --output-style 'compressed'",
     "styles:watch": "npm run styles && npm run styles -- -w --source-map-root file://${PWD}/ --source-map-embed true",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "eslint": "eslint ./src ./.eleventy.js",
+    "stylelint": "stylelint '**/*.scss'",
+    "lint": "npm run eslint && npm run stylelint",
+    "test": "npm run lint"
   },
   "author": "Dolf Barr <dolf.barr@gmail.com>",
   "license": "MIT",
@@ -15,5 +18,14 @@
     "@11ty/eleventy": "^0.12.1",
     "concurrently": "^6.0.0",
     "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^4.0.0"
   }
 }

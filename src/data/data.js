@@ -8,12 +8,12 @@ module.exports = {
     stackoverflow: 'https://stackoverflow.com/u/8362049',
     linkedin: 'https://www.linkedin.com/in/dolfbarr',
     email: 'dolf.barr@gmail.com',
-    instagram: 'https://www.instagram.com/dolf.barr/',
+    instagram: 'https://www.instagram.com/dolf.barr/'
   },
   totalYearsOfExperience: Math.abs((new Date(Date.now() - new Date('Nov 2013'))).getUTCFullYear() - 1970),
   work: {
     link: 'https://invitae.com',
     name: 'Invitae Corp',
-    label: '@invitae',
+    label: '@invitae'
   }
 }

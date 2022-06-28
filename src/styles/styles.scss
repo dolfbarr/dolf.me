@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-@import 'variables.scss';
+@import "https://fonts.googleapis.com/css2?family=Play&display=swap";
+@import "variables";
 
 * {
   margin: 0;
   padding: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -13,7 +11,8 @@
   outline: 3px solid $primary-color;
 }
 
-html, body {
+html,
+body {
   background: $background-color;
   color: $text-color;
   width: 100%;
@@ -26,8 +25,12 @@ html, body {
   font-size: $font-size;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Play', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Play, sans-serif;
   font-weight: 700;
   color: $primary-color;
 }
@@ -57,13 +60,13 @@ h4 {
   font-size: 1.33em;
   line-height: 1.29em;
   padding-top: 0.292em;
-  margin-bottom: 1.00em;
+  margin-bottom: 1em;
 }
 
 p {
-  font-size: 1.00em;
+  font-size: 1em;
   line-height: 1.72em;
-  padding-top: 0.500em;
+  padding-top: 0.5em;
   margin-bottom: 1.22em;
 }
 
@@ -80,7 +83,8 @@ a {
   }
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -116,7 +120,7 @@ strong, b {
     flex-direction: column;
     height: 100%;
 
-    .page__section {
+    .page__section { /* stylelint-disable-line selector-class-pattern */
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -160,14 +164,14 @@ strong, b {
       display: inline-block;
       filter: invert(29%) sepia(80%) saturate(1573%) hue-rotate(185deg) brightness(102%) contrast(103%);
 
-      &--twitter {background-image: url('/assets/icons/twitter.svg');}
-      &--instagram {background-image: url('/assets/icons/instagram.svg');}
-      &--linkedin {background-image: url('/assets/icons/linkedin.svg');}
-      &--stack-overflow {background-image: url('/assets/icons/stack-overflow.svg');}
-      &--mail {background-image: url('/assets/icons/mail.svg');}
-      &--telegram {background-image: url('/assets/icons/telegram.svg');}
-      &--github {background-image: url('/assets/icons/github.svg');}
-      &--gpg {background-image: url('/assets/icons/key.svg');}
+      &--twitter { background-image: url("/assets/icons/twitter.svg"); }
+      &--instagram { background-image: url("/assets/icons/instagram.svg"); }
+      &--linkedin { background-image: url("/assets/icons/linkedin.svg"); }
+      &--stack-overflow { background-image: url("/assets/icons/stack-overflow.svg"); }
+      &--mail { background-image: url("/assets/icons/mail.svg"); }
+      &--telegram { background-image: url("/assets/icons/telegram.svg"); }
+      &--github { background-image: url("/assets/icons/github.svg"); }
+      &--gpg { background-image: url("/assets/icons/key.svg"); }
     }
   }
 }

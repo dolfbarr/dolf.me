@@ -15,7 +15,7 @@ module.exports = function (config) {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     templateFormats: [
-        'md', 'njk'
-    ],
+      'md', 'njk'
+    ]
   }
 }

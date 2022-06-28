@@ -9,6 +9,6 @@ ___
 - [ ] Dark theme
 - [ ] RRS feed
 - [ ] Cypress tests
-- [ ] Linters
+- [x] Linters
 - [x] Domain
 - [x] Github Actions
