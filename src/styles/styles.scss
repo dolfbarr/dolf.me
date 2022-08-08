@@ -162,7 +162,7 @@ b {
       width: 2.8em;
       height: 2.8em;
       display: inline-block;
-      filter: invert(29%) sepia(80%) saturate(1573%) hue-rotate(185deg) brightness(102%) contrast(103%);
+      filter: $filter-primary;
 
       &--twitter { background-image: url("/assets/icons/twitter.svg"); }
       &--instagram { background-image: url("/assets/icons/instagram.svg"); }
