@@ -7,6 +7,7 @@ customStyles: ['index', 'experience']
 
 {% include 'sections/landing.njk' %}
 
+{% include 'sections/contact.njk' %}
+
 {% include 'sections/experience.njk' %}
 
-{% include 'sections/contact.njk' %}
