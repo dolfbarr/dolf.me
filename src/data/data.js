@@ -1,6 +1,12 @@
+const location = {
+  title: 'Belgrade, Serbia',
+  link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city'
+}
+
 module.exports = {
   author: 'Dolf Barr',
-  description: 'Dolf Barr, a frontend engineer based in Belgrade',
+  description: `Dolf Barr, a frontend engineer based in ${location.title}`,
+  location,
   contacts: {
     twitter: 'https://twitter.com/dolfbarr',
     github: 'https://github.com/dolfbarr',
