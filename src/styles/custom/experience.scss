@@ -1,6 +1,12 @@
 @import "../variables";
 
 .experience {
+  &__separator {
+     @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: 50% 50%;
