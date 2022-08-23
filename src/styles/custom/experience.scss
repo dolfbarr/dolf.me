@@ -28,12 +28,11 @@
 
   &__skills {
     font-style: italic;
-    margin-bottom: 0.1em;
     font-size: 0.9em;
     font-weight: 100;
   }
 
-  &__description {
+  &__skills, &__description {
     margin-bottom: 0.32em;
   }
 
