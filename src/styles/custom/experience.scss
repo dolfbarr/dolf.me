@@ -2,7 +2,7 @@
 
 .experience {
   &__separator {
-     @media (max-width: $mobile-width) {
+    @media (max-width: $mobile-width) {
       display: none;
     }
   }
@@ -38,7 +38,8 @@
     font-weight: 100;
   }
 
-  &__skills, &__description {
+  &__skills,
+  &__description {
     margin-bottom: 0.32em;
   }
 
