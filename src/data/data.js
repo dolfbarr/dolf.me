@@ -10,7 +10,7 @@ module.exports = {
   contacts: {
     twitter: 'https://twitter.com/dolfbarr',
     github: 'https://github.com/dolfbarr',
-    telegram: 'https://t.me/dolfbarr',
+    telegram: 'https://dolfbarr.t.me/',
     stackoverflow: 'https://stackoverflow.com/u/8362049',
     linkedin: 'https://www.linkedin.com/in/dolfbarr',
     email: 'mail@dolf.me',
