@@ -158,25 +158,26 @@ b {
       align-items: center;
       flex-wrap: wrap;
     }
-
-    &__icon {
-      text-decoration: none;
-      background-size: 60%;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 2.8em;
-      height: 2.8em;
-      display: inline-block;
-      filter: $filter-primary;
-
-      &--twitter { background-image: url("/assets/icons/twitter.svg"); }
-      &--instagram { background-image: url("/assets/icons/instagram.svg"); }
-      &--linkedin { background-image: url("/assets/icons/linkedin.svg"); }
-      &--stack-overflow { background-image: url("/assets/icons/stack-overflow.svg"); }
-      &--mail { background-image: url("/assets/icons/mail.svg"); }
-      &--telegram { background-image: url("/assets/icons/telegram.svg"); }
-      &--github { background-image: url("/assets/icons/github.svg"); }
-      &--gpg { background-image: url("/assets/icons/key.svg"); }
-    }
   }
+}
+
+.icon {
+  text-decoration: none;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2.8em;
+  height: 2.8em;
+  display: inline-block;
+  filter: $filter-primary;
+
+  &--twitter { background-image: url("/assets/icons/twitter.svg"); }
+  &--instagram { background-image: url("/assets/icons/instagram.svg"); }
+  &--linkedin { background-image: url("/assets/icons/linkedin.svg"); }
+  &--stack-overflow { background-image: url("/assets/icons/stack-overflow.svg"); }
+  &--mail { background-image: url("/assets/icons/mail.svg"); }
+  &--telegram { background-image: url("/assets/icons/telegram.svg"); }
+  &--github { background-image: url("/assets/icons/github.svg"); }
+  &--gpg { background-image: url("/assets/icons/key.svg"); }
+  &--file { background-image: url("/assets/icons/file.svg"); }
 }
