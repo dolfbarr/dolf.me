@@ -5,7 +5,7 @@ const location = {
 
 module.exports = {
   author: 'Dolf Barr',
-  description: `Dolf Barr, a frontend engineer based in ${location.title}`,
+  description: `Dolf Barr, a senior frontend engineer based in ${location.title}`,
   location,
   contacts: {
     twitter: 'https://twitter.com/dolfbarr',
