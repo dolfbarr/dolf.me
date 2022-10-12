@@ -13,7 +13,7 @@ module.exports = {
     telegram: 'https://t.me/dolfbarr',
     stackoverflow: 'https://stackoverflow.com/u/8362049',
     linkedin: 'https://www.linkedin.com/in/dolfbarr',
-    email: 'dolf.barr@gmail.com',
+    email: 'mail@dolf.me',
     instagram: 'https://www.instagram.com/dolf.barr/'
   },
   totalYearsOfExperience: Math.abs((new Date(Date.now() - new Date('Nov 2013'))).getUTCFullYear() - 1970),
