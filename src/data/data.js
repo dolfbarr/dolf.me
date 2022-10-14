@@ -3,16 +3,19 @@ const location = {
   link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city'
 }
 
+const nickname = 'dolfbarr'
+
 module.exports = {
   author: 'Dolf Barr',
+  nickname,
   description: `Dolf Barr, a senior frontend engineer based in ${location.title}`,
   location,
   contacts: {
-    twitter: 'https://twitter.com/dolfbarr',
-    github: 'https://github.com/dolfbarr',
-    telegram: 'https://dolfbarr.t.me/',
+    twitter: `https://twitter.com/${nickname}`,
+    github: `https://github.com/${nickname}`,
+    telegram: `https://${nickname}.t.me/`,
     stackoverflow: 'https://stackoverflow.com/u/8362049',
-    linkedin: 'https://www.linkedin.com/in/dolfbarr',
+    linkedin: `https://www.linkedin.com/in/${nickname}`,
     email: 'mail@dolf.me',
     instagram: 'https://www.instagram.com/dolf.barr/'
   },
