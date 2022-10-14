@@ -129,8 +129,6 @@ b {
 
   .footer {
     padding-bottom: 1em;
-    padding-top: 1em;
-    margin-top: 1em;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -141,9 +139,11 @@ b {
 
     &__contacts {
       height: 2.8em;
+      justify-content: center;
+      display: flex;
+      width: 100%;
 
       @media (max-width: $mobile-width) {
-        display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin: 0 -0.5em;
@@ -180,4 +180,5 @@ b {
   &--github { background-image: url("/assets/icons/github.svg"); }
   &--gpg { background-image: url("/assets/icons/key.svg"); }
   &--file { background-image: url("/assets/icons/file.svg"); }
+  &--facebook { background-image: url("/assets/icons/facebook.svg"); }
 }

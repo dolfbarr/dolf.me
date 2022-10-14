@@ -17,7 +17,8 @@ module.exports = {
     stackoverflow: 'https://stackoverflow.com/u/8362049',
     linkedin: `https://www.linkedin.com/in/${nickname}`,
     email: 'mail@dolf.me',
-    instagram: 'https://www.instagram.com/dolf.barr/'
+    instagram: 'https://www.instagram.com/dolf.barr/',
+    facebook: `https://www.facebook.com/${nickname}/`
   },
   totalYearsOfExperience: Math.abs((new Date(Date.now() - new Date('Nov 2013'))).getUTCFullYear() - 1970),
   work: {
