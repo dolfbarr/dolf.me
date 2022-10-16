@@ -11,6 +11,4 @@ customStyles: ['index', 'experience', 'skills', 'contribution']
 
 {% include 'sections/skills.njk' %}
 
-{% include 'sections/contribution.njk' %}
-
 {% include 'sections/contact.njk' %}
