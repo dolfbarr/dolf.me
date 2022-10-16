@@ -5,3 +5,18 @@
     font-size: 1.2em;
   }
 }
+
+.header-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    position: relative;
+
+    &::before {
+      content: '#';
+      position: absolute;
+      left: -0.7em;
+      bottom: -0.15em;
+    }
+  }
+}
