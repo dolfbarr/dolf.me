@@ -8,12 +8,13 @@
 
 .header-link {
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
     position: relative;
 
     &::before {
-      content: '#';
+      content: "#";
       position: absolute;
       left: -0.7em;
       bottom: -0.15em;

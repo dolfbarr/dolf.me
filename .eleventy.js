@@ -1,4 +1,3 @@
-
 module.exports = function (config) {
   config.addPassthroughCopy('src/assets/**')
   config.addWatchTarget('src/styles/**')
