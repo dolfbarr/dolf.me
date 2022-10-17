@@ -1,7 +1,0 @@
-pre-commit:
-  parallel: true
-  commands:
-    tests:
-      files: git diff --name-only @{push}
-      glob: "*.{js,ts, jsx, tsx, njk, scss, md, svg}"
-      run: npm run test
