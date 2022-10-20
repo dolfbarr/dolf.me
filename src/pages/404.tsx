@@ -1,7 +1,7 @@
-import * as React from "react"
-import { HeadFC } from "gatsby"
+import * as React from 'react'
+import { HeadFC } from 'gatsby'
 
-const NotFoundPage = () => {
+const NotFoundPage = (): React.FC => {
   return (
     <main>
       404

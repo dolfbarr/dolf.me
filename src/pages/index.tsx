@@ -1,7 +1,7 @@
-import * as React from "react"
-import type { HeadFC } from "gatsby"
+import * as React from 'react'
+import type { HeadFC } from 'gatsby'
 
-const IndexPage = () => {
+const IndexPage = (): React.FC => {
   return (
     <main>
       dolf.me
