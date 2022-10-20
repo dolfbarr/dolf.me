@@ -1,6 +1,6 @@
 import React from 'react'
-import Section from './Section'
-import { LOCATION, PERSONAL_DATA, WORK } from '../content/data'
+import Section from '../Section'
+import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
 
 const Landing = (): React.FC => (
   <Section>
