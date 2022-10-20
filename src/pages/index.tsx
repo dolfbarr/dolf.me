@@ -1,11 +1,14 @@
 import * as React from 'react'
 import type { HeadFC } from 'gatsby'
+import Page from '../layouts/Page'
+
+import Landing from '../components/Landing'
 
 const IndexPage = (): React.FC => {
   return (
-    <main>
-      dolf.me
-    </main>
+    <Page>
+      <Landing />
+    </Page>
   )
 }
 
