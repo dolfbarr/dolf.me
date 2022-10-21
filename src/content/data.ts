@@ -48,7 +48,7 @@ export const WORK = {
       description:
         'Working on the frontend architecture and implementation business processes for web portal & inner tools.',
       skills: [
-        'JS',
+        'Javascript',
         'Typescript',
         'HTML',
         'CSS',
@@ -78,7 +78,7 @@ export const WORK = {
       description:
         'Responsibility for the frontend architecture and development of the UI and application business logic.',
       skills: [
-        'JS',
+        'Javascript',
         'Flow',
         'Typescript',
         'HTML',
