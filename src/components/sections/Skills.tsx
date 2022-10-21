@@ -6,16 +6,26 @@ import Section from '../Section'
 const Skills = ({ children }): React.FC => {
   const allSkills = [
     ...new Set([
-      ...WORK.experience.map((workplace) => workplace.skills).flat(),
+      ...WORK.experience
+        .filter((workplace) => workplace.skills)
+        .map((workplace) => workplace.skills)
+        .flat(),
     ]),
   ]
+
+  console.log(allSkills)
 
   return (
     <Section>
       <Heading id="skills">Skills</Heading>
-      <p>
+      <p className="flex flex-wrap gap-2">
         {allSkills.map((skill) => (
-          <span key={skill}>{skill}</span>
+          <span
+            key={skill}
+            className="rounded-md border border-solid border-gray-300 py-0 px-2 font-extralight"
+          >
+            {skill}
+          </span>
         ))}
       </p>
     </Section>
