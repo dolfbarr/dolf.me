@@ -6,7 +6,14 @@ module.exports = {
     './src/layouts/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#0078d4',
+          dark: '#c26e00',
+        },
+      },
+    },
   },
   plugins: [],
 }
