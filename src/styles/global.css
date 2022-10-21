@@ -11,4 +11,28 @@
   a {
     @apply text-primary visited:text-gray-400 underline;
   }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-bold text-primary;
+  }
+
+  h1 {
+    @apply text-5xl pb-6;
+  }
+
+  h2 {
+    @apply text-4xl pb-4;
+  }
+
+  h3 {
+    @apply text-3xl pb-3;
+  }
+
+  h4 {
+    @apply text-2xl pb-2;
+  }
+
+  h5 {
+    @apply text-xl pb-1;
+  }
 }

@@ -4,9 +4,7 @@ import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
 
 const Landing = (): React.FC => (
   <Section>
-    <h1 className="pb-6 text-6xl text-primary">
-      Hi! I’m {PERSONAL_DATA.fullName} 👋
-    </h1>
+    <h1 className="pb-6 text-primary">Hi! I’m {PERSONAL_DATA.fullName} 👋</h1>
     <p className="text-xl leading-9">
       a {PERSONAL_DATA.occupation} at{' '}
       <a

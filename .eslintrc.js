@@ -29,6 +29,7 @@ module.exports = {
     ],
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   },
   parserOptions: {
     project: './tsconfig.json',
