@@ -38,7 +38,6 @@ export const WORK = {
   ),
   link: 'https://invitae.com',
   name: 'Invitae',
-  label: '@invitae',
 
   experience: [
     {
@@ -123,7 +122,7 @@ export const WORK = {
 
 export const EDUCATION = {
   university: 'Tomsk State University',
-  description: "Bachelor's degree, Computer Science.",
+  description: 'Bachelor’s degree, Computer Science.',
   startDate: '2011',
   endDate: '2015',
 }

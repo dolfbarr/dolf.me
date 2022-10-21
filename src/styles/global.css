@@ -9,7 +9,7 @@
   }
 
   a {
-    @apply text-primary visited:text-gray-400 underline;
+    @apply text-primary visited:text-gray-500 underline;
   }
 
   h1, h2, h3, h4, h5 {
@@ -25,11 +25,11 @@
   }
 
   h3 {
-    @apply text-2xl pb-3;
+    @apply text-2xl pb-2;
   }
 
   h4 {
-    @apply text-xl pb-2;
+    @apply text-xl pb-1;
   }
 
   h5 {

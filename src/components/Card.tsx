@@ -16,12 +16,12 @@ const Card = ({
   endDate,
   skills,
 }: CardProps): React.FC => (
-  <li className="flex flex-col pb-4">
+  <li className="flex flex-col">
     <h3>{title}</h3>
-    {description && <p>{description}</p>}
-    {children && <p>{children}</p>}
+    {description && <p className="pb-2">{description}</p>}
+    {children && <p className="pb-2">{children}</p>}
     {skills?.length && (
-      <p>
+      <p className="pb-2">
         Tech:{' '}
         {skills.map((skill) => (
           <span key={skill}>{skill}</span>
@@ -29,7 +29,7 @@ const Card = ({
       </p>
     )}
     {startDate && (
-      <p>
+      <p className="pb-2 text-gray-500">
         {startDate} — {endDate ?? 'now'}
       </p>
     )}

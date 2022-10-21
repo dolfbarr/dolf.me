@@ -22,7 +22,7 @@ const Skills = ({ children }): React.FC => {
         {allSkills.map((skill) => (
           <span
             key={skill}
-            className="rounded-md border border-solid border-gray-300 py-0 px-2 font-extralight"
+            className="rounded-md border border-solid border-gray-400 py-0 px-2 font-extralight"
           >
             {skill}
           </span>
