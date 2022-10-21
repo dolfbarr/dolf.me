@@ -120,3 +120,10 @@ export const WORK = {
     endDate?: string
   }>,
 }
+
+export const EDUCATION = {
+  university: 'Tomsk State University',
+  description: "Bachelor's degree, Computer Science.",
+  startDate: '2011',
+  endDate: '2015',
+}
