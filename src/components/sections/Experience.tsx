@@ -5,7 +5,9 @@ import Section from '../Section'
 
 const Experience = ({ children }): React.FC => (
   <Section>
-    <Heading id="experience">Work Experience ⸱ {WORK.totalYearsOfExperience}+ years</Heading>
+    <Heading id="experience">
+      Work Experience ⸱ {WORK.totalYearsOfExperience}+ years
+    </Heading>
   </Section>
 )
 

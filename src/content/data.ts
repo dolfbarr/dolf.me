@@ -1,18 +1,24 @@
 export const PERSONAL_DATA = {
   firstName: 'Dolf',
   lastName: 'Barr',
-  get fullName () { return `${String(this.firstName)} ${String(this.lastName)}` },
-  get nickname () { return `${String(this.firstName.toLocaleLowerCase())}${String(this.lastName.toLocaleLowerCase())}` },
-  occupation: 'senior frontend engineer'
+  get fullName() {
+    return `${String(this.firstName)} ${String(this.lastName)}`
+  },
+  get nickname() {
+    return `${String(this.firstName.toLocaleLowerCase())}${String(
+      this.lastName.toLocaleLowerCase(),
+    )}`
+  },
+  occupation: 'senior frontend engineer',
 }
 
 export const LOCATION = {
   title: 'Belgrade, Serbia',
-  link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city'
+  link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city',
 }
 
 export const META = {
-  description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`
+  description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
 }
 
 export const CONTACTS = {
@@ -23,12 +29,14 @@ export const CONTACTS = {
   linkedin: `https://www.linkedin.com/in/${PERSONAL_DATA.nickname}`,
   email: `mail@${PERSONAL_DATA.firstName.toLocaleLowerCase()}.me`,
   instagram: `https://www.instagram.com/${PERSONAL_DATA.firstName.toLocaleLowerCase()}.${PERSONAL_DATA.lastName.toLocaleLowerCase()}/`,
-  facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`
+  facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`,
 }
 
 export const WORK = {
-  totalYearsOfExperience: Math.abs((new Date(Date.now() - new Date('1 Nov 2013'))).getUTCFullYear() - 1970),
+  totalYearsOfExperience: Math.abs(
+    new Date(Date.now() - new Date('1 Nov 2013')).getUTCFullYear() - 1970,
+  ),
   link: 'https://invitae.com',
   name: 'Invitae',
-  label: '@invitae'
+  label: '@invitae',
 }
