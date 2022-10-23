@@ -5,13 +5,12 @@ import Heading from '../Heading'
 import Section from '../Section'
 
 const Experience = ({ children }): React.FC => {
-  const formatTitle = (workplace) => ''
   return (
     <Section>
       <Heading id="experience">
         Work Experience ⸱ {WORK.totalYearsOfExperience}+ years
       </Heading>
-      <ul className="grid grid-cols-2 gap-4">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {WORK.experience.map((workplace) => (
           <Card
             key={workplace.company + workplace.title}

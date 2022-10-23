@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Page = ({ children }): React.FC => (
-  <div className="container flex justify-center p-4 pt-8">
-    <main className="max-w-screen-md px-6">{children}</main>
+  <div className="container flex flex-1 justify-center p-4 pt-8 align-middle">
+    <main className="max-w-screen-md px-2 sm:px-6 ">{children}</main>
   </div>
 )
 
