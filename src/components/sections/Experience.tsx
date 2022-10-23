@@ -1,4 +1,5 @@
 import React from 'react'
+import { Cpu } from 'react-feather'
 import { WORK } from '../../content/data'
 import Card from '../Card'
 import Heading from '../Heading'
@@ -23,7 +24,10 @@ const Experience = ({ children }): React.FC => {
           >
             {workplace.skills?.length > 0 && (
               <div className="font-extralight italic">
-                Tech: {workplace.skills?.join(', ')}
+                <span className="inline-flex items-baseline gap-1">
+                  <Cpu size="12" /> Tech:
+                </span>{' '}
+                {workplace.skills?.join(', ')}
               </div>
             )}
           </Card>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Section from '../Section'
 import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
+import { MapPin } from 'react-feather'
 
 const Landing = (): React.FC => (
   <Section>
@@ -21,8 +22,9 @@ const Landing = (): React.FC => (
         title={LOCATION.title}
         target="_blank"
         rel="noopener noreferrer"
+        className="inline-flex items-baseline gap-1"
       >
-        {LOCATION.title}
+        <MapPin size={16} /> {LOCATION.title}
       </a>
       .
     </p>

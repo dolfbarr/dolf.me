@@ -1,8 +1,10 @@
 import React from 'react'
+import Footer from '../components/Footer'
 
 const Page = ({ children }): React.FC => (
-  <div className="container flex flex-1 justify-center p-4 pt-8 align-middle">
+  <div className="container flex flex-col items-center justify-center p-4 pt-8">
     <main className="max-w-screen-md px-2 sm:px-6 ">{children}</main>
+    <Footer />
   </div>
 )
 
