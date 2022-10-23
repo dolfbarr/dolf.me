@@ -16,6 +16,7 @@ const Experience = ({ children }): React.FC => {
             target="_blank"
             title={CONTACTS.resume.title}
             rel="noreferrer noopener"
+            className="hidden md:inline-block"
           >
             <Download />
           </a>
@@ -39,7 +40,7 @@ const Experience = ({ children }): React.FC => {
             description={workplace.description}
           >
             {workplace.skills?.length > 0 && (
-              <div className="text-justify font-extralight italic dark:text-gray-300">
+              <div className="font-extralight italic dark:text-gray-300 md:text-justify">
                 <span className="inline-flex items-baseline gap-1">
                   <Cpu size="12" /> Tech:
                 </span>{' '}

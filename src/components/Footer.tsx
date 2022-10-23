@@ -3,7 +3,7 @@ import { CONTACTS } from '../content/data'
 
 const Footer = ({ children }): React.FC => (
   <footer>
-    <section className="flex gap-4 text-3xl text-primary">
+    <section className="flex flex-wrap justify-center gap-4 text-3xl text-primary">
       {Object.keys(CONTACTS).map((key) => (
         <a
           key={key}

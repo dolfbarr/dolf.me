@@ -10,9 +10,9 @@ const Heading = ({ children, id, aside }: HeadingProps): React.FC => (
   <h2 className=" flex justify-between align-baseline" id={id}>
     <a
       href={`#${id}`}
-      className="group -ml-8 inline-block no-underline visited:text-primary hover:underline visited:dark:text-primary-dark"
+      className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8"
     >
-      <span className="instapaper_ignore not-sr-only inline-block w-8 opacity-0 group-hover:opacity-100">
+      <span className="instapaper_ignore not-sr-only hidden w-8 opacity-0 group-hover:opacity-100 md:inline-block">
         <Hash />
       </span>
       <span>{children}</span>
