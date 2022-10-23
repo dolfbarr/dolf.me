@@ -9,8 +9,8 @@ const Landing = (): React.FC => (
       Hi! I’m{' '}
       <span className="whitespace-nowrap">{PERSONAL_DATA.fullName}</span> 👋
     </h1>
-    <p className="hyphens pb-6 text-xl leading-9">
-      a {PERSONAL_DATA.occupation} at{' '}
+    <p className="hyphens pb-6 text-xl leading-loose">
+      a <em>{PERSONAL_DATA.occupation}</em> at{' '}
       <a
         href={WORK.link}
         title={WORK.name}
@@ -30,9 +30,10 @@ const Landing = (): React.FC => (
       >
         <MapPin size={14} /> {LOCATION.title}
       </a>
-      . I&apos;m passionate about web and, especially, frontend development. I
-      like to be on the edge of solving business problems & appeal for users and
-      believe that soft skills and clean code matter.
+      . I&apos;m <em>passionate about web</em> and, especially, frontend
+      development. I like to be on the edge of{' '}
+      <em>solving business problems</em> & appeal for users and believe that{' '}
+      <em>soft skills</em> and <em>clean code</em> matter.
     </p>
   </Section>
 )

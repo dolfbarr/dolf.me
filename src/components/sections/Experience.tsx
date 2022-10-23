@@ -24,7 +24,7 @@ const Experience = ({ children }): React.FC => {
       >
         Work Experience ⸱ {WORK.totalYearsOfExperience}+ years
       </Heading>
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {WORK.experience.map((workplace) => (
           <Card
             key={workplace.company + workplace.title}
@@ -33,6 +33,7 @@ const Experience = ({ children }): React.FC => {
                 <span>{workplace.title}</span>
                 <span className="inline-flex items-center gap-1">
                   <AtSign size={18} strokeWidth={3} />
+                  <span className="sr-only"> at </span>
                   <span className="whitespace-nowrap">{workplace.company}</span>
                 </span>
 
@@ -44,7 +45,7 @@ const Experience = ({ children }): React.FC => {
             description={workplace.description}
           >
             {workplace.skills?.length > 0 && (
-              <div className="font-extralight italic dark:text-gray-300 md:text-justify">
+              <p className="font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
                   <span>
                     <Cpu size="12" />
@@ -52,7 +53,7 @@ const Experience = ({ children }): React.FC => {
                   </span>
                 </span>{' '}
                 {workplace.skills?.join(', ')}
-              </div>
+              </p>
             )}
           </Card>
         ))}
