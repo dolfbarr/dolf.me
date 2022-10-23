@@ -1,3 +1,17 @@
+import React from 'react'
+import {
+  Facebook,
+  GitHub,
+  Instagram,
+  Layers,
+  Linkedin,
+  Mail,
+  Send,
+  Twitter,
+  Key,
+  FileText,
+} from 'react-feather'
+
 export const PERSONAL_DATA = {
   firstName: 'Dolf',
   lastName: 'Barr',
@@ -21,7 +35,7 @@ export const META = {
   description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
 }
 
-export const CONTACTS = {
+export const SOCIALS = {
   twitter: `https://twitter.com/${PERSONAL_DATA.nickname}`,
   github: `https://github.com/${PERSONAL_DATA.nickname}`,
   telegram: `https://${PERSONAL_DATA.nickname}.t.me/`,
@@ -30,6 +44,59 @@ export const CONTACTS = {
   email: `mail@${PERSONAL_DATA.firstName.toLocaleLowerCase()}.me`,
   instagram: `https://www.instagram.com/${PERSONAL_DATA.firstName.toLocaleLowerCase()}.${PERSONAL_DATA.lastName.toLocaleLowerCase()}/`,
   facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`,
+}
+
+export const CONTACTS = {
+  resume: {
+    url: '/files/dolf-barr-resume.pdf',
+    icon: <FileText />,
+    title: 'Download resume in PDF',
+  },
+  gpg: {
+    url: '/files/dolf-barr-gpg.key',
+    icon: <Key />,
+    title: 'Download GPG Key',
+  },
+  email: {
+    url: SOCIALS.email,
+    icon: <Mail />,
+    title: 'Email',
+  },
+  telegram: {
+    url: SOCIALS.telegram,
+    icon: <Send />,
+    title: 'Telegram',
+  },
+  facebook: {
+    url: SOCIALS.facebook,
+    icon: <Facebook />,
+    title: 'Facebook',
+  },
+  instagram: {
+    url: SOCIALS.instagram,
+    icon: <Instagram />,
+    title: 'Instagram',
+  },
+  twitter: {
+    url: SOCIALS.twitter,
+    icon: <Twitter />,
+    title: 'Twitter',
+  },
+  github: {
+    url: SOCIALS.github,
+    icon: <GitHub />,
+    title: 'Github',
+  },
+  stackoverflow: {
+    url: SOCIALS.stackoverflow,
+    icon: <Layers />,
+    title: 'Stack Overflow',
+  },
+  linkedin: {
+    url: SOCIALS.linkedin,
+    icon: <Linkedin />,
+    title: 'LinkedIn',
+  },
 }
 
 export const WORK = {

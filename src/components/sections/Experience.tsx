@@ -1,6 +1,6 @@
 import React from 'react'
-import { Cpu } from 'react-feather'
-import { WORK } from '../../content/data'
+import { Cpu, Download } from 'react-feather'
+import { CONTACTS, WORK } from '../../content/data'
 import Card from '../Card'
 import Heading from '../Heading'
 import Section from '../Section'
@@ -8,7 +8,19 @@ import Section from '../Section'
 const Experience = ({ children }): React.FC => {
   return (
     <Section>
-      <Heading id="experience">
+      <Heading
+        id="experience"
+        aside={
+          <a
+            href={CONTACTS.resume.url}
+            target="_blank"
+            title={CONTACTS.resume.title}
+            rel="noreferrer noopener"
+          >
+            <Download />
+          </a>
+        }
+      >
         Work Experience ⸱ {WORK.totalYearsOfExperience}+ years
       </Heading>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
