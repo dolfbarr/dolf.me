@@ -2,10 +2,10 @@ import React from 'react'
 import { Calendar } from 'react-feather'
 
 interface CardProps extends React.PropsWithChildren {
-  title: string
+  title: React.ReactNode
   skills?: string[]
   startDate?: string
-  description?: string
+  description?: React.ReactNode
   endDate?: string
 }
 
@@ -19,15 +19,10 @@ const Card = ({
 }: CardProps): React.FC => (
   <li className="flex flex-col">
     <h3>{title}</h3>
-    {description && <p className="pb-2">{description}</p>}
+    {description && <p className="pb-2 text-justify">{description}</p>}
     {children && <p className="pb-2">{children}</p>}
     {skills?.length && (
-      <p className="pb-2">
-        Tech:{' '}
-        {skills.map((skill) => (
-          <span key={skill}>{skill}</span>
-        ))}
-      </p>
+      <p className="pb-2 text-justify">Tech: {skills.map((skill) => skill)}</p>
     )}
     {startDate && (
       <p className="pb-2 text-gray-500">

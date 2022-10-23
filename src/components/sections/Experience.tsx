@@ -27,9 +27,13 @@ const Experience = ({ children }): React.FC => {
         {WORK.experience.map((workplace) => (
           <Card
             key={workplace.company + workplace.title}
-            title={`${workplace.title} @ ${workplace.company}${
-              workplace.contract ? ' ⸱ contract' : ''
-            }`}
+            title={
+              <>
+                <span>{workplace.title} @ </span>
+                <span className="whitespace-nowrap">{workplace.company}</span>
+                <span>{workplace.contract ? ' ⸱ contract' : ''}</span>
+              </>
+            }
             startDate={workplace.startDate}
             endDate={workplace.endDate}
             description={workplace.description}

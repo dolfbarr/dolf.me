@@ -18,7 +18,7 @@ const Skills = ({ children }): React.FC => {
   return (
     <Section>
       <Heading id="skills">Skills</Heading>
-      <p className="flex flex-wrap gap-2">
+      <p className="flex flex-wrap justify-start gap-2">
         {allSkills.map((skill) => (
           <span
             key={skill}

@@ -24,7 +24,7 @@ const Landing = (): React.FC => (
         rel="noopener noreferrer"
         className="inline-flex items-baseline gap-1"
       >
-        <MapPin size={16} /> {LOCATION.title}
+        <MapPin size={14} /> {LOCATION.title}
       </a>
       .
     </p>
