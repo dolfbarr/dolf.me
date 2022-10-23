@@ -4,16 +4,16 @@
 
 @layer base {
   html {
-    @apply text-gray-700 bg-white;
+    @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200;
     font-family: -apple-system, Arial, system-ui;
   }
 
   a {
-    @apply text-primary visited:text-gray-500 underline;
+    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark;
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-bold text-primary;
+    @apply font-bold text-primary dark:text-primary-dark;
   }
 
   h1 {

@@ -21,11 +21,8 @@ const Card = ({
     <h3>{title}</h3>
     {description && <p className="pb-2 text-justify">{description}</p>}
     {children && <p className="pb-2">{children}</p>}
-    {skills?.length && (
-      <p className="pb-2 text-justify">Tech: {skills.map((skill) => skill)}</p>
-    )}
     {startDate && (
-      <p className="pb-2 text-gray-500">
+      <p className="pb-2 text-gray-500 dark:text-gray-400">
         <span className="inline-flex items-baseline gap-1">
           <Calendar size={12} />
           {startDate} — {endDate ?? 'now'}

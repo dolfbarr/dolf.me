@@ -39,7 +39,7 @@ const Experience = ({ children }): React.FC => {
             description={workplace.description}
           >
             {workplace.skills?.length > 0 && (
-              <div className="font-extralight italic">
+              <div className="text-justify font-extralight italic dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
                   <Cpu size="12" /> Tech:
                 </span>{' '}

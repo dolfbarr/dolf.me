@@ -7,10 +7,10 @@ interface HeadingProps extends PropsWithChildren {
 }
 
 const Heading = ({ children, id, aside }: HeadingProps): React.FC => (
-  <h2 className=" flex justify-between align-baseline text-primary" id={id}>
+  <h2 className=" flex justify-between align-baseline" id={id}>
     <a
       href={`#${id}`}
-      className="group -ml-8 inline-block no-underline visited:text-primary hover:underline"
+      className="group -ml-8 inline-block no-underline visited:text-primary hover:underline visited:dark:text-primary-dark"
     >
       <span className="instapaper_ignore not-sr-only inline-block w-8 opacity-0 group-hover:opacity-100">
         <Hash />
