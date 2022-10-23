@@ -19,7 +19,7 @@ const Card = ({
 }: CardProps): React.FC => (
   <li className="flex flex-col">
     <h3>{title}</h3>
-    {description && <p className="pb-2 md:text-justify">{description}</p>}
+    {description && <p className="md:hyphens pb-2">{description}</p>}
     {children && <p className="pb-2">{children}</p>}
     {startDate && (
       <p className="pb-2 text-gray-500 dark:text-gray-400">

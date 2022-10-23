@@ -7,12 +7,14 @@ import Section from '../Section'
 const Education = ({ children }): React.FC => (
   <Section>
     <Heading id="education">Education</Heading>
-    <Card
-      title={EDUCATION.university}
-      description={EDUCATION.description}
-      startDate={EDUCATION.startDate}
-      endDate={EDUCATION.endDate}
-    />
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <Card
+        title={EDUCATION.university}
+        description={EDUCATION.description}
+        startDate={EDUCATION.startDate}
+        endDate={EDUCATION.endDate}
+      />
+    </ul>
   </Section>
 )
 

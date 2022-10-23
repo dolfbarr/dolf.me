@@ -35,4 +35,8 @@
   h5 {
     @apply text-base pb-1;
   }
+
+  .hyphens {
+    hyphens: auto;
+  }
 }

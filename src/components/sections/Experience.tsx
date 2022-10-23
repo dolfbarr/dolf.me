@@ -1,5 +1,5 @@
 import React from 'react'
-import { Cpu, Download } from 'react-feather'
+import { AtSign, Cpu, Download } from 'react-feather'
 import { CONTACTS, WORK } from '../../content/data'
 import Card from '../Card'
 import Heading from '../Heading'
@@ -30,8 +30,12 @@ const Experience = ({ children }): React.FC => {
             key={workplace.company + workplace.title}
             title={
               <>
-                <span>{workplace.title} @ </span>
-                <span className="whitespace-nowrap">{workplace.company}</span>
+                <span>{workplace.title}</span>
+                <span className="inline-flex items-center gap-1">
+                  <AtSign size={18} strokeWidth={3} />
+                  <span className="whitespace-nowrap">{workplace.company}</span>
+                </span>
+
                 <span>{workplace.contract ? ' ⸱ contract' : ''}</span>
               </>
             }
@@ -42,7 +46,10 @@ const Experience = ({ children }): React.FC => {
             {workplace.skills?.length > 0 && (
               <div className="font-extralight italic dark:text-gray-300 md:text-justify">
                 <span className="inline-flex items-baseline gap-1">
-                  <Cpu size="12" /> Tech:
+                  <span>
+                    <Cpu size="12" />
+                    <span className="sr-only">Tech: </span>
+                  </span>
                 </span>{' '}
                 {workplace.skills?.join(', ')}
               </div>
