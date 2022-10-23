@@ -27,8 +27,16 @@ const Card = ({
       <p className=" text-gray-500 dark:text-gray-400">
         <span className="inline-flex items-baseline gap-1">
           <Calendar size={12} />
-          {startDate} — {endDate ?? 'now'}
-        </span>
+          {startDate}
+        </span>{' '}
+        {endDate ? (
+          <span className="inline-flex items-baseline gap-1">
+            — <Calendar size={12} />
+            {endDate}
+          </span>
+        ) : (
+          ' — now'
+        )}
       </p>
     )}
   </li>

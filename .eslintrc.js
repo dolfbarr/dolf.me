@@ -30,6 +30,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    'multiline-ternary': 'off',
   },
   parserOptions: {
     project: './tsconfig.json',
