@@ -13,8 +13,6 @@ const Skills = ({ children }): React.FC => {
     ]),
   ]
 
-  console.log(allSkills)
-
   return (
     <Section>
       <Heading id="skills">Skills</Heading>
