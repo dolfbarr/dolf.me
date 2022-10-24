@@ -13,6 +13,10 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
+      - name: GitHub Config
+        run: |
+          git config --global user.email "mail@dolf.me"
+          git config --global user.name "Dolf Barr"
       - name: Git Checkout
         uses: actions/checkout@v2
       - name: Node Setup
