@@ -1,0 +1,25 @@
+name: Push
+on:
+  push:
+    paths-ignore:
+      - README.md
+      - .gitignore
+      - LICENSE
+    branches:
+      - 'main'
+
+jobs:
+  build-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+      - name: Node Setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install
+        run: npm ci
+      - name: Deploy
+        run: npm run deploy
