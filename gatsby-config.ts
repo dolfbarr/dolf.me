@@ -6,7 +6,6 @@ const config: GatsbyConfig = {
     title: PERSONAL_DATA.fullName,
     description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
     twitterUsername: `@${PERSONAL_DATA.nickname}`,
-    image: '/gatsby-icon.png',
     siteUrl: 'https://dolf.me',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -19,12 +18,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: './static/images/icon.png',
-      },
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -40,6 +33,12 @@ const config: GatsbyConfig = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: '@raae/gatsby-plugin-svg-emoji-favicon',
+      options: {
+        emoji: '⌨️',
+      },
     },
   ],
 }

@@ -5,7 +5,6 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
     siteUrl,
     twitterUsername,
   } = useSiteMetadata()
@@ -13,7 +12,6 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${String(siteUrl)}${String(image)}`,
     url: `${String(siteUrl)}${String(pathname) || ''}`,
     twitterUsername,
   }
@@ -27,7 +25,6 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <link
         rel="icon"
