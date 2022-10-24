@@ -4,10 +4,11 @@ import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
 import { AtSign, MapPin } from 'react-feather'
 
 const Landing = (): React.FC => (
-  <Section>
+  <Section className="group">
     <h1 className="pb-6">
       Hi! I’m{' '}
-      <span className="whitespace-nowrap">{PERSONAL_DATA.fullName}</span> 👋
+      <span className="whitespace-nowrap">{PERSONAL_DATA.fullName}</span>{' '}
+      <span className="inline-flex group-hover:animate-bounce">👋</span>
     </h1>
     <p className="hyphens pb-6 text-xl leading-loose">
       a <em>{PERSONAL_DATA.occupation}</em> at{' '}
