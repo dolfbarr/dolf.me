@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/dolfbarr/dolf.me.git",
+    "deploy:ci": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/dolfbarr/dolf.me.git",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-feather": "^2.0.10"
@@ -49,7 +50,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-typescript": "^0.14.0",
     "gatsby-plugin-postcss": "^5.24.0",
-    "gh-pages": "^4.0.0",
     "postcss": "^8.4.18",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
