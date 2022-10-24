@@ -13,6 +13,9 @@ module.exports = {
           dark: '#c26e00',
         },
       },
+      fontFamily: {
+        play: ['Play', 'sans-serif', '-apple-system', 'Arial', 'system-ui'],
+      },
     },
   },
   plugins: [],
