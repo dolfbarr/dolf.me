@@ -7,6 +7,7 @@ import Experience from '../components/sections/Experience'
 import Education from '../components/sections/Education'
 import Skills from '../components/sections/Skills'
 import Contact from '../components/sections/Contact'
+import { SEO } from '../components/SEO'
 
 const IndexPage = (): React.FC => {
   return (
@@ -22,4 +23,4 @@ const IndexPage = (): React.FC => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = (): HeadFC => <SEO />

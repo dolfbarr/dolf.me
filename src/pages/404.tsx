@@ -4,6 +4,7 @@ import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
 import { Home, Mail, Send } from 'react-feather'
 import Iconed from '../components/Iconed'
+import { SEO } from '../components/SEO'
 
 const NotFoundPage = (): React.FC => {
   return (
@@ -39,4 +40,4 @@ const NotFoundPage = (): React.FC => {
 
 export default NotFoundPage
 
-export const Head: HeadFC = () => <title>404: Not found</title>
+export const Head = (): HeadFC => <SEO title="404: Not found" />
