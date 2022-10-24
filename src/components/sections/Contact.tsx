@@ -2,6 +2,7 @@ import React from 'react'
 import { Mail, Send } from 'react-feather'
 import { SOCIALS } from '../../content/data'
 import Heading from '../Heading'
+import Iconed from '../Iconed'
 import Section from '../Section'
 
 const Contact = ({ children }): React.FC => (
@@ -12,19 +13,13 @@ const Contact = ({ children }): React.FC => (
       <a
         href={`mailto:${SOCIALS.email}`}
         title="Email"
-        className="inline-flex items-baseline gap-1"
         rel="noopener noreferrer"
       >
-        <Mail size={12} /> {SOCIALS.email}
+        <Iconed icon={<Mail />}>{SOCIALS.email}</Iconed>
       </a>{' '}
       or telegram{' '}
-      <a
-        href={SOCIALS.telegram}
-        className="inline-flex items-baseline gap-1"
-        title="Telegram"
-        rel="noopener noreferrer"
-      >
-        <Send size={12} /> {SOCIALS.telegram}
+      <a href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
+        <Iconed icon={<Send />}>{SOCIALS.email}</Iconed>
       </a>
       .
     </p>

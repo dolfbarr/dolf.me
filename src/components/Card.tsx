@@ -1,5 +1,6 @@
 import React from 'react'
 import { Calendar } from 'react-feather'
+import Iconed from './Iconed'
 
 interface CardProps extends React.PropsWithChildren {
   title: React.ReactNode
@@ -25,15 +26,11 @@ const Card = ({
     {children && <p className="pb-2">{children}</p>}
     {startDate && (
       <p className=" text-gray-500 dark:text-gray-400">
-        <span className="inline-flex items-baseline gap-1">
-          <Calendar size={12} />
-          {startDate}
-        </span>{' '}
+        <Iconed icon={<Calendar />}>{startDate}</Iconed>{' '}
         {endDate ? (
-          <span className="inline-flex items-baseline gap-1">
-            — <Calendar size={12} />
-            {endDate}
-          </span>
+          <>
+            — <Iconed icon={<Calendar />}>{endDate}</Iconed>
+          </>
         ) : (
           ' — now'
         )}

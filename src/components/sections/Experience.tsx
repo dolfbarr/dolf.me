@@ -3,6 +3,7 @@ import { AtSign, Cpu, Download } from 'react-feather'
 import { CONTACTS, WORK } from '../../content/data'
 import Card from '../Card'
 import Heading from '../Heading'
+import Iconed from '../Iconed'
 import Section from '../Section'
 
 const Experience = ({ children }): React.FC => {
@@ -31,11 +32,10 @@ const Experience = ({ children }): React.FC => {
             title={
               <>
                 <span>{workplace.title}</span>
-                <span className="inline-flex items-center gap-1">
-                  <AtSign size={18} strokeWidth={3} />
+                <Iconed icon={<AtSign strokeWidth={3} />} size={18}>
                   <span className="sr-only"> at </span>
                   <span className="whitespace-nowrap">{workplace.company}</span>
-                </span>
+                </Iconed>
 
                 <span>{workplace.contract ? ' ⸱ contract' : ''}</span>
               </>
@@ -47,10 +47,9 @@ const Experience = ({ children }): React.FC => {
             {workplace.skills?.length > 0 && (
               <p className="font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
-                  <span>
-                    <Cpu size="12" />
+                  <Iconed icon={<Cpu />}>
                     <span className="sr-only">Tech: </span>
-                  </span>
+                  </Iconed>
                 </span>{' '}
                 {workplace.skills?.join(', ')}
               </p>

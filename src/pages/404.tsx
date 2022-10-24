@@ -3,6 +3,7 @@ import { HeadFC, Link } from 'gatsby'
 import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
 import { Home, Mail, Send } from 'react-feather'
+import Iconed from '../components/Iconed'
 
 const NotFoundPage = (): React.FC => {
   return (
@@ -17,26 +18,18 @@ const NotFoundPage = (): React.FC => {
           Do<strong>bu</strong>le check the URL spelling
         </li>
         <li>
-          <a
-            href={`mailto:${SOCIALS.email}`}
-            className="inline-flex items-center gap-1"
-          >
-            <Mail size={12} /> Email me
+          <a href={`mailto:${SOCIALS.email}`}>
+            <Iconed icon={<Mail />}>Email me</Iconed>
           </a>{' '}
           or send a message via{' '}
-          <a
-            href={SOCIALS.telegram}
-            title="Telegram"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1"
-          >
-            <Send size={12} /> telegram
+          <a href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
+            <Iconed icon={<Send />}> telegram</Iconed>
           </a>{' '}
           if you need this page
         </li>
         <li>
-          <Link to="/" className="inline-flex items-center gap-1">
-            Redirect to <Home size={12} /> home
+          <Link to="/">
+            Redirect to <Iconed icon={<Home />}>home</Iconed>
           </Link>
         </li>
       </ul>

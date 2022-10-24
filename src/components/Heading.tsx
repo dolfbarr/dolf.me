@@ -13,7 +13,7 @@ const Heading = ({ children, id, aside }: HeadingProps): React.FC => (
       className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8"
     >
       <span className="instapaper_ignore not-sr-only  hidden w-8 flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex">
-        <Hash />
+        <Hash strokeWidth={3} />
       </span>
       <span>{children}</span>
     </a>

@@ -2,6 +2,7 @@ import React from 'react'
 import Section from '../Section'
 import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
 import { AtSign, MapPin } from 'react-feather'
+import Iconed from '../Iconed'
 
 const Landing = (): React.FC => (
   <Section className="group">
@@ -17,9 +18,10 @@ const Landing = (): React.FC => (
         title={WORK.name}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-baseline gap-1"
       >
-        <AtSign size={14} /> {WORK.name}
+        <Iconed icon={<AtSign />} size={14}>
+          {WORK.name}
+        </Iconed>
       </a>{' '}
       with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
       <a
@@ -27,9 +29,10 @@ const Landing = (): React.FC => (
         title={LOCATION.title}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-baseline gap-1"
       >
-        <MapPin size={14} /> {LOCATION.title}
+        <Iconed icon={<MapPin />} size={14}>
+          {LOCATION.title}
+        </Iconed>
       </a>
       . I&apos;m <em>passionate about web</em> and, especially, frontend
       development. I like to be on the edge of{' '}
