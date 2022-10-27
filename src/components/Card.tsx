@@ -26,13 +26,13 @@ const Card = ({
     {children && <p className="pb-2">{children}</p>}
     {startDate && (
       <p className=" text-gray-500 dark:text-gray-400">
-        <Iconed icon={<Calendar />}>{startDate}</Iconed>{' '}
+        <Iconed icon={<Calendar strokeWidth={3} />}>{startDate}</Iconed> —{' '}
         {endDate ? (
           <>
-            — <Iconed icon={<Calendar />}>{endDate}</Iconed>
+            <Iconed icon={<Calendar strokeWidth={3} />}>{endDate}</Iconed>
           </>
         ) : (
-          ' — now'
+          'Present'
         )}
       </p>
     )}

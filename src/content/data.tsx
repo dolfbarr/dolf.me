@@ -128,14 +128,14 @@ export const WORK = {
         'Cypress',
         'Python (Django)',
       ],
-      startDate: 'April 2019',
+      startDate: 'Apr 19’',
     },
     {
       title: 'Senior Software Engineer',
       company: ' QuantumSoft',
       description:
         'Within different teams working on projects for QuantumSoft partners. Most of the time, I am responsible for the frontend architecture and development of the UI and application business logic.',
-      startDate: 'October 2015',
+      startDate: 'Oct 15’',
     },
     {
       title: 'Frontend Engineer',
@@ -157,24 +157,16 @@ export const WORK = {
         'd3',
         'Draft.js',
       ],
-      startDate: 'August 2016',
-      endDate: 'March 2019',
+      startDate: 'Aug 16’',
+      endDate: 'Mar 19’',
     },
     {
       title: 'Full-Stack Web Developer',
       company: 'KREOSOFT',
       description:
         'Participated in the development of corporate and social services for students and employees of Tomsk State University.',
-      startDate: 'November 2013',
-      endDate: 'Septmeber 2015',
-    },
-    {
-      title: 'Full-Stack Web Developer',
-      company: 'Soundotcom',
-      description:
-        'Developing and implementing of a beta version of the application SoundDotCom.',
-      startDate: 'January 2014',
-      endDate: 'July 2014',
+      startDate: 'Nov 13’',
+      endDate: 'Sep 15’',
     },
   ] as Array<{
     title: string
