@@ -47,7 +47,7 @@ const Experience = ({ children }): React.FC => {
             {workplace.skills?.length > 0 && (
               <p className="font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
-                  <Iconed icon={<Cpu />}>
+                  <Iconed icon={<Cpu className="rotate-12" />}>
                     <span className="sr-only">Tech: </span>
                   </Iconed>
                 </span>{' '}
