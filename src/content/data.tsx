@@ -28,6 +28,8 @@ export const PERSONAL_DATA = {
 
 export const LOCATION = {
   title: 'Belgrade, Serbia',
+  original: 'Београд, Србија',
+  flag: '🇷🇸',
   link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city',
 }
 
