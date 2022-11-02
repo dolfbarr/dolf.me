@@ -7,7 +7,7 @@ const Footer = ({ children }): React.FC => (
       {Object.keys(CONTACTS).map((key) => (
         <a
           key={key}
-          href={CONTACTS[key].url}
+          href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${CONTACTS[key].url}`}
           target="_blank"
           title={CONTACTS[key].title}
           rel="noreferrer noopener"

@@ -48,7 +48,14 @@ export const SOCIALS = {
   facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`,
 }
 
-export const CONTACTS = {
+export const CONTACTS: {
+  [key: string]: {
+    url: string
+    icon: JSX.Element
+    title: string
+    isEmail?: string
+  }
+} = {
   resume: {
     url: '/files/dolf-barr-resume.pdf',
     icon: <FileText />,
@@ -63,6 +70,7 @@ export const CONTACTS = {
     url: SOCIALS.email,
     icon: <Mail />,
     title: 'Email',
+    isEmail: true,
   },
   telegram: {
     url: SOCIALS.telegram,
