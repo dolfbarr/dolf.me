@@ -19,7 +19,7 @@ const Contact = ({ children }): React.FC => (
       </a>{' '}
       or telegram{' '}
       <a href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
-        <Iconed icon={<Send />}>{SOCIALS.email}</Iconed>
+        <Iconed icon={<Send />}>{SOCIALS.telegram}</Iconed>
       </a>
       .
     </p>
