@@ -23,7 +23,7 @@ const Experience = ({ children }): React.FC => {
           </a>
         }
       >
-        Work Experience ⸱ {WORK.totalYearsOfExperience}+ years
+        Work Experience · {WORK.totalYearsOfExperience}+ years
       </Heading>
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {WORK.experience.map((workplace) => (
@@ -37,7 +37,7 @@ const Experience = ({ children }): React.FC => {
                   <span className="whitespace-nowrap">{workplace.company}</span>
                 </Iconed>
 
-                <span>{workplace.contract ? ' ⸱ contract' : ''}</span>
+                <span>{workplace.contract ? ' · contract' : ''}</span>
               </>
             }
             startDate={workplace.startDate}
