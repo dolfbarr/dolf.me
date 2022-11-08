@@ -9,6 +9,7 @@ env:
 
 jobs:
   build:
+    name: Build, Lint & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: GitHub Config
