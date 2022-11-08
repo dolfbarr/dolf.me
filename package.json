@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy:ci": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/dolfbarr/dolf.me.git",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ./src"
   },
   "dependencies": {
     "@mdx-js/react": "^2.1.5",
@@ -38,7 +39,7 @@
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "autoprefixer": "^10.4.12",
-    "eslint": "^8.25.0",
+    "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-prettier-standard": "^4.0.1",
     "eslint-config-standard": "^17.0.0",

@@ -4,7 +4,7 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript',
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'react'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -34,5 +34,8 @@ module.exports = {
   },
   parserOptions: {
     project: './tsconfig.json',
+  },
+  settings: {
+    react: { version: 'detect' },
   },
 }

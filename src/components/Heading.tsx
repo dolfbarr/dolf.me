@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from 'react'
 import { Hash } from 'react-feather'
-import classNames from 'classnames'
 
 interface HeadingProps extends PropsWithChildren {
   id: string
