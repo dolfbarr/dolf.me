@@ -19,7 +19,7 @@ const Card = ({
   skills,
 }: CardProps): React.FC => (
   <li className="flex flex-col">
-    <h3 className="leading-normal">{title}</h3>
+    <h3 className="font-normal leading-normal">{title}</h3>
     {description && (
       <p className="md:hyphens pb-2 leading-normal">{description}</p>
     )}

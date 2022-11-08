@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import Section from '../Section'
 import { LOCATION, PERSONAL_DATA, WORK } from '../../content/data'
 import { AtSign, MapPin } from 'react-feather'
 import Iconed from '../Iconed'
+import Heading from '../Heading'
 
 const Landing = (): React.FC => (
   <Section className="group/section">
-    <h1 className="pb-6">
-      Hi! I’m{' '}
-      <span className="whitespace-nowrap">{PERSONAL_DATA.fullName}</span>{' '}
-      <span className="inline-flex group-hover/section:animate-bounce">👋</span>
-    </h1>
+    <span className="inline-flex align-baseline">
+      <Heading
+        headingTag={({
+          children,
+          ...props
+        }: PropsWithChildren<HTMLDivElement>) => <h1 {...props}>{children}</h1>}
+        className="group/heading"
+        id="greeting"
+        iconSize={32}
+      >
+        Hi! I’m{' '}
+        <span className="whitespace-nowrap">{PERSONAL_DATA.fullName}</span>{' '}
+      </Heading>
+      <span className="ml-4 text-6xl group-hover/section:animate-bounce">
+        👋
+      </span>
+    </span>
     <p className="hyphens pb-6 text-xl leading-loose">
       a <em>{PERSONAL_DATA.occupation}</em> at{' '}
       <a

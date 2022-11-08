@@ -11,11 +11,11 @@
   }
 
   a {
-    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark;
+    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark transition hover:brightness-125;
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-bold text-primary dark:text-primary-dark font-play;
+    @apply font-bold dark:text-primary-dark font-play;
   }
 
   h1 {
