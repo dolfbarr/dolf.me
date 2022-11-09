@@ -1,4 +1,4 @@
-import { WORK } from '../../src/content/data'
+import { SOCIALS, WORK } from '../../src/content/data'
 
 describe('main page', () => {
   it('renders main page', () => {
@@ -50,5 +50,17 @@ describe('main page', () => {
       // check for non-unique skills
       expect(allSkills.length).to.be.equal([...new Set(allSkills)].length)
     })
+
+    it('renders emails with mailto: hrefs', () => {
+      cy.contains(SOCIALS.email).each(($email) => {
+        cy.wrap($email)
+          .closest('a')
+          .should('have.attr', 'href')
+          .then((href) => {
+            expect(href).to.contain('mailto:')
+          })
+      })
+    })
   })
 })
+ 

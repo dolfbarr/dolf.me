@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { CONTACTS } from '../content/data'
+import { CONTACTS, SOCIALS } from '../content/data'
 
 const Footer = ({ children }): React.FC => (
   <footer>
@@ -15,7 +15,9 @@ const Footer = ({ children }): React.FC => (
           data-testid={key}
         >
           {React.cloneElement(CONTACTS[key].icon, { size: 24 })}
-          <span className="sr-only">{CONTACTS[key].title}</span>
+          <span className="sr-only">
+            {CONTACTS[key].title}: {SOCIALS[key]}
+          </span>
         </Link>
       ))}
     </section>
