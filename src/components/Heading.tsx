@@ -24,7 +24,11 @@ const Heading = ({
     ))
 
   return (
-    <HeadingTag className="flex justify-between align-baseline" id={id}>
+    <HeadingTag
+      className="flex justify-between align-baseline"
+      id={id}
+      data-testid={id}
+    >
       <Link
         href={`#${id}`}
         className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8"
