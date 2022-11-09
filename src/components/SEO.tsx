@@ -35,7 +35,10 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
         data-goatcounter="https://dolf.goatcounter.com/count"
         async
         src="//gc.zgo.at/count.js"
-      ></script>
+      />
+      <noscript>
+        <img src="https://dolf.goatcounter.com/count?p=/test-noscript" />
+      </noscript>
       {children}
     </>
   )

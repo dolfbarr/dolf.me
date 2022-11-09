@@ -18,8 +18,11 @@ const Experience = ({ children }): React.FC => {
             title={CONTACTS.resume.title}
             rel="noreferrer noopener"
             className="hidden md:inline-block"
+            data-goatcounter-click="resume-download"
+            data-goatcounter-title={CONTACTS.resume.title}
           >
             <Download />
+            <span className="sr-only">{CONTACTS.resume.title}</span>
           </a>
         }
       >
