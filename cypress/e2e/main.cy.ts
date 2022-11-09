@@ -12,24 +12,21 @@ describe('main page', () => {
 
     it('renders headings', () => {
       cy.get('#greeting').should('exist')
-      cy.get('h1').should('have.text', 'Hi! I’m Dolf Barr ')
+      cy.get('h1').should('contain.text', 'Hi! I’m Dolf Barr ')
 
       cy.get('#experience').should('exist')
       cy.get('h2')
         .eq(0)
         .should(
-          'have.text',
+          'contain.text',
           `Work Experience · ${WORK.totalYearsOfExperience}+ years`,
         )
 
       cy.get('#education').should('exist')
-      cy.get('h2').eq(1).should('have.text', 'Education')
+      cy.get('h2').eq(1).should('contain.text', 'Education')
 
       cy.get('#skills').should('exist')
-      cy.get('h2').eq(2).should('have.text', 'Skills')
-
-      cy.get('#contact').should('exist')
-      cy.get('h2').eq(3).should('have.text', 'Contact Information')
+      cy.get('h2').eq(2).should('contain.text', 'Skills')
     })
 
     it('renders footer links', () => {
@@ -63,4 +60,3 @@ describe('main page', () => {
     })
   })
 })
- 

@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { AtSign, Cpu, Download } from 'react-feather'
 import { CONTACTS, WORK } from '../../content/data'
@@ -12,7 +13,7 @@ const Experience = ({ children }): React.FC => {
       <Heading
         id="experience"
         aside={
-          <a
+          <Link
             href={CONTACTS.resume.url}
             target="_blank"
             title={CONTACTS.resume.title}
@@ -23,7 +24,7 @@ const Experience = ({ children }): React.FC => {
           >
             <Download />
             <span className="sr-only">{CONTACTS.resume.title}</span>
-          </a>
+          </Link>
         }
       >
         Work Experience · {WORK.totalYearsOfExperience}+ years

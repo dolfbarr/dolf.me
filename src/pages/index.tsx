@@ -6,7 +6,6 @@ import Landing from '../components/sections/Landing'
 import Experience from '../components/sections/Experience'
 import Education from '../components/sections/Education'
 import Skills from '../components/sections/Skills'
-import Contact from '../components/sections/Contact'
 import { SEO } from '../components/SEO'
 
 const IndexPage = (): React.FC => {
@@ -16,7 +15,6 @@ const IndexPage = (): React.FC => {
       <Experience />
       <Education />
       <Skills />
-      <Contact />
     </Page>
   )
 }

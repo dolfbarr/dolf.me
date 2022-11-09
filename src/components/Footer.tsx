@@ -10,7 +10,7 @@ const Footer = ({ children }): React.FC => (
           key={key}
           href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${CONTACTS[key].url}`}
           target="_blank"
-          title={CONTACTS[key].title}
+          title={CONTACTS[key].title + ': ' + String(SOCIALS[key])}
           rel="noreferrer noopener"
           data-testid={key}
           data-goatcounter-click={key + '-event'}
