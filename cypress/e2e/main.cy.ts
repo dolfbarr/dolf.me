@@ -37,5 +37,18 @@ describe('main page', () => {
 
       footerLinks.should('have.length', '10')
     })
+
+    it('combines all skills', () => {
+      const allSkills = []
+
+      cy.get('[data-testid="skill"]')
+        .should('have.length', '23')
+        .each(($skill) => {
+          allSkills.push($skill.text)
+        })
+
+      // check for non-unique skills
+      expect(allSkills.length).to.be.equal([...new Set(allSkills)].length)
+    })
   })
 })
