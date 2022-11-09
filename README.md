@@ -4,14 +4,14 @@ ___
 ## TODO
 
 - [ ] Blog
-- [ ] Resume
+- [x] Resume
 - [ ] Projects
-- [ ] Dark theme
-- [ ] RRS feed
-- [ ] Cypress tests
-- [ ] Linters
-- [ ] Domain
-- [ ] Github Actions
+- [x] Dark theme
+- [ ] RSS feed
+- [x] Cypress tests
+- [x] Linters
+- [x] Domain
+- [x] Github Actions
 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
