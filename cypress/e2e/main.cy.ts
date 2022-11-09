@@ -31,5 +31,11 @@ describe('main page', () => {
       cy.get('#contact').should('exist')
       cy.get('h2').eq(3).should('have.text', 'Contact Information')
     })
+
+    it('renders footer links', () => {
+      const footerLinks = cy.get('footer a')
+
+      footerLinks.should('have.length', '10')
+    })
   })
 })
