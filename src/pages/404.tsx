@@ -19,13 +19,17 @@ const NotFoundPage = (): React.FC => {
           Do<strong>bu</strong>le check the URL spelling
         </li>
         <li>
-          <a href={`mailto:${SOCIALS.email}`}>
+          <Link href={`mailto:${SOCIALS.email}`}>
             <Iconed icon={<Mail />}>Email me</Iconed>
-          </a>{' '}
+          </Link>{' '}
           or send a message via{' '}
-          <a href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
+          <Link
+            href={SOCIALS.telegram}
+            title="Telegram"
+            rel="noopener noreferrer"
+          >
             <Iconed icon={<Send />}> telegram</Iconed>
-          </a>{' '}
+          </Link>{' '}
           if you need this page
         </li>
         <li>

@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React, { PropsWithChildren } from 'react'
 import { Hash } from 'react-feather'
 
@@ -24,7 +25,7 @@ const Heading = ({
 
   return (
     <HeadingTag className="flex justify-between align-baseline" id={id}>
-      <a
+      <Link
         href={`#${id}`}
         className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8"
       >
@@ -32,7 +33,7 @@ const Heading = ({
           <Hash strokeWidth={3} size={iconSize} />
         </span>
         <span>{children}</span>
-      </a>
+      </Link>
       <aside className="flex flex-col justify-center align-baseline">
         {aside}
       </aside>

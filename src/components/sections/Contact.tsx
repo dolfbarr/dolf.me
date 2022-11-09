@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { Mail, Send } from 'react-feather'
 import { SOCIALS } from '../../content/data'
@@ -18,9 +19,9 @@ const Contact = ({ children }): React.FC => (
         <Iconed icon={<Mail />}>{SOCIALS.email}</Iconed>
       </a>{' '}
       or telegram{' '}
-      <a href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
+      <Link href={SOCIALS.telegram} title="Telegram" rel="noopener noreferrer">
         <Iconed icon={<Send />}>{SOCIALS.telegram}</Iconed>
-      </a>
+      </Link>
       .
     </p>
   </Section>
