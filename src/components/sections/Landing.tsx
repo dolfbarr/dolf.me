@@ -77,21 +77,17 @@ const Landing = (): React.FC => (
         title={LOCATION.flag + ' ' + LOCATION.title}
         target="_blank"
         rel="noopener noreferrer"
-        className="group/location border-b border-current no-underline">
-        <Iconed
-          icon={<MapPin />}
-          size={14}
-          className="relative inline-flex w-44">
-          <span className="absolute left-5 inline-flex self-center opacity-100 transition-opacity group-hover/location:opacity-0">
-            {LOCATION.title},
+        className="group/location">
+        <Iconed icon={<MapPin />} size={14} className="relative inline-flex">
+          <span className="inline-flex tracking-[.008em] opacity-100 transition-opacity group-hover/location:hidden">
+            {LOCATION.title};
           </span>
-          <span className="absolute left-5 self-center opacity-0 transition-opacity group-hover/location:opacity-100">
-            {LOCATION.original},
+          <span className="hidden group-hover/location:inline-flex">
+            {LOCATION.original};
           </span>
-        </Iconed>
-
+        </Iconed>{' '}
         <Iconed icon={<Clock />} size={14}>
-          <span className="no-underline">
+          <span className="">
             {new Date().toLocaleTimeString(undefined, {
               hour: '2-digit',
               minute: '2-digit',

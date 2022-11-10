@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         play: ['Play', 'sans-serif', '-apple-system', 'Arial', 'system-ui'],
       },
+      width: {
+        46: '11.5rem',
+      },
     },
   },
   plugins: [],
