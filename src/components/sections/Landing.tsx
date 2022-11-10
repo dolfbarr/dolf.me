@@ -80,23 +80,27 @@ const Landing = (): React.FC => (
         className="group/location">
         <Iconed icon={<MapPin />} size={14} className="relative inline-flex">
           <span className="inline-flex tracking-[.008em] opacity-100 transition-opacity group-hover/location:hidden">
-            {LOCATION.title};
+            {LOCATION.title}
           </span>
           <span className="hidden group-hover/location:inline-flex">
-            {LOCATION.original};
-          </span>
-        </Iconed>{' '}
-        <Iconed icon={<Clock />} size={14}>
-          <span className="">
-            {new Date().toLocaleTimeString(undefined, {
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: false,
-              timeZone: LOCATION.timeZone,
-            })}
+            {LOCATION.original}
           </span>
         </Iconed>
       </a>
+      {'; '}
+      <Iconed
+        icon={<Clock strokeWidth={3} />}
+        size={14}
+        className=" font-mono text-lg text-gray-500 dark:text-gray-400">
+        <span>
+          {new Date().toLocaleTimeString(undefined, {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: LOCATION.timeZone,
+          })}
+        </span>
+      </Iconed>
       {'. '}
       <span>
         I&apos;m <em>passionate about web</em> and, especially, frontend
