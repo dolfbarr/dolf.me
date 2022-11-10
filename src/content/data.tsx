@@ -10,6 +10,7 @@ import {
   Twitter,
   Key,
   FileText,
+  Code,
 } from 'react-feather'
 
 export const PERSONAL_DATA = {
@@ -48,6 +49,7 @@ export const SOCIALS = {
   email: `mail@${PERSONAL_DATA.firstName.toLocaleLowerCase()}.me`,
   instagram: `https://www.instagram.com/${PERSONAL_DATA.firstName.toLocaleLowerCase()}.${PERSONAL_DATA.lastName.toLocaleLowerCase()}/`,
   facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`,
+  devto: `https://dev.to/${PERSONAL_DATA.nickname}`,
 }
 
 export const CONTACTS: {
@@ -93,6 +95,11 @@ export const CONTACTS: {
     url: SOCIALS.twitter,
     icon: <Twitter />,
     title: 'Twitter',
+  },
+  devto: {
+    url: SOCIALS.devto,
+    icon: <Code />,
+    title: 'Dev.to',
   },
   github: {
     url: SOCIALS.github,
