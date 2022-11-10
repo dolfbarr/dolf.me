@@ -11,6 +11,7 @@ import {
   Key,
   FileText,
   Code,
+  Gitlab,
 } from 'react-feather'
 
 export const PERSONAL_DATA = {
@@ -43,6 +44,7 @@ export const META = {
 export const SOCIALS = {
   twitter: `https://twitter.com/${PERSONAL_DATA.nickname}`,
   github: `https://github.com/${PERSONAL_DATA.nickname}`,
+  gitlab: `https://gitlab.com/${PERSONAL_DATA.nickname}`,
   telegram: `https://${PERSONAL_DATA.nickname}.t.me/`,
   stackoverflow: 'https://stackoverflow.com/u/8362049',
   linkedin: `https://www.linkedin.com/in/${PERSONAL_DATA.nickname}`,
@@ -104,7 +106,12 @@ export const CONTACTS: {
   github: {
     url: SOCIALS.github,
     icon: <GitHub />,
-    title: 'Github',
+    title: 'GitHub',
+  },
+  gitlab: {
+    url: SOCIALS.github,
+    icon: <Gitlab />,
+    title: 'Gitlab',
   },
   stackoverflow: {
     url: SOCIALS.stackoverflow,
