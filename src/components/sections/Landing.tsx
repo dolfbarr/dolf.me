@@ -7,7 +7,7 @@ import {
   SOCIALS,
   WORK,
 } from '../../content/data'
-import { AtSign, MapPin } from 'react-feather'
+import { AtSign, Clock, MapPin } from 'react-feather'
 import Iconed from '../Iconed'
 import Heading from '../Heading'
 import { Link } from 'gatsby'
@@ -77,32 +77,47 @@ const Landing = (): React.FC => (
         title={LOCATION.flag + ' ' + LOCATION.title}
         target="_blank"
         rel="noopener noreferrer"
-        className="group/location relative inline-flex w-44">
-        <Iconed icon={<MapPin />} size={14}>
+        className="group/location border-b border-current no-underline">
+        <Iconed
+          icon={<MapPin />}
+          size={14}
+          className="relative inline-flex w-44">
           <span className="absolute left-5 inline-flex self-center opacity-100 transition-opacity group-hover/location:opacity-0">
-            {LOCATION.title}.
+            {LOCATION.title},
           </span>
           <span className="absolute left-5 self-center opacity-0 transition-opacity group-hover/location:opacity-100">
-            {LOCATION.original}.
+            {LOCATION.original},
+          </span>
+        </Iconed>
+
+        <Iconed icon={<Clock />} size={14}>
+          <span className="no-underline">
+            {new Date().toLocaleTimeString(undefined, {
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false,
+              timeZone: LOCATION.timeZone,
+            })}
+            .
           </span>
         </Iconed>
       </a>{' '}
-      I&apos;m <em>passionate about web</em> and, especially, frontend
-      development. I like to be on the edge of{' '}
-      <em>solving business problems</em> & appeal for users and believe that{' '}
-      <em>soft skills</em> and <em>clean code</em> matter.
+      <span>
+        I&apos;m <em>passionate about web</em> and, especially, frontend
+        development. I like to be on the edge of{' '}
+        <em>solving business problems</em> & appeal for users and believe that{' '}
+        <em>soft skills</em> and <em>clean code</em> matter.
+      </span>
     </p>
     <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
-      {PERSONAL_DATA.tagLines.map((tag, index) => {
-        return (
-          <>
-            <span className="inline-flex">{tag}</span>
-            {index !== PERSONAL_DATA.tagLines.length - 1 && (
-              <span className="inline-flex">·</span>
-            )}
-          </>
-        )
-      })}
+      {PERSONAL_DATA.tagLines.map((tag, index) => (
+        <>
+          <span className="inline-flex">{tag}</span>
+          {index !== PERSONAL_DATA.tagLines.length - 1 && (
+            <span className="inline-flex">·</span>
+          )}
+        </>
+      ))}
     </p>
   </Section>
 )
