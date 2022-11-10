@@ -26,8 +26,7 @@ const NotFoundPage = (): React.FC => {
           <Link
             href={SOCIALS.telegram}
             title="Telegram"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <Iconed icon={<Send />}> telegram</Iconed>
           </Link>{' '}
           if you need this page

@@ -32,8 +32,7 @@ const Landing = (): React.FC => (
               rel="noreferrer noopener"
               className="hidden md:inline-block"
               data-goatcounter-click="telegram-top"
-              data-goatcounter-title={CONTACTS.telegram.title}
-            >
+              data-goatcounter-title={CONTACTS.telegram.title}>
               {CONTACTS.telegram.icon}
               <span className="sr-only">
                 {CONTACTS.telegram.title}: {SOCIALS.telegram}
@@ -46,16 +45,14 @@ const Landing = (): React.FC => (
               rel="noreferrer noopener"
               className="hidden md:inline-block"
               data-goatcounter-click="email-top"
-              data-goatcounter-title={CONTACTS.email.title}
-            >
+              data-goatcounter-title={CONTACTS.email.title}>
               {CONTACTS.email.icon}
               <span className="sr-only">
                 {CONTACTS.email.title}: {SOCIALS.email}
               </span>
             </Link>
           </div>
-        }
-      >
+        }>
         Hi! <br className="sm:hidden" />
         I’m {PERSONAL_DATA.fullName}{' '}
       </Heading>
@@ -69,8 +66,7 @@ const Landing = (): React.FC => (
         href={WORK.link}
         title={WORK.name}
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         <Iconed icon={<AtSign />} size={14}>
           {WORK.name}
         </Iconed>
@@ -81,8 +77,7 @@ const Landing = (): React.FC => (
         title={LOCATION.flag + ' ' + LOCATION.title}
         target="_blank"
         rel="noopener noreferrer"
-        className="group/location relative inline-flex w-44"
-      >
+        className="group/location relative inline-flex w-44">
         <Iconed icon={<MapPin />} size={14}>
           <span className="absolute left-5 inline-flex self-center opacity-100 transition-opacity group-hover/location:opacity-0">
             {LOCATION.title}.

@@ -13,6 +13,7 @@ module.exports = {
         semi: false,
         bracketSpacing: true,
         trailingComma: 'all',
+        bracketSameLine: true,
       },
     ],
     'react/prop-types': 'off',
@@ -31,6 +32,7 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     'multiline-ternary': 'off',
+    'react/jsx-closing-bracket-location': [1, {selfClosing: 'tag-aligned', nonEmpty: 'after-props'}],
   },
   parserOptions: {
     project: './tsconfig.json',

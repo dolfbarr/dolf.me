@@ -20,13 +20,11 @@ const Experience = ({ children }): React.FC => {
             rel="noreferrer noopener"
             className="hidden md:inline-block"
             data-goatcounter-click="resume-download"
-            data-goatcounter-title={CONTACTS.resume.title}
-          >
+            data-goatcounter-title={CONTACTS.resume.title}>
             <Download />
             <span className="sr-only">{CONTACTS.resume.title}</span>
           </Link>
-        }
-      >
+        }>
         Work Experience · {WORK.totalYearsOfExperience}+ years
       </Heading>
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -46,8 +44,7 @@ const Experience = ({ children }): React.FC => {
             }
             startDate={workplace.startDate}
             endDate={workplace.endDate}
-            description={workplace.description}
-          >
+            description={workplace.description}>
             {workplace.skills?.length > 0 && (
               <p className="font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">

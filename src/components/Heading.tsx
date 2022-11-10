@@ -27,13 +27,11 @@ const Heading = ({
     <HeadingTag
       className="flex justify-between align-baseline"
       id={id}
-      data-testid={id}
-    >
+      data-testid={id}>
       <Link
         href={`#${id}`}
         data-goatcounter-click={id + '-event'}
-        className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8"
-      >
+        className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8">
         <span className="instapaper_ignore not-sr-only hidden  flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">
           <Hash strokeWidth={3} size={iconSize} />
         </span>

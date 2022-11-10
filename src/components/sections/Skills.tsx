@@ -21,8 +21,7 @@ const Skills = ({ children }): React.FC => {
           <span
             key={skill}
             data-testid="skill"
-            className="rounded-md border border-solid border-gray-400 py-0 px-2 font-extralight dark:border-gray-500"
-          >
+            className="rounded-md border border-solid border-gray-400 py-0 px-2 font-extralight dark:border-gray-500">
             {skill}
           </span>
         ))}

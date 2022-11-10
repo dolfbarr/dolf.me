@@ -14,8 +14,7 @@ const Footer = ({ children }): React.FC => (
           rel="noreferrer noopener"
           data-testid={key}
           data-goatcounter-click={key + '-event'}
-          data-goatcounter-title={CONTACTS[key].title}
-        >
+          data-goatcounter-title={CONTACTS[key].title}>
           {React.cloneElement(CONTACTS[key].icon, { size: 24 })}
           <span className="sr-only">
             {CONTACTS[key].title}: {SOCIALS[key]}
