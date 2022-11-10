@@ -24,6 +24,7 @@ export const PERSONAL_DATA = {
     )}`
   },
   occupation: 'senior frontend engineer',
+  tagLines: ['💻 frontend engineer', '☕️ coffee driven', '🏡 remote advocate'],
 }
 
 export const LOCATION = {

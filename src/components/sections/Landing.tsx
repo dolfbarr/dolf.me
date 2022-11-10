@@ -60,7 +60,7 @@ const Landing = (): React.FC => (
         👋
       </span>
     </span>
-    <p className="hyphens pb-6 text-xl leading-loose">
+    <p className="hyphens text-xl leading-loose">
       a <em>{PERSONAL_DATA.occupation}</em> at{' '}
       <a
         href={WORK.link}
@@ -91,6 +91,18 @@ const Landing = (): React.FC => (
       development. I like to be on the edge of{' '}
       <em>solving business problems</em> & appeal for users and believe that{' '}
       <em>soft skills</em> and <em>clean code</em> matter.
+    </p>
+    <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
+      {PERSONAL_DATA.tagLines.map((tag, index) => {
+        return (
+          <>
+            <span className="inline-flex">{tag}</span>
+            {index !== PERSONAL_DATA.tagLines.length - 1 && (
+              <span className="inline-flex">·</span>
+            )}
+          </>
+        )
+      })}
     </p>
   </Section>
 )
