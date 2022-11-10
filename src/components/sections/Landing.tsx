@@ -98,10 +98,10 @@ const Landing = (): React.FC => (
               hour12: false,
               timeZone: LOCATION.timeZone,
             })}
-            .
           </span>
         </Iconed>
-      </a>{' '}
+      </a>
+      {'. '}
       <span>
         I&apos;m <em>passionate about web</em> and, especially, frontend
         development. I like to be on the edge of{' '}
