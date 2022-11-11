@@ -10,14 +10,18 @@ const Footer = ({ children }): React.FC => (
           key={key}
           href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${CONTACTS[key].url}`}
           target="_blank"
-          title={CONTACTS[key].title + ': ' + String(SOCIALS[key])}
+          title={
+            CONTACTS[key].title +
+            (SOCIALS[key] ? `: ${String(SOCIALS[key])}` : '')
+          }
           rel="noreferrer noopener"
           data-testid={key}
           data-goatcounter-click={key + '-event'}
           data-goatcounter-title={CONTACTS[key].title}>
           {React.cloneElement(CONTACTS[key].icon, { size: 24 })}
           <span className="sr-only">
-            {CONTACTS[key].title}: {SOCIALS[key]}
+            {CONTACTS[key].title}
+            {SOCIALS[key] && `: ${String(SOCIALS[key])}`}
           </span>
         </Link>
       ))}
