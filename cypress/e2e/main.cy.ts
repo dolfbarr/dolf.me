@@ -32,7 +32,7 @@ describe('main page', () => {
     it('renders footer links', () => {
       const footerLinks = cy.get('footer a')
 
-      footerLinks.should('have.length', '10')
+      footerLinks.should('have.length', '12')
     })
 
     it('combines all skills', () => {
