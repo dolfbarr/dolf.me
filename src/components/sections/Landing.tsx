@@ -34,31 +34,27 @@ const Landing: React.FC = (): ReactElement => {
                 target="_blank"
                 title={CONTACTS.telegram.title + ': ' + SOCIALS.telegram}
                 rel="noreferrer noopener"
-                className="hidden md:inline-block"
+                className="md:inline-block "
                 data-goatcounter-click="telegram-top"
                 data-goatcounter-title={CONTACTS.telegram.title}>
                 {CONTACTS.telegram.icon}
-                <span className="sr-only">
-                  {CONTACTS.telegram.title}: {SOCIALS.telegram}
-                </span>
               </a>
               <a
                 href={`mailto:${CONTACTS.email.url}`}
                 target="_blank"
                 title={CONTACTS.email.title + ': ' + SOCIALS.email}
                 rel="noreferrer noopener"
-                className="hidden md:inline-block"
+                className="md:inline-block"
                 data-goatcounter-click="email-top"
                 data-goatcounter-title={CONTACTS.email.title}>
                 {CONTACTS.email.icon}
-                <span className="sr-only">
-                  {CONTACTS.email.title}: {SOCIALS.email}
-                </span>
               </a>
             </div>
           }>
-          Hi! <br className="sm:hidden" />
-          I’m {PERSONAL_DATA.fullName}{' '}
+          <span>Hi!</span>
+          <br className="sm:hidden" />
+          <span> I’m </span>
+          {PERSONAL_DATA.fullName}{' '}
         </Heading>
         <span className="ml-4 hidden text-6xl group-hover/section:animate-bounce sm:inline-flex md:items-baseline">
           👋
