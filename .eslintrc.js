@@ -31,6 +31,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    "@typescript-eslint/indent": 'off',
     'multiline-ternary': 'off',
     'react/jsx-closing-bracket-location': [1, {selfClosing: 'tag-aligned', nonEmpty: 'after-props'}],
   },

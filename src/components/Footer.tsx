@@ -1,12 +1,12 @@
+import React, { ReactElement } from 'react'
 import { Link } from 'gatsby'
-import React from 'react'
 import { CONTACTS, SOCIALS } from '../content/data'
 import packageJson from '../../package.json'
 import { GitHub, Moon, Sun } from 'react-feather'
 import Iconed from './Iconed'
 import { useThemeModeContext } from '../contexts/ThemeModeProvider'
 
-const Footer = ({ children }): React.FC => {
+const Footer: React.FC = (): ReactElement => {
   const { isDarkTheme, changeTheme } = useThemeModeContext()
   return (
     <footer>
@@ -14,7 +14,7 @@ const Footer = ({ children }): React.FC => {
         {Object.keys(CONTACTS).map((key) => (
           <Link
             key={key}
-            href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${
+            to={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${
               CONTACTS[key].url
             }`}
             target="_blank"
@@ -26,17 +26,18 @@ const Footer = ({ children }): React.FC => {
             data-testid="social-link"
             data-goatcounter-click={key + '-event'}
             data-goatcounter-title={CONTACTS[key].title}>
-            {React.cloneElement(CONTACTS[key].icon, { size: 24 })}
-            <span className="sr-only">
-              {CONTACTS[key].title}
-              {SOCIALS[key] && `: ${String(SOCIALS[key])}`}
-            </span>
+            <Iconed icon={CONTACTS[key].icon} size={24}>
+              <span className="sr-only">
+                {CONTACTS[key].title}
+                {SOCIALS[key] && `: ${String(SOCIALS[key])}`}
+              </span>
+            </Iconed>
           </Link>
         ))}
       </section>
       <section className="flex flex-wrap justify-center gap-4">
         <Link
-          href={packageJson.repository.url}
+          to={packageJson.repository.url}
           target="_blank"
           rel="noreferrer noopener"
           data-goatcounter-click={'site-repositroy-url'}

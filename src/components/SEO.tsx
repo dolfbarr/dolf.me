@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-export const SEO = ({ title, description, pathname, children }): React.FC => {
+export interface SEOProps extends PropsWithChildren {
+  pathname?: string
+  title?: string
+  description?: string
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  pathname,
+  children,
+}): ReactElement => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -10,8 +21,8 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
   } = useSiteMetadata()
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
+    title: title ?? defaultTitle,
+    description: description ?? defaultDescription,
     url: `${String(siteUrl)}${String(pathname) || ''}`,
     twitterUsername,
   }
@@ -20,8 +31,6 @@ export const SEO = ({ title, description, pathname, children }): React.FC => {
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />

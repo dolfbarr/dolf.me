@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import {
   Facebook,
   GitHub,
@@ -27,7 +27,7 @@ export const PERSONAL_DATA = {
   },
   occupation: 'senior frontend engineer',
   tagLines: ['💻 frontend engineer', '☕️ coffee driven', '🏡 remote advocate'],
-}
+} as const
 
 export const LOCATION = {
   title: 'Belgrade, Serbia',
@@ -35,13 +35,13 @@ export const LOCATION = {
   timeZone: 'Europe/Belgrade',
   flag: '🇷🇸',
   link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city',
-}
+} as const
 
 export const META = {
   description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
-}
+} as const
 
-export const SOCIALS = {
+export const SOCIALS: { [key: string]: string } = {
   twitter: `https://twitter.com/${PERSONAL_DATA.nickname}`,
   github: `https://github.com/${PERSONAL_DATA.nickname}`,
   gitlab: `https://gitlab.com/${PERSONAL_DATA.nickname}`,
@@ -52,14 +52,14 @@ export const SOCIALS = {
   instagram: `https://www.instagram.com/${PERSONAL_DATA.firstName.toLocaleLowerCase()}.${PERSONAL_DATA.lastName.toLocaleLowerCase()}/`,
   facebook: `https://www.facebook.com/${PERSONAL_DATA.nickname}/`,
   devto: `https://dev.to/${PERSONAL_DATA.nickname}`,
-}
+} as const
 
 export const CONTACTS: {
   [key: string]: {
     url: string
-    icon: JSX.Element
+    icon: ReactElement
     title: string
-    isEmail?: string
+    isEmail?: boolean
   }
 } = {
   resume: {
@@ -127,7 +127,9 @@ export const CONTACTS: {
 
 export const WORK = {
   totalYearsOfExperience: Math.abs(
-    new Date(Date.now() - new Date('1 Nov 2013')).getUTCFullYear() - 1970,
+    new Date(
+      Number(Date.now()) - Number(new Date('1 Nov 2013')),
+    ).getUTCFullYear() - 1970,
   ),
   link: 'https://invitae.com',
   name: 'Invitae',
@@ -206,11 +208,11 @@ export const WORK = {
     startDate: string
     endDate?: string
   }>,
-}
+} as const
 
 export const EDUCATION = {
   university: 'Tomsk State University',
   description: 'Bachelor’s degree, Computer Science.',
   startDate: '2011',
   endDate: '2015',
-}
+} as const

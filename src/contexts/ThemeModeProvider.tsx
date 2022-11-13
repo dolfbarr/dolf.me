@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, {
+  createContext,
+  PropsWithChildren,
+  ReactElement,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
 
 interface ThemeModeContextProps {
   isDarkTheme: boolean
@@ -13,7 +20,9 @@ const ThemeModeContext = createContext<ThemeModeContextProps>({
 export const useThemeModeContext = (): ThemeModeContextProps =>
   useContext(ThemeModeContext)
 
-const ThemeModeProvider = ({ children }): React.FC => {
+const ThemeModeProvider: React.FC<PropsWithChildren> = ({
+  children,
+}): ReactElement => {
   const [isDarkTheme, setDarkTheme] = useState(
     localStorage.theme === 'dark' ||
       (!('theme' in localStorage) &&

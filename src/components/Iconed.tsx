@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { ReactElement, PropsWithChildren } from 'react'
 import classNames from 'classnames'
 
-interface IconedProps extends React.PropsWithChildren {
+interface IconedProps
+  extends PropsWithChildren,
+    React.HTMLAttributes<HTMLDivElement> {
   size?: number
-  icon: React.ReactNode
+  icon: ReactElement
 }
 
-const Iconed = ({
+const Iconed: React.FC<IconedProps> = ({
   children,
   className,
   icon,
   size = 12,
-}: IconedProps): React.FC => (
+}): ReactElement => (
   <span className={classNames('inline-flex items-baseline gap-1', className)}>
     {React.cloneElement(icon, { size })}
     {children}

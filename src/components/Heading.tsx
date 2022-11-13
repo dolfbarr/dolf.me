@@ -1,35 +1,42 @@
+import classNames from 'classnames'
 import { Link } from 'gatsby'
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Hash } from 'react-feather'
 
-interface HeadingProps extends PropsWithChildren {
+interface HeadingProps
+  extends PropsWithChildren,
+    React.HTMLAttributes<HTMLDivElement> {
   id: string
-  aside?: React.ReactNode
-  headingTag?: React.ReactNode
+  aside?: ReactElement
+  headingTag?: React.ComponentType
   iconSize?: number
   iconSpace?: string
 }
 
-const Heading = ({
+const Heading: React.FC<HeadingProps> = ({
   children,
   id,
   aside,
   headingTag,
   iconSize = 24,
-}: HeadingProps): React.FC => {
+  className,
+}: HeadingProps): ReactElement => {
   const HeadingTag =
     headingTag ??
-    (({ children, ...props }: PropsWithChildren<HTMLDivElement>) => (
-      <h2 {...props}>{children}</h2>
-    ))
+    (({
+      children,
+      ...props
+    }: PropsWithChildren<
+      React.HTMLAttributes<HTMLDivElement>
+    >): ReactElement => <h2 {...props}>{children}</h2>)
 
   return (
     <HeadingTag
-      className="flex justify-between align-baseline"
+      className={classNames('flex justify-between align-baseline', className)}
       id={id}
       data-testid={id}>
       <Link
-        href={`#${id}`}
+        to={`#${id}`}
         data-goatcounter-click={id + '-event'}
         className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8">
         <span className="instapaper_ignore not-sr-only hidden  flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">

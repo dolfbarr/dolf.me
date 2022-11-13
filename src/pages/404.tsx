@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { ReactElement } from 'react'
 import { HeadFC, Link } from 'gatsby'
 import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
@@ -6,7 +6,7 @@ import { Home, Mail, Send } from 'react-feather'
 import Iconed from '../components/Iconed'
 import { SEO } from '../components/SEO'
 
-const NotFoundPage = (): React.FC => {
+const NotFoundPage: React.FC = (): ReactElement => {
   return (
     <Page>
       <h1 className="pb-12 leading-snug">
@@ -19,21 +19,28 @@ const NotFoundPage = (): React.FC => {
           Do<strong>bu</strong>le check the URL spelling
         </li>
         <li>
-          <Link href={`mailto:${SOCIALS.email}`}>
-            <Iconed icon={<Mail />}>Email me</Iconed>
+          <Link to={`mailto:${SOCIALS.email}`}>
+            <Iconed icon={<Mail />}>
+              <span>Email me</span>
+            </Iconed>
           </Link>{' '}
           or send a message via{' '}
           <Link
-            href={SOCIALS.telegram}
+            to={SOCIALS.telegram}
             title="Telegram"
             rel="noopener noreferrer">
-            <Iconed icon={<Send />}> telegram</Iconed>
+            <Iconed icon={<Send />}>
+              <span>telegram</span>
+            </Iconed>
           </Link>{' '}
           if you need this page
         </li>
         <li>
           <Link to="/">
-            Redirect to <Iconed icon={<Home />}>home</Iconed>
+            Redirect to{' '}
+            <Iconed icon={<Home />}>
+              <span>home</span>
+            </Iconed>
           </Link>
         </li>
       </ul>
@@ -43,4 +50,4 @@ const NotFoundPage = (): React.FC => {
 
 export default NotFoundPage
 
-export const Head = (): HeadFC => <SEO title="404: Not found" />
+export const Head: HeadFC = (): ReactElement => <SEO title="404: Not found" />

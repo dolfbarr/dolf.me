@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { AtSign, Cpu, Download } from 'react-feather'
 import { CONTACTS, WORK } from '../../content/data'
 import Card from '../Card'
@@ -7,14 +7,14 @@ import Heading from '../Heading'
 import Iconed from '../Iconed'
 import Section from '../Section'
 
-const Experience = ({ children }): React.FC => {
+const Experience: React.FC = (): ReactElement => {
   return (
     <Section>
       <Heading
         id="experience"
         aside={
           <Link
-            href={CONTACTS.resume.url}
+            to={CONTACTS.resume.url}
             target="_blank"
             title={CONTACTS.resume.title}
             rel="noreferrer noopener"
@@ -39,20 +39,20 @@ const Experience = ({ children }): React.FC => {
                   <span className="whitespace-nowrap">{workplace.company}</span>
                 </Iconed>
 
-                <span>{workplace.contract ? ' · contract' : ''}</span>
+                <span>{workplace?.contract ? ' · contract' : ''}</span>
               </>
             }
             startDate={workplace.startDate}
             endDate={workplace.endDate}
             description={workplace.description}>
-            {workplace.skills?.length > 0 && (
+            {workplace?.skills && workplace?.skills?.length > 0 && (
               <p className="font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
                   <Iconed icon={<Cpu className="rotate-12" />}>
                     <span className="sr-only">Tech: </span>
                   </Iconed>
                 </span>{' '}
-                {workplace.skills?.join(', ')}
+                {workplace?.skills?.join(', ')}
               </p>
             )}
           </Card>

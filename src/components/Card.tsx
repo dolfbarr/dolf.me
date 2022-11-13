@@ -17,7 +17,7 @@ const Card = ({
   startDate,
   endDate,
   skills,
-}: CardProps): React.FC => (
+}: CardProps): JSX.Element => (
   <li className="flex flex-col">
     <h3 className="font-normal leading-normal">{title}</h3>
     {description && (
@@ -26,10 +26,15 @@ const Card = ({
     {children && <p className="pb-2">{children}</p>}
     {startDate && (
       <p className=" text-gray-500 dark:text-gray-400">
-        <Iconed icon={<Calendar strokeWidth={3} />}>{startDate}</Iconed> —{' '}
+        <Iconed icon={<Calendar strokeWidth={3} />}>
+          <span>{startDate}</span>
+        </Iconed>{' '}
+        —{' '}
         {endDate ? (
           <>
-            <Iconed icon={<Calendar strokeWidth={3} />}>{endDate}</Iconed>
+            <Iconed icon={<Calendar strokeWidth={3} />}>
+              <span>{endDate}</span>
+            </Iconed>
           </>
         ) : (
           'Present'

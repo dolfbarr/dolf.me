@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { ReactElement } from 'react'
 import type { HeadFC } from 'gatsby'
 import Page from '../layouts/Page'
 
@@ -8,7 +8,7 @@ import Education from '../components/sections/Education'
 import Skills from '../components/sections/Skills'
 import { SEO } from '../components/SEO'
 
-const IndexPage = (): React.FC => {
+const IndexPage: React.FC = (): ReactElement => {
   return (
     <Page>
       <Landing />
@@ -21,4 +21,4 @@ const IndexPage = (): React.FC => {
 
 export default IndexPage
 
-export const Head = (): HeadFC => <SEO />
+export const Head: HeadFC = (): ReactElement => <SEO />

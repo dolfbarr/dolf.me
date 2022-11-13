@@ -36,12 +36,12 @@ describe('main page', () => {
     })
 
     it('combines all skills', () => {
-      const allSkills = []
+      const allSkills: string[] = []
 
       cy.get('[data-testid="skill"]')
         .should('have.length', '23')
         .each(($skill) => {
-          allSkills.push($skill.text)
+          allSkills.push(String($skill.text))
         })
 
       // check for non-unique skills

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { WORK } from '../../content/data'
 import Heading from '../Heading'
 import Section from '../Section'
 
-const Skills = ({ children }): React.FC => {
+const Skills: React.FC = (): ReactElement => {
   const allSkills = [
     ...new Set([
       ...WORK.experience
