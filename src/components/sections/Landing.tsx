@@ -29,8 +29,8 @@ const Landing: React.FC = (): ReactElement => {
           iconSize={32}
           aside={
             <div className="absolute right-0 top-5 flex justify-between gap-4 align-baseline">
-              <Link
-                to={CONTACTS.telegram.url}
+              <a
+                href={CONTACTS.telegram.url}
                 target="_blank"
                 title={CONTACTS.telegram.title + ': ' + SOCIALS.telegram}
                 rel="noreferrer noopener"
@@ -41,9 +41,9 @@ const Landing: React.FC = (): ReactElement => {
                 <span className="sr-only">
                   {CONTACTS.telegram.title}: {SOCIALS.telegram}
                 </span>
-              </Link>
-              <Link
-                to={`mailto:${CONTACTS.email.url}`}
+              </a>
+              <a
+                href={`mailto:${CONTACTS.email.url}`}
                 target="_blank"
                 title={CONTACTS.email.title + ': ' + SOCIALS.email}
                 rel="noreferrer noopener"
@@ -54,7 +54,7 @@ const Landing: React.FC = (): ReactElement => {
                 <span className="sr-only">
                   {CONTACTS.email.title}: {SOCIALS.email}
                 </span>
-              </Link>
+              </a>
             </div>
           }>
           Hi! <br className="sm:hidden" />
@@ -66,18 +66,18 @@ const Landing: React.FC = (): ReactElement => {
       </span>
       <p className="hyphens text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
-        <Link
-          to={WORK.link}
+        <a
+          href={WORK.link}
           title={WORK.name}
           target="_blank"
           rel="noopener noreferrer">
           <Iconed icon={<AtSign />} size={14}>
             <span>{WORK.name}</span>
           </Iconed>
-        </Link>{' '}
+        </a>{' '}
         with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
-        <Link
-          to={LOCATION.link}
+        <a
+          href={LOCATION.link}
           title={LOCATION.flag + ' ' + LOCATION.title}
           target="_blank"
           rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Landing: React.FC = (): ReactElement => {
               {LOCATION.original}
             </span>
           </Iconed>
-        </Link>
+        </a>
         {'; '}
         <Iconed
           icon={<Clock strokeWidth={3} />}

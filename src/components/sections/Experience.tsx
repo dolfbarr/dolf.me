@@ -13,8 +13,8 @@ const Experience: React.FC = (): ReactElement => {
       <Heading
         id="experience"
         aside={
-          <Link
-            to={CONTACTS.resume.url}
+          <a
+            href={CONTACTS.resume.url}
             target="_blank"
             title={CONTACTS.resume.title}
             rel="noreferrer noopener"
@@ -23,7 +23,7 @@ const Experience: React.FC = (): ReactElement => {
             data-goatcounter-title={CONTACTS.resume.title}>
             <Download />
             <span className="sr-only">{CONTACTS.resume.title}</span>
-          </Link>
+          </a>
         }>
         Work Experience · {WORK.totalYearsOfExperience}+ years
       </Heading>

@@ -14,9 +14,11 @@ const Footer: React.FC = (): ReactElement => {
     <footer>
       <section className="flex flex-wrap justify-center gap-4 pb-4 text-3xl text-primary">
         {Object.keys(CONTACTS).map((key) => (
-          <Link
+          <a
             key={key}
-            to={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${CONTACTS[key].url}`}
+            href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${
+              CONTACTS[key].url
+            }`}
             target="_blank"
             title={
               CONTACTS[key].title +
@@ -32,12 +34,12 @@ const Footer: React.FC = (): ReactElement => {
                 {SOCIALS[key] && `: ${String(SOCIALS[key])}`}
               </span>
             </Iconed>
-          </Link>
+          </a>
         ))}
       </section>
       <section className="flex flex-wrap justify-center gap-4">
-        <Link
-          to={packageJson.repository.url}
+        <a
+          href={packageJson.repository.url}
           target="_blank"
           rel="noreferrer noopener"
           data-goatcounter-click={'site-repositroy-url'}
@@ -46,7 +48,7 @@ const Footer: React.FC = (): ReactElement => {
           <Iconed icon={<GitHub size={14} />}>
             <span>Site source code</span>
           </Iconed>
-        </Link>
+        </a>
         <Button onClick={changeTheme} data-testid="change-theme">
           <Iconed icon={isDarkTheme ? <Sun size={14} /> : <Moon size={14} />}>
             <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
