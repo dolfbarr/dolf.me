@@ -111,12 +111,12 @@ const Landing = (): React.FC => (
     </p>
     <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
       {PERSONAL_DATA.tagLines.map((tag, index) => (
-        <>
+        <span key={tag + String(index)}>
           <span className="inline-flex">{tag}</span>
           {index !== PERSONAL_DATA.tagLines.length - 1 && (
             <span className="inline-flex">·</span>
           )}
-        </>
+        </span>
       ))}
     </p>
   </Section>

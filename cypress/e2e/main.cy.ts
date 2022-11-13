@@ -29,8 +29,8 @@ describe('main page', () => {
       cy.get('h2').eq(2).should('contain.text', 'Skills')
     })
 
-    it('renders footer links', () => {
-      const footerLinks = cy.get('footer a')
+    it('renders footer  social links', () => {
+      const footerLinks = cy.get('footer a[data-testid="social-link"]')
 
       footerLinks.should('have.length', '12')
     })
@@ -57,6 +57,12 @@ describe('main page', () => {
             expect(href).to.contain('mailto:')
           })
       })
+    })
+
+    it('enables dark theme', () => {
+      cy.get('[data-testid="change-theme"').click()
+
+      cy.get('html').should('have.class', 'dark')
     })
   })
 })
