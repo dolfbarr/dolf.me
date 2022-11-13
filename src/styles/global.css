@@ -6,7 +6,7 @@
 
 @layer base {
   html, body {
-    @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200 transition-colors;
+    @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200 transition-colors scroll-smooth;
     font-family: -apple-system, Arial, system-ui;
   }
 
