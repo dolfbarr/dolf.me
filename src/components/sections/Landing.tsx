@@ -10,7 +10,6 @@ import {
 import { AtSign, Clock, MapPin } from 'react-feather'
 import Iconed from '../Iconed'
 import Heading from '../Heading'
-import { Link } from 'gatsby'
 
 const Landing: React.FC = (): ReactElement => {
   const HeadingH1 = ({

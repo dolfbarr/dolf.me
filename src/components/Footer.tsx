@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import { Link } from 'gatsby'
 import { CONTACTS, SOCIALS } from '../content/data'
 import packageJson from '../../package.json'
 import { GitHub, Moon, RefreshCw, Sun } from 'react-feather'

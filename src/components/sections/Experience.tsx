@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import React, { ReactElement } from 'react'
 import { AtSign, Cpu, Download } from 'react-feather'
 import { CONTACTS, WORK } from '../../content/data'
