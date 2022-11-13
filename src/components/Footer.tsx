@@ -2,12 +2,14 @@ import React, { ReactElement } from 'react'
 import { Link } from 'gatsby'
 import { CONTACTS, SOCIALS } from '../content/data'
 import packageJson from '../../package.json'
-import { GitHub, Moon, Sun } from 'react-feather'
+import { GitHub, Moon, RefreshCw, Sun } from 'react-feather'
 import Iconed from './Iconed'
 import { useThemeModeContext } from '../contexts/ThemeModeProvider'
+import Button from './Button'
 
 const Footer: React.FC = (): ReactElement => {
-  const { isDarkTheme, changeTheme } = useThemeModeContext()
+  const { isDarkTheme, changeTheme, isThemeReset, resetTheme } =
+    useThemeModeContext()
   return (
     <footer>
       <section className="flex flex-wrap justify-center gap-4 pb-4 text-3xl text-primary">
@@ -45,14 +47,18 @@ const Footer: React.FC = (): ReactElement => {
             <span>Site source code</span>
           </Iconed>
         </Link>
-        <button
-          onClick={changeTheme}
-          data-testid="change-theme"
-          className="rounded border border-primary bg-transparent px-2 text-primary transition-colors hover:border-transparent hover:bg-primary hover:text-white active:brightness-90 dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:hover:text-white">
+        <Button onClick={changeTheme} data-testid="change-theme">
           <Iconed icon={isDarkTheme ? <Sun size={14} /> : <Moon size={14} />}>
             <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
           </Iconed>
-        </button>
+        </Button>
+        {!isThemeReset && (
+          <Button onClick={resetTheme} data-testid="change-theme">
+            <Iconed icon={<RefreshCw size={14} />}>
+              <span>Enable auto switch for theme</span>
+            </Iconed>
+          </Button>
+        )}
       </section>
     </footer>
   )

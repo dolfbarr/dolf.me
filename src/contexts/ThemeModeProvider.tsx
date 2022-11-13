@@ -10,11 +10,15 @@ import React, {
 interface ThemeModeContextProps {
   isDarkTheme: boolean
   changeTheme: () => void
+  isThemeReset: boolean
+  resetTheme: () => void
 }
 
 const ThemeModeContext = createContext<ThemeModeContextProps>({
   isDarkTheme: false,
   changeTheme: () => null,
+  isThemeReset: false,
+  resetTheme: () => null,
 })
 
 export const useThemeModeContext = (): ThemeModeContextProps =>
@@ -26,8 +30,12 @@ const ThemeModeProvider: React.FC<PropsWithChildren> = ({
   const [isDarkTheme, setDarkTheme] = useState(
     (typeof window !== 'undefined' && localStorage.theme === 'dark') ||
       (typeof window !== 'undefined' &&
-        !('theme' in localStorage) &&
+        (!('theme' in localStorage) || !localStorage.theme) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches),
+  )
+
+  const [isThemeReset, setIsThemeReset] = useState(
+    typeof window !== 'undefined' && !localStorage.theme,
   )
 
   const changeTheme = (): void => {
@@ -35,12 +43,23 @@ const ThemeModeProvider: React.FC<PropsWithChildren> = ({
       localStorage.theme = !isDarkTheme ? 'dark' : 'light'
     }
 
+    setIsThemeReset(false)
     setDarkTheme(!isDarkTheme)
+  }
+
+  const resetTheme = (): void => {
+    if (typeof window !== 'undefined') {
+      localStorage.theme = ''
+    }
+
+    setIsThemeReset(true)
   }
 
   const value: ThemeModeContextProps = {
     isDarkTheme,
     changeTheme,
+    isThemeReset,
+    resetTheme,
   }
 
   useEffect(() => {
