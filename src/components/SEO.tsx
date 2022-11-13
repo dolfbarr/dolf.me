@@ -1,10 +1,12 @@
 import React, { PropsWithChildren, ReactElement } from 'react'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import { Helmet } from 'react-helmet'
 
 export interface SEOProps extends PropsWithChildren {
   pathname?: string
   title?: string
   description?: string
+  lang?: string
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -12,12 +14,14 @@ export const SEO: React.FC<SEOProps> = ({
   description,
   pathname,
   children,
+  lang,
 }): ReactElement => {
   const {
     title: defaultTitle,
     description: defaultDescription,
     siteUrl,
     twitterUsername,
+    lang: defaultLang,
   } = useSiteMetadata()
 
   const seo = {
@@ -25,10 +29,16 @@ export const SEO: React.FC<SEOProps> = ({
     description: description ?? defaultDescription,
     url: `${String(siteUrl)}${String(pathname) || ''}`,
     twitterUsername,
+    lang: lang ?? defaultLang,
   }
 
   return (
     <>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+      />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="twitter:title" content={seo.title} />

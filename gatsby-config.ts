@@ -7,6 +7,7 @@ const config: GatsbyConfig = {
     description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
     twitterUsername: `@${PERSONAL_DATA.nickname}`,
     siteUrl: 'https://dolf.me',
+    lang: 'en',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

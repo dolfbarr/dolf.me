@@ -10,6 +10,7 @@ export const useSiteMetadata = (): Record<string, string> => {
           description: string
           twitterUsername: string
           siteUrl: string
+          lang: string
         }
       }
     >
@@ -21,6 +22,7 @@ export const useSiteMetadata = (): Record<string, string> => {
           description
           twitterUsername
           siteUrl
+          lang
         }
       }
     }
