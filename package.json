@@ -7,6 +7,10 @@
   "keywords": [
     "gatsby"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dolfbarr/dolf.me.git"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

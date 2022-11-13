@@ -62,7 +62,7 @@ const Landing = (): React.FC => (
     </span>
     <p className="hyphens text-xl leading-loose">
       a <em>{PERSONAL_DATA.occupation}</em> at{' '}
-      <a
+      <Link
         href={WORK.link}
         title={WORK.name}
         target="_blank"
@@ -70,9 +70,9 @@ const Landing = (): React.FC => (
         <Iconed icon={<AtSign />} size={14}>
           {WORK.name}
         </Iconed>
-      </a>{' '}
+      </Link>{' '}
       with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
-      <a
+      <Link
         href={LOCATION.link}
         title={LOCATION.flag + ' ' + LOCATION.title}
         target="_blank"
@@ -86,7 +86,7 @@ const Landing = (): React.FC => (
             {LOCATION.original}
           </span>
         </Iconed>
-      </a>
+      </Link>
       {'; '}
       <Iconed
         icon={<Clock strokeWidth={3} />}

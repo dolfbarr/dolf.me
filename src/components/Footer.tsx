@@ -1,10 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { CONTACTS, SOCIALS } from '../content/data'
+import packageJson from '../../package.json'
+import { GitHub } from 'react-feather'
+import Iconed from './Iconed'
 
 const Footer = ({ children }): React.FC => (
   <footer>
-    <section className="flex flex-wrap justify-center gap-4 text-3xl text-primary">
+    <section className="flex flex-wrap justify-center gap-4 pb-2 text-3xl text-primary">
       {Object.keys(CONTACTS).map((key) => (
         <Link
           key={key}
@@ -25,6 +28,20 @@ const Footer = ({ children }): React.FC => (
           </span>
         </Link>
       ))}
+    </section>
+    <section className="flex flex-wrap justify-center gap-4">
+      {' '}
+      <Link
+        href={packageJson.repository.url}
+        target="_blank"
+        rel="noreferrer noopener"
+        data-goatcounter-click={'site-repositroy-url'}
+        data-goatcounter-title="Site source code"
+        title="Github repository">
+        <Iconed icon={<GitHub size={14} />}>
+          <span>Site source code</span>
+        </Iconed>
+      </Link>
     </section>
   </footer>
 )
