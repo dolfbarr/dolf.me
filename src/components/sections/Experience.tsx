@@ -46,7 +46,7 @@ const Experience: React.FC = (): ReactElement => {
             endDate={workplace.endDate}
             description={workplace.description}>
             {workplace?.skills && workplace?.skills?.length > 0 && (
-              <p className="font-extralight italic leading-tight dark:text-gray-300">
+              <p className="pb-2 font-extralight italic leading-tight dark:text-gray-300">
                 <span className="inline-flex items-baseline gap-1">
                   <Iconed icon={<Cpu className="rotate-12" />}>
                     <span className="sr-only">Tech: </span>
