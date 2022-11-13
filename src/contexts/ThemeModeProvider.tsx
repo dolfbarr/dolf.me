@@ -24,13 +24,17 @@ const ThemeModeProvider: React.FC<PropsWithChildren> = ({
   children,
 }): ReactElement => {
   const [isDarkTheme, setDarkTheme] = useState(
-    localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
+    (typeof window !== 'undefined' && localStorage.theme === 'dark') ||
+      (typeof window !== 'undefined' &&
+        !('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches),
   )
 
   const changeTheme = (): void => {
-    localStorage.theme = !isDarkTheme ? 'dark' : 'light'
+    if (typeof window !== 'undefined') {
+      localStorage.theme = !isDarkTheme ? 'dark' : 'light'
+    }
+
     setDarkTheme(!isDarkTheme)
   }
 
