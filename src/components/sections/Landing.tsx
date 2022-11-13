@@ -7,9 +7,10 @@ import {
   SOCIALS,
   WORK,
 } from '../../content/data'
-import { AtSign, Clock, MapPin } from 'react-feather'
+import { AtSign, MapPin } from 'react-feather'
 import Iconed from '../Iconed'
 import Heading from '../Heading'
+import Clock from '../Clock'
 
 const Landing: React.FC = (): ReactElement => {
   const HeadingH1 = ({
@@ -87,19 +88,7 @@ const Landing: React.FC = (): ReactElement => {
           </Iconed>
         </a>
         {'; '}
-        <Iconed
-          icon={<Clock strokeWidth={3} />}
-          size={14}
-          className=" font-mono text-lg text-gray-500 dark:text-gray-400">
-          <span>
-            {new Date().toLocaleTimeString(undefined, {
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: false,
-              timeZone: LOCATION.timeZone,
-            })}
-          </span>
-        </Iconed>
+        <Clock />
         {'. '}
         <span>
           I&apos;m <em>passionate about web</em> and, especially, frontend
