@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { Link } from 'gatsby'
-import React, { PropsWithChildren, ReactElement, ReactNode } from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import { Hash } from 'react-feather'
 
 interface HeadingProps

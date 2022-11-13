@@ -7,5 +7,7 @@ export default defineConfig({
     },
     baseUrl: 'http://localhost:8000',
     specPattern: 'cypress/e2e',
+    video: false,
+    screenshotOnRunFailure: false,
   },
 })

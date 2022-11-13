@@ -14,9 +14,7 @@ const Footer: React.FC = (): ReactElement => {
         {Object.keys(CONTACTS).map((key) => (
           <Link
             key={key}
-            to={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${
-              CONTACTS[key].url
-            }`}
+            to={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${CONTACTS[key].url}`}
             target="_blank"
             title={
               CONTACTS[key].title +
