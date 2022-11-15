@@ -34,7 +34,7 @@ const Landing: React.FC = (): ReactElement => {
                 target="_blank"
                 title={CONTACTS.telegram.title + ': ' + SOCIALS.telegram}
                 rel="noreferrer noopener"
-                className="md:inline-block "
+                className="hidden md:inline-block "
                 data-goatcounter-click="telegram-top"
                 data-goatcounter-title={CONTACTS.telegram.title}>
                 {CONTACTS.telegram.icon}
@@ -44,7 +44,7 @@ const Landing: React.FC = (): ReactElement => {
                 target="_blank"
                 title={CONTACTS.email.title + ': ' + SOCIALS.email}
                 rel="noreferrer noopener"
-                className="md:inline-block"
+                className="hidden md:inline-block"
                 data-goatcounter-click="email-top"
                 data-goatcounter-title={CONTACTS.email.title}>
                 {CONTACTS.email.icon}
@@ -98,9 +98,11 @@ const Landing: React.FC = (): ReactElement => {
         </span>
       </p>
       <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
-        {PERSONAL_DATA.tagLines.map((tag, index) => (
-          <span key={tag + String(index)}>
-            <span className="inline-flex">{tag}</span>
+        {PERSONAL_DATA.tagLines.map((tagLine, index) => (
+          <span
+            key={tagLine + String(index)}
+            className="flex flex-wrap justify-center gap-2">
+            <span className="inline-flex">{tagLine}</span>
             {index !== PERSONAL_DATA.tagLines.length - 1 && (
               <span className="inline-flex">·</span>
             )}
