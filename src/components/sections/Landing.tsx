@@ -13,8 +13,7 @@ import Heading from '../Heading'
 import Clock from '../Clock'
 import Button from '../Button'
 import classNames from 'classnames'
-import { MapContainer, TileLayer, CircleMarker } from 'react-leaflet'
-import { LatLngTuple } from 'leaflet'
+import Map from '../Map'
 
 const Landing: React.FC = (): ReactElement => {
   const [isMapOpen, setIsMapOpen] = useState(false)
@@ -101,38 +100,13 @@ const Landing: React.FC = (): ReactElement => {
           <em>soft skills</em> and <em>clean code</em> matter.
         </span>
       </p>
-      {typeof window !== 'undefined' && (
-        <div
-          className={classNames(
-            isMapOpen ? 'mt-4 max-h-96' : 'max-h-0',
-            'map-wrapper h-96 overflow-hidden transition-[max-height]',
-          )}>
-          <MapContainer
-            center={LOCATION.coordinates as LatLngTuple}
-            zoom={5}
-            className="h-96"
-            zoomAnimation
-            placeholder={
-              <p className="flex content-center justify-center">
-                Map of {LOCATION.title}.{' '}
-                <noscript>
-                  You need to enable JavaScript to see this map.
-                </noscript>
-              </p>
-            }
-            scrollWheelZoom={false}>
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <CircleMarker
-              center={LOCATION.coordinates as LatLngTuple}
-              radius={10}
-              fillOpacity={0.25}
-            />
-          </MapContainer>
-        </div>
-      )}
+      <div
+        className={classNames(
+          isMapOpen ? 'mt-4 max-h-96' : 'max-h-0',
+          'map-wrapper h-96 overflow-hidden transition-[max-height]',
+        )}>
+        <Map className="h-96" />
+      </div>
       <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
         {PERSONAL_DATA.tagLines.map((tagLine, index) => (
           <span
