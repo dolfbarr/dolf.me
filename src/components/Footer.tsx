@@ -41,7 +41,7 @@ const Footer: React.FC = (): ReactElement => {
           href={packageJson.repository.url}
           target="_blank"
           rel="noreferrer noopener"
-          data-goatcounter-click={'site-repositroy-url'}
+          data-goatcounter-click={'site-repository-url'}
           data-goatcounter-title="Site source code"
           title="Github repository">
           <Iconed icon={<GitHub size={14} />}>
