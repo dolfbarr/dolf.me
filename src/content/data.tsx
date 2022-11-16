@@ -33,8 +33,8 @@ export const LOCATION = {
   title: 'Belgrade, Serbia',
   original: 'Београд, Србија',
   timeZone: 'Europe/Belgrade',
+  coordinates: [44.8178, 20.457],
   flag: '🇷🇸',
-  link: 'https://geohack.toolforge.org/geohack.php?pagename=Belgrade&params=44_49_04_N_20_27_25_E_region:RS_type:city',
 } as const
 
 export const META = {

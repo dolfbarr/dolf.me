@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react'
+import React, { PropsWithChildren, ReactElement, useState } from 'react'
 import Section from '../Section'
 import {
   CONTACTS,
@@ -11,14 +11,21 @@ import { AtSign, MapPin } from 'react-feather'
 import Iconed from '../Iconed'
 import Heading from '../Heading'
 import Clock from '../Clock'
+import Button from '../Button'
+import classNames from 'classnames'
+import { MapContainer, TileLayer, CircleMarker } from 'react-leaflet'
+import { LatLngTuple } from 'leaflet'
 
 const Landing: React.FC = (): ReactElement => {
+  const [isMapOpen, setIsMapOpen] = useState(false)
+
   const HeadingH1 = ({
     children,
     ...props
   }: PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>): ReactElement => (
     <h1 {...props}>{children}</h1>
   )
+
   return (
     <Section className="group/section relative">
       <span className="align-center inline-flex flex-wrap">
@@ -72,12 +79,10 @@ const Landing: React.FC = (): ReactElement => {
           </Iconed>
         </a>{' '}
         with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
-        <a
-          href={LOCATION.link}
+        <Button
+          className="group/location mr-1 text-base"
           title={LOCATION.flag + ' ' + LOCATION.title}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/location">
+          onClick={() => setIsMapOpen(!isMapOpen)}>
           <Iconed icon={<MapPin />} size={14} className="relative inline-flex">
             <span className="inline-flex tracking-[.008em] opacity-100 transition-opacity group-hover/location:hidden">
               {LOCATION.title}
@@ -86,8 +91,7 @@ const Landing: React.FC = (): ReactElement => {
               {LOCATION.original}
             </span>
           </Iconed>
-        </a>
-        {'; '}
+        </Button>
         <Clock />
         {'. '}
         <span>
@@ -97,6 +101,38 @@ const Landing: React.FC = (): ReactElement => {
           <em>soft skills</em> and <em>clean code</em> matter.
         </span>
       </p>
+      {typeof window !== 'undefined' && (
+        <div
+          className={classNames(
+            isMapOpen ? 'mt-4 max-h-96' : 'max-h-0',
+            'map-wrapper h-96 overflow-hidden transition-[max-height]',
+          )}>
+          <MapContainer
+            center={LOCATION.coordinates as LatLngTuple}
+            zoom={5}
+            className="h-96"
+            zoomAnimation
+            placeholder={
+              <p className="flex content-center justify-center">
+                Map of {LOCATION.title}.{' '}
+                <noscript>
+                  You need to enable JavaScript to see this map.
+                </noscript>
+              </p>
+            }
+            scrollWheelZoom={false}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <CircleMarker
+              center={LOCATION.coordinates as LatLngTuple}
+              radius={10}
+              fillOpacity={0.25}
+            />
+          </MapContainer>
+        </div>
+      )}
       <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
         {PERSONAL_DATA.tagLines.map((tagLine, index) => (
           <span

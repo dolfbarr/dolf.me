@@ -4,14 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * GENERAL
+ */
+
 @layer base {
   html, body {
     @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200 transition-colors scroll-smooth;
     font-family: -apple-system, Arial, system-ui;
-  }
-
-  a {
-    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark transition hover:brightness-125;
   }
 
   h1, h2, h3, h4, h5 {
@@ -40,5 +40,72 @@
 
   .hyphens {
     hyphens: auto;
+  }
+}
+
+/*
+ * MAP
+ */
+
+@layer base {
+  .map-wrapper .leaflet-container, .map-wrapper .leaflet-control-attribution.leaflet-control {
+    @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200;
+  }
+
+  .map-wrapper .leaflet-control-attribution.leaflet-control {
+    @apply bg-opacity-50 dark:bg-opacity-50;
+  }
+
+  .map-wrapper .leaflet-touch .leaflet-bar a {
+    @apply btn text-base no-underline;
+  }
+
+  .map-wrapper .leaflet-touch .leaflet-bar a:first-child {
+    @apply rounded rounded-t rounded-b;
+  }
+
+  .map-wrapper .leaflet-touch .leaflet-bar a:last-child {
+    @apply rounded rounded-bl rounded-br border-solid border-b border-primary dark:border-primary-dark;
+  }
+
+  .map-wrapper a, a {
+    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark transition hover:brightness-125;
+  }
+
+  .map-wrapper :is(.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar) {
+    @apply flex flex-col gap-2 border-none;
+  }
+
+  .map-wrapper .leaflet-interactive{
+    @apply stroke-primary dark:stroke-primary-dark fill-primary dark:fill-primary-dark;
+  }
+}
+
+/*
+ * MAP DARK THEME
+ */
+
+:root {
+  --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+.dark .map-wrapper .leaflet-tile {
+  filter: var(--map-tiles-filter, none);
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-wrapper .map-tiles {
+    filter: var(--map-tiles-filter, none);
+	}
+}
+
+/*
+ * COMPONENTS
+ */
+
+
+@layer components {
+  .btn {
+    @apply rounded border border-primary bg-white dark:bg-stone-900 px-2 text-primary transition-colors hover:border-transparent hover:bg-primary hover:text-white focus:border-transparent focus:bg-primary focus:text-white active:brightness-90 dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-white dark:focus:bg-primary-dark dark:focus:text-white;
   }
 }
