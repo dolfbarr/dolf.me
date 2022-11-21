@@ -28,7 +28,7 @@ const Clock: React.FC<ClockProps> = ({
     return () => {
       clearInterval(timer)
     }
-  })
+  }, [])
 
   return (
     <Iconed
