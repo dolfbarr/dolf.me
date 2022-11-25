@@ -26,11 +26,10 @@ const Landing: React.FC = (): ReactElement => {
   )
 
   return (
-    <Section className="group/section relative">
+    <Section className="relative">
       <span className="align-center inline-flex flex-wrap">
         <Heading
           headingTag={HeadingH1}
-          className="group/heading"
           id="greeting"
           iconSize={32}
           aside={
@@ -62,7 +61,7 @@ const Landing: React.FC = (): ReactElement => {
           <span> I’m </span>
           {PERSONAL_DATA.fullName}{' '}
         </Heading>
-        <span className="ml-4 hidden text-6xl group-hover/section:animate-bounce sm:inline-flex md:items-baseline">
+        <span className="ml-4 hidden text-6xl hover:animate-bounce sm:inline-flex md:items-baseline">
           👋
         </span>
       </span>
