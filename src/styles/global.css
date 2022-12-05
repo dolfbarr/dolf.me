@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400%253B700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,7 @@
   html, body {
     @apply text-gray-700 bg-white dark:bg-stone-900 dark:text-gray-200 transition-colors scroll-smooth;
     font-family: -apple-system, Arial, system-ui;
+    font-size: 16px;
   }
 
   h1, h2, h3, h4, h5 {
