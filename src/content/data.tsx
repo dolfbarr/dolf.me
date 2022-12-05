@@ -131,8 +131,12 @@ export const WORK = {
       Number(Date.now()) - Number(new Date('1 Nov 2013')),
     ).getUTCFullYear() - 1970,
   ),
-  link: 'https://invitae.com',
-  name: 'Invitae',
+  get link() {
+    return this.experience[0].url
+  },
+  get name() {
+    return this.experience[0].company
+  },
 
   experience: [
     {
@@ -160,6 +164,7 @@ export const WORK = {
         'Python (Django)',
       ],
       startDate: 'Apr ’19',
+      url: 'https://invitae.com',
     },
     {
       title: 'Senior Software Engineer',
@@ -167,6 +172,7 @@ export const WORK = {
       description:
         'Within different teams working on projects for QuantumSoft partners. Most of the time, I am responsible for the frontend architecture and development of the UI and application business logic.',
       startDate: 'Oct ’15',
+      url: 'https://quantumsoft.pro',
     },
     {
       title: 'Frontend Engineer',
@@ -190,6 +196,7 @@ export const WORK = {
       ],
       startDate: 'Aug ’16',
       endDate: 'Mar ’19',
+      url: 'https://www.mindmappro.com',
     },
     {
       title: 'Full-Stack Web Developer',
@@ -198,6 +205,7 @@ export const WORK = {
         'Participated in the development of corporate and social services for students and employees of Tomsk State University.',
       startDate: 'Nov ’13',
       endDate: 'Sep ’15',
+      url: 'https://kreosoft.ru',
     },
   ] as Array<{
     title: string
@@ -207,6 +215,7 @@ export const WORK = {
     skills?: string[]
     startDate: string
     endDate?: string
+    url?: string
   }>,
 } as const
 

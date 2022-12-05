@@ -7,6 +7,17 @@ import Iconed from '../Iconed'
 import Section from '../Section'
 
 const Experience: React.FC = (): ReactElement => {
+  const IconedCompanyName = ({
+    companyName,
+  }: {
+    companyName: string
+  }): ReactElement => (
+    <Iconed icon={<AtSign strokeWidth={3} />} size={18}>
+      <span className="sr-only"> at </span>
+      <span className="whitespace-nowrap">{companyName}</span>
+    </Iconed>
+  )
+
   return (
     <Section>
       <Heading
@@ -33,10 +44,20 @@ const Experience: React.FC = (): ReactElement => {
             title={
               <>
                 <span>{workplace.title}</span>
-                <Iconed icon={<AtSign strokeWidth={3} />} size={18}>
-                  <span className="sr-only"> at </span>
-                  <span className="whitespace-nowrap">{workplace.company}</span>
-                </Iconed>
+                {workplace?.url ? (
+                  <a
+                    className="whitespace-nowrap"
+                    href={workplace.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    data-goatcounter-click={`workplace-${workplace.company}`}
+                    data-goatcounter-title={workplace.company}
+                    title={workplace.company}>
+                    <IconedCompanyName companyName={workplace.company} />
+                  </a>
+                ) : (
+                  <IconedCompanyName companyName={workplace.company} />
+                )}
 
                 <span>{workplace?.contract ? ' · contract' : ''}</span>
               </>
