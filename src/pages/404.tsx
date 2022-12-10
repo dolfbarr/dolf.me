@@ -28,16 +28,6 @@ const NotFoundPage: React.FC = (): ReactElement => {
               <span>Email me</span>
             </Iconed>
           </a>{' '}
-          or send a message via{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={SOCIALS.telegram}
-            title={'Telegram: ' + SOCIALS.telegram}>
-            <Iconed icon={<Send />}>
-              <span>telegram</span>
-            </Iconed>
-          </a>{' '}
           if you need this page
         </li>
         <li>

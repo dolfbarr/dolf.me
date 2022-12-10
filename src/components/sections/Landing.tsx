@@ -35,16 +35,6 @@ const Landing: React.FC = (): ReactElement => {
           aside={
             <div className="absolute right-0 top-5 flex justify-between gap-4 align-baseline">
               <a
-                href={CONTACTS.telegram.url}
-                target="_blank"
-                title={CONTACTS.telegram.title + ': ' + SOCIALS.telegram}
-                rel="noreferrer noopener"
-                className="hidden md:inline-block "
-                data-goatcounter-click="telegram-top"
-                data-goatcounter-title={CONTACTS.telegram.title}>
-                {CONTACTS.telegram.icon}
-              </a>
-              <a
                 href={`mailto:${CONTACTS.email.url}`}
                 target="_blank"
                 title={CONTACTS.email.title + ': ' + SOCIALS.email}
