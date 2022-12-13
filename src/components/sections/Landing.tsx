@@ -55,7 +55,7 @@ const Landing: React.FC = (): ReactElement => {
           👋
         </span>
       </span>
-      <p className="hyphens text-xl leading-loose">
+      <p className="hyphens mb-6 text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
         <a
           href={WORK.link}
@@ -91,12 +91,12 @@ const Landing: React.FC = (): ReactElement => {
       </p>
       <div
         className={classNames(
-          isMapOpen ? 'mt-4 max-h-96' : 'max-h-0',
-          'map-wrapper h-96 overflow-hidden transition-[max-height]',
+          isMapOpen ? 'my-8 max-h-96 opacity-100' : 'max-h-0 opacity-0',
+          'map-wrapper h-96 rounded-lg drop-shadow-lg transition-all duration-200 ease-in',
         )}>
-        <Map className="h-96" />
+        <Map className="h-96 rounded-lg" />
       </div>
-      <p className="flex flex-wrap justify-center gap-2 pt-8 text-center text-xl leading-loose">
+      <p className="flex flex-wrap justify-center gap-2 text-center text-xl leading-loose">
         {PERSONAL_DATA.tagLines.map((tagLine, index) => (
           <span
             key={tagLine + String(index)}
