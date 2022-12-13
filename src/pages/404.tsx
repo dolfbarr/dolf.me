@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { HeadFC, Link } from 'gatsby'
 import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
-import { Home, Mail, Send } from 'react-feather'
+import { Home, Mail } from 'react-feather'
 import Iconed from '../components/Iconed'
 import { SEO } from '../components/SEO'
 
