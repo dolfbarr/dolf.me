@@ -58,12 +58,22 @@ const Landing: React.FC = (): ReactElement => {
       <p className="hyphens mb-6 text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
         <a
-          href={WORK.link}
-          title={WORK.name}
+          href={WORK.experience[0].url}
+          title={WORK.experience[0].company}
           target="_blank"
           rel="noopener noreferrer">
           <Iconed icon={<AtSign />} size={14}>
-            <span>{WORK.name}</span>
+            <span>{WORK.experience[0].company}</span>
+          </Iconed>
+        </a>{' '}
+        &{' '}
+        <a
+          href={WORK.experience[1].url}
+          title={WORK.experience[1].company}
+          target="_blank"
+          rel="noopener noreferrer">
+          <Iconed icon={<AtSign />} size={14}>
+            <span>{WORK.experience[1].company}</span>
           </Iconed>
         </a>{' '}
         with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}

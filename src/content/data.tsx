@@ -131,12 +131,6 @@ export const WORK = {
       Number(Date.now()) - Number(new Date('1 Nov 2013')),
     ).getUTCFullYear() - 1970,
   ),
-  get link() {
-    return this.experience[0].url
-  },
-  get name() {
-    return this.experience[0].company
-  },
 
   experience: [
     {
