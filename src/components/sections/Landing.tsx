@@ -55,6 +55,18 @@ const Landing: React.FC = (): ReactElement => {
           👋
         </span>
       </span>
+      <p className="mb-6 flex flex-wrap justify-center gap-2 text-center text-xl leading-loose">
+        {PERSONAL_DATA.tagLines.map((tagLine, index) => (
+          <span
+            key={tagLine + String(index)}
+            className="flex flex-wrap justify-center gap-2">
+            <span className="inline-flex">{tagLine}</span>
+            {index !== PERSONAL_DATA.tagLines.length - 1 && (
+              <span className="inline-flex">·</span>
+            )}
+          </span>
+        ))}
+      </p>
       <p className="hyphens mb-6 text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
         <a
@@ -106,18 +118,6 @@ const Landing: React.FC = (): ReactElement => {
         )}>
         <Map className="h-96 rounded-lg" />
       </div>
-      <p className="flex flex-wrap justify-center gap-2 text-center text-xl leading-loose">
-        {PERSONAL_DATA.tagLines.map((tagLine, index) => (
-          <span
-            key={tagLine + String(index)}
-            className="flex flex-wrap justify-center gap-2">
-            <span className="inline-flex">{tagLine}</span>
-            {index !== PERSONAL_DATA.tagLines.length - 1 && (
-              <span className="inline-flex">·</span>
-            )}
-          </span>
-        ))}
-      </p>
     </Section>
   )
 }
