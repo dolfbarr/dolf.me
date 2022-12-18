@@ -11,6 +11,7 @@ interface HeadingProps
   headingTag?: React.ComponentType
   iconSize?: number
   iconSpace?: string
+  to?: string
 }
 
 const Heading: React.FC<HeadingProps> = ({
@@ -20,6 +21,7 @@ const Heading: React.FC<HeadingProps> = ({
   headingTag,
   iconSize = 24,
   className,
+  to,
 }: HeadingProps): ReactElement => {
   const HeadingTag =
     headingTag ??
@@ -36,12 +38,17 @@ const Heading: React.FC<HeadingProps> = ({
       id={id}
       data-testid={id}>
       <Link
-        to={`#${id}`}
+        to={to ?? `#${id}`}
         data-goatcounter-click={id + '-event'}
-        className="group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark md:-ml-8">
-        <span className="instapaper_ignore not-sr-only hidden  flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">
-          <Hash strokeWidth={3} size={iconSize} />
-        </span>
+        className={classNames(
+          'group inline-flex no-underline visited:text-primary hover:underline visited:dark:text-primary-dark',
+          !to && 'md:-ml-8',
+        )}>
+        {!to && (
+          <span className="instapaper_ignore not-sr-only hidden  flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">
+            <Hash strokeWidth={3} size={iconSize} />
+          </span>
+        )}
         <span>{children}</span>
       </Link>
       <aside className="flex flex-col justify-center align-baseline">

@@ -1,4 +1,9 @@
-import React, { PropsWithChildren, ReactElement, useState } from 'react'
+import React, {
+  PropsWithChildren,
+  ReactElement,
+  useEffect,
+  useState,
+} from 'react'
 import Section from '../Section'
 import {
   CONTACTS,
@@ -15,15 +20,24 @@ import Button from '../Button'
 import classNames from 'classnames'
 import Map from '../Map'
 
+export const HeadingH1 = ({
+  children,
+  ...props
+}: PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>): ReactElement => (
+  <h1 {...props}>{children}</h1>
+)
+
 const Landing: React.FC = (): ReactElement => {
   const [isMapOpen, setIsMapOpen] = useState(false)
+  const [isMapAbsolute, setIsMapAbsolute] = useState(true)
 
-  const HeadingH1 = ({
-    children,
-    ...props
-  }: PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>): ReactElement => (
-    <h1 {...props}>{children}</h1>
-  )
+  useEffect(() => {
+    if (!isMapOpen) {
+      setTimeout(() => setIsMapAbsolute(true), 200)
+    } else {
+      setIsMapAbsolute(false)
+    }
+  }, [isMapOpen])
 
   return (
     <Section className="relative">
@@ -67,7 +81,7 @@ const Landing: React.FC = (): ReactElement => {
           </span>
         ))}
       </p>
-      <p className="hyphens mb-6 text-xl leading-loose">
+      <p className="hyphens  text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
         <a
           href={WORK.experience[0].url}
@@ -113,7 +127,8 @@ const Landing: React.FC = (): ReactElement => {
       </p>
       <div
         className={classNames(
-          isMapOpen ? 'my-8 max-h-96 opacity-100' : 'max-h-0 opacity-0',
+          isMapOpen ? 'my-8 max-h-96 opacity-100' : '-t-96 max-h-0 opacity-0',
+          isMapAbsolute && 'absolute',
           'map-wrapper h-96 rounded-lg drop-shadow-lg transition-all duration-200 ease-in',
         )}>
         <Map className="h-96 rounded-lg" />
