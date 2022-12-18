@@ -70,7 +70,11 @@
   }
 
   .map-wrapper a, a {
-    @apply text-primary visited:text-gray-500 underline dark:text-primary-dark transition hover:brightness-125;
+    @apply text-primary underline dark:text-primary-dark transition hover:brightness-125 focus:ring-2;
+  }
+
+  .map-wrapper a:visited, a:visited, a:visited * {
+    @apply text-blue-800 stroke-blue-800 dark:text-amber-800 dark:stroke-amber-800;
   }
 
   .map-wrapper :is(.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar) {
@@ -107,7 +111,7 @@
 
 @layer components {
   .btn {
-    @apply rounded border border-primary bg-white dark:bg-stone-900 px-2 text-primary transition-colors hover:border-transparent hover:bg-primary hover:text-white focus:border-transparent focus:bg-primary focus:text-white active:brightness-90 dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-white dark:focus:bg-primary-dark dark:focus:text-white;
+    @apply rounded border border-primary bg-white dark:bg-stone-900 px-2 text-primary transition-colors hover:border-transparent hover:bg-primary hover:text-white focus:border-transparent focus:bg-primary focus:text-white active:brightness-90 dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-white dark:focus:bg-primary-dark dark:focus:text-white focus:ring-2;
   }
 
   .btn:disabled {
