@@ -65,7 +65,7 @@ const Landing: React.FC = (): ReactElement => {
           <span> I’m </span>
           {PERSONAL_DATA.fullName}{' '}
         </Heading>
-        <span className="ml-4 hidden text-6xl hover:animate-bounce sm:inline-flex md:items-baseline">
+        <span className="duration-2000 ml-4 hidden origin-bottom-right text-6xl transition-all ease-in-out hover:animate-wave sm:inline-flex">
           👋
         </span>
       </span>
