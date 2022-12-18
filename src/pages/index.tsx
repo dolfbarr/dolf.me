@@ -8,6 +8,7 @@ import { SEO } from '../components/SEO'
 import Button from '../components/Button'
 import { FileText, PenTool } from 'react-feather'
 import Iconed from '../components/Iconed'
+import Contact from '../components/sections/Contact'
 
 enum Block {
   Resume = 'resume',
@@ -56,7 +57,12 @@ const IndexPage: React.FC = (): ReactElement => {
           )
         })}
       </div>
-      {block === Block.Resume && <Resume />}
+      {block === Block.Resume && (
+        <>
+          <Resume />
+          <Contact />
+        </>
+      )}
     </Page>
   )
 }
