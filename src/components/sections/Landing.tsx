@@ -127,7 +127,9 @@ const Landing: React.FC = (): ReactElement => {
       </p>
       <div
         className={classNames(
-          isMapOpen ? 'my-8 max-h-96 opacity-100' : '-t-96 max-h-0 opacity-0',
+          isMapOpen
+            ? 'mt-8 mb-2 max-h-96 opacity-100'
+            : '-t-96 max-h-0 opacity-0',
           isMapAbsolute && 'absolute',
           'map-wrapper h-96 rounded-lg drop-shadow-lg transition-all duration-200 ease-in',
         )}>
