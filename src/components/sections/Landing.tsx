@@ -88,7 +88,7 @@ const Landing: React.FC = (): ReactElement => {
           title={WORK.experience[0].company}
           target="_blank"
           rel="noopener noreferrer">
-          <Iconed icon={<AtSign />} size={14}>
+          <Iconed icon={<AtSign />}>
             <span>{WORK.experience[0].company}</span>
           </Iconed>
         </a>{' '}
@@ -98,16 +98,16 @@ const Landing: React.FC = (): ReactElement => {
           title={WORK.experience[1].company}
           target="_blank"
           rel="noopener noreferrer">
-          <Iconed icon={<AtSign />} size={14}>
+          <Iconed icon={<AtSign />}>
             <span>{WORK.experience[1].company}</span>
           </Iconed>
         </a>{' '}
         with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
         <Button
-          className="group/location mr-1 text-base"
+          className="group/location text-base"
           title={LOCATION.flag + ' ' + LOCATION.title}
           onClick={() => setIsMapOpen(!isMapOpen)}>
-          <Iconed icon={<MapPin />} size={14} className="relative inline-flex">
+          <Iconed icon={<MapPin />} className="relative inline-flex">
             <span className="inline-flex tracking-[.008em] opacity-100 transition-opacity group-hover/location:hidden">
               {LOCATION.title}
             </span>
@@ -115,7 +115,7 @@ const Landing: React.FC = (): ReactElement => {
               {LOCATION.original}
             </span>
           </Iconed>
-        </Button>
+        </Button>{' '}
         <Clock />
         {'. '}
         <span>

@@ -31,10 +31,7 @@ const Clock: React.FC<ClockProps> = ({
   }, [])
 
   return (
-    <Iconed
-      icon={<ClockIcon strokeWidth={3} />}
-      size={14}
-      className=" font-mono text-lg text-gray-500 dark:text-gray-400">
+    <Iconed icon={<ClockIcon strokeWidth={3} />} className=" font-mono text-lg">
       <span>
         {date.toLocaleTimeString(undefined, {
           hour: '2-digit',

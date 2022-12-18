@@ -59,7 +59,7 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
   )
 
   return (
-    <footer className={classNames('w-full', className)}>
+    <footer className={classNames('mt-8 w-full', className)}>
       <Section className="flex flex-wrap justify-evenly pb-4 text-primary">
         <Group contactGroup={otherContacts} />
         <Group contactGroup={socialContacts} />
@@ -73,18 +73,18 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
           data-goatcounter-click={'site-repository-url'}
           data-goatcounter-title="Site source code"
           title="Github repository">
-          <Iconed icon={<GitHub size={14} />}>
+          <Iconed icon={<GitHub />}>
             <span>Site source code</span>
           </Iconed>
         </a>
         <Button onClick={changeTheme} data-testid="change-theme">
-          <Iconed icon={isDarkTheme ? <Sun size={14} /> : <Moon size={14} />}>
+          <Iconed icon={isDarkTheme ? <Sun /> : <Moon />}>
             <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
           </Iconed>
         </Button>
         {!isThemeReset && (
           <Button onClick={resetTheme} data-testid="change-theme">
-            <Iconed icon={<RefreshCw size={14} />}>
+            <Iconed icon={<RefreshCw />}>
               <span>Enable auto switch for theme</span>
             </Iconed>
           </Button>
