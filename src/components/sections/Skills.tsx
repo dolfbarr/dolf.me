@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React, { ReactElement } from 'react'
 import { WORK } from '../../content/data'
 import Heading from '../Heading'
@@ -16,13 +17,17 @@ const Skills: React.FC = (): ReactElement => {
   return (
     <Section>
       <Heading id="skills">Skills</Heading>
-      <p className="flex flex-wrap justify-start gap-2 dark:text-gray-300">
-        {allSkills.map((skill) => (
-          <span
-            key={skill}
-            data-testid="skill"
-            className="rounded-full border border-solid border-gray-300 py-0 px-2 font-thin dark:border-gray-400">
-            {skill}
+      <p className="flex flex-wrap justify-start gap-1 pb-2 font-extralight leading-tight dark:text-gray-300">
+        {allSkills.map((skill, index) => (
+          <span key={skill}>
+            <span
+              data-testid="skill"
+              className={classNames('rounded-full py-0 pr-2')}>
+              {skill}
+            </span>
+            {index !== allSkills.length - 1 && (
+              <span className="inline-flex pr-1">·</span>
+            )}
           </span>
         ))}
       </p>
