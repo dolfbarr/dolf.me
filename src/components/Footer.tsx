@@ -1,42 +1,71 @@
-import React, { ReactElement } from 'react'
-import { CONTACTS, SOCIALS } from '../content/data'
+import React, { ReactElement, PropsWithChildren } from 'react'
+import { ContactGroup, CONTACTS, SOCIALS } from '../content/data'
 import packageJson from '../../package.json'
 import { GitHub, Moon, RefreshCw, Sun } from 'react-feather'
 import Iconed from './Iconed'
 import { useThemeModeContext } from '../contexts/ThemeModeProvider'
 import Button from './Button'
+import Section from './Section'
+import classNames from 'classnames'
 
-const Footer: React.FC = (): ReactElement => {
+const Group: React.FC = ({ contactGroup = [] }): ReactElement => (
+  <div className="flex flex-wrap justify-center gap-4">
+    {contactGroup.map((contactKey: string) => {
+      console.log(contactKey)
+      return (
+        <a
+          key={contactKey}
+          href={`${CONTACTS[contactKey].isEmail ? 'mailto:' : ''}${
+            CONTACTS[contactKey].url
+          }`}
+          target="_blank"
+          title={
+            CONTACTS[contactKey].title +
+            (SOCIALS[contactKey] ? `: ${String(SOCIALS[contactKey])}` : '')
+          }
+          rel="noreferrer noopener"
+          data-testid="social-link"
+          data-goatcounter-click={contactKey + '-event'}
+          data-goatcounter-title={CONTACTS[contactKey].title}>
+          <Iconed icon={CONTACTS[contactKey].icon} size={24}>
+            <span className="sr-only">
+              {CONTACTS[contactKey].title}
+              {SOCIALS[contactKey] && `: ${String(SOCIALS[contactKey])}`}
+            </span>
+          </Iconed>
+        </a>
+      )
+    })}
+  </div>
+)
+
+const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
+  children,
+  className,
+}): ReactElement => {
   const { isDarkTheme, changeTheme, isThemeReset, resetTheme } =
     useThemeModeContext()
+
+  const allContacts = Object.keys(CONTACTS)
+
+  const socialContacts = allContacts.filter(
+    (key) => CONTACTS[key].group === ContactGroup.Social,
+  )
+  const codeContacts = allContacts.filter(
+    (key) => CONTACTS[key].group === ContactGroup.Code,
+  )
+  const otherContacts = allContacts.filter(
+    (key) => CONTACTS[key].group === ContactGroup.Other,
+  )
+
   return (
-    <footer>
-      <section className="flex flex-wrap justify-center gap-4 pb-4 text-3xl text-primary">
-        {Object.keys(CONTACTS).map((key) => (
-          <a
-            key={key}
-            href={`${CONTACTS[key].isEmail ? 'mailto:' : ''}${
-              CONTACTS[key].url
-            }`}
-            target="_blank"
-            title={
-              CONTACTS[key].title +
-              (SOCIALS[key] ? `: ${String(SOCIALS[key])}` : '')
-            }
-            rel="noreferrer noopener"
-            data-testid="social-link"
-            data-goatcounter-click={key + '-event'}
-            data-goatcounter-title={CONTACTS[key].title}>
-            <Iconed icon={CONTACTS[key].icon} size={24}>
-              <span className="sr-only">
-                {CONTACTS[key].title}
-                {SOCIALS[key] && `: ${String(SOCIALS[key])}`}
-              </span>
-            </Iconed>
-          </a>
-        ))}
-      </section>
-      <section className="flex flex-wrap justify-center gap-4">
+    <footer className={classNames('w-full', className)}>
+      <Section className="flex flex-wrap justify-evenly pb-4 text-primary">
+        <Group contactGroup={otherContacts} />
+        <Group contactGroup={socialContacts} />
+        <Group contactGroup={codeContacts} />
+      </Section>
+      <Section className="flex flex-wrap justify-center gap-4">
         <a
           href={packageJson.repository.url}
           target="_blank"
@@ -60,7 +89,8 @@ const Footer: React.FC = (): ReactElement => {
             </Iconed>
           </Button>
         )}
-      </section>
+      </Section>
+      {children}
     </footer>
   )
 }

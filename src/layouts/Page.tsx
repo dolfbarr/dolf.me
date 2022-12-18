@@ -6,7 +6,7 @@ const Page: React.FC<PropsWithChildren> = ({ children }): ReactElement => (
   <ThemeModeProvider>
     <div className="flex min-h-screen flex-col items-center justify-center p-4 pt-8">
       <main className="max-w-screen-md flex-1 px-2 sm:px-6">{children}</main>
-      <Footer />
+      <Footer className="max-w-screen-md px-2 sm:px-6" />
     </div>
   </ThemeModeProvider>
 )
