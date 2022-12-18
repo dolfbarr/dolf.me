@@ -1,6 +1,5 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import { Mail, Send } from 'react-feather'
+import { Mail } from 'react-feather'
 import { SOCIALS } from '../../content/data'
 import Heading from '../Heading'
 import Iconed from '../Iconed'
