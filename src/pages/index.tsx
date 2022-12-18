@@ -43,11 +43,14 @@ const IndexPage: React.FC = (): ReactElement => {
           )
 
           return block !== page.block ? (
-            <Button className={classes} onClick={() => setBlock(page.block)}>
+            <Button
+              className={classes}
+              onClick={() => setBlock(page.block)}
+              key={page.block}>
               {inner}
             </Button>
           ) : (
-            <Link to={page.path} className={classes}>
+            <Link to={page.path} className={classes} key={page.block}>
               {inner}
             </Link>
           )
