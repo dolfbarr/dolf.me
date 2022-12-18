@@ -12,7 +12,7 @@ const Experience: React.FC = (): ReactElement => {
   }: {
     companyName: string
   }): ReactElement => (
-    <Iconed icon={<AtSign strokeWidth={3} />} size={18}>
+    <Iconed icon={<AtSign strokeWidth={3} />} size={16}>
       <span className="sr-only"> at </span>
       <span className="whitespace-nowrap">{companyName}</span>
     </Iconed>

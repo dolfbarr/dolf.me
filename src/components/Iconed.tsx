@@ -12,7 +12,7 @@ const Iconed: React.FC<IconedProps> = ({
   children,
   className,
   icon,
-  size = 12,
+  size = 13,
 }): ReactElement => (
   <span className={classNames('inline-flex items-baseline gap-1', className)}>
     {React.cloneElement(icon, { size })}
