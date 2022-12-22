@@ -65,7 +65,7 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
         <Group contactGroup={socialContacts} />
         <Group contactGroup={codeContacts} />
       </Section>
-      <Section className="flex flex-wrap justify-center gap-4">
+      <Section className="flex flex-wrap justify-center gap-4 pb-2">
         <a
           href={packageJson.repository.url}
           target="_blank"
