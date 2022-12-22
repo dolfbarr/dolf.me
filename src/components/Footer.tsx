@@ -8,10 +8,11 @@ import Button from './Button'
 import Section from './Section'
 import classNames from 'classnames'
 
-const Group: React.FC = ({ contactGroup = [] }): ReactElement => (
+const Group: React.FC<{
+  contactGroup: string[]
+}> = ({ contactGroup = [] }): ReactElement => (
   <div className="flex flex-wrap justify-center gap-4">
     {contactGroup.map((contactKey: string) => {
-      console.log(contactKey)
       return (
         <a
           key={contactKey}
@@ -65,7 +66,7 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
         <Group contactGroup={socialContacts} />
         <Group contactGroup={codeContacts} />
       </Section>
-      <Section className="flex flex-wrap justify-center gap-4">
+      <Section className="flex flex-wrap justify-center gap-4 pb-2">
         <a
           href={packageJson.repository.url}
           target="_blank"

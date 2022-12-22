@@ -69,18 +69,6 @@ const Landing: React.FC = (): ReactElement => {
           👋
         </span>
       </span>
-      <p className="mb-6 flex flex-wrap justify-center gap-2 text-center text-xl leading-loose">
-        {PERSONAL_DATA.tagLines.map((tagLine, index) => (
-          <span
-            key={tagLine + String(index)}
-            className="flex flex-wrap justify-center gap-2">
-            <span className="inline-flex">{tagLine}</span>
-            {index !== PERSONAL_DATA.tagLines.length - 1 && (
-              <span className="inline-flex">·</span>
-            )}
-          </span>
-        ))}
-      </p>
       <p className="hyphens  text-xl leading-loose">
         a <em>{PERSONAL_DATA.occupation}</em> at{' '}
         <a
@@ -128,13 +116,25 @@ const Landing: React.FC = (): ReactElement => {
       <div
         className={classNames(
           isMapOpen
-            ? 'mt-8 mb-2 max-h-96 opacity-100'
+            ? 'mt-8 mb-8 max-h-96 opacity-100'
             : '-t-96 max-h-0 opacity-0',
           isMapAbsolute && 'absolute',
           'map-wrapper h-96 rounded-lg drop-shadow-lg transition-all duration-200 ease-in',
         )}>
         <Map className="h-96 rounded-lg" />
       </div>
+      <p className="mt-6 flex flex-wrap justify-center gap-2 text-center text-xl leading-loose">
+        {PERSONAL_DATA.tagLines.map((tagLine, index) => (
+          <span
+            key={tagLine + String(index)}
+            className="flex flex-wrap justify-center gap-2">
+            <span className="inline-flex">{tagLine}</span>
+            {index !== PERSONAL_DATA.tagLines.length - 1 && (
+              <span className="inline-flex">·</span>
+            )}
+          </span>
+        ))}
+      </p>
     </Section>
   )
 }

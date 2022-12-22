@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import { Mail } from 'react-feather'
 import { SOCIALS } from '../../content/data'
 import Heading from '../Heading'
 import Iconed from '../Iconed'
 import Section from '../Section'
 
-const Contact = ({ children }): React.FC => (
+const Contact: React.FC<PropsWithChildren> = ({ children }): ReactElement => (
   <Section>
     <Heading id="contact">Contact me</Heading>
     <p>
