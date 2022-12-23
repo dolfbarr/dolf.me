@@ -125,7 +125,7 @@ export const CONTACTS: {
     group: ContactGroup.Code,
   },
   gitlab: {
-    url: SOCIALS.github,
+    url: SOCIALS.gitlab,
     icon: <Gitlab />,
     title: 'Gitlab',
     group: ContactGroup.Code,
