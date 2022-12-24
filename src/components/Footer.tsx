@@ -79,7 +79,10 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
             <span>Site source code</span>
           </Iconed>
         </a>
-        <Button onClick={changeTheme} data-testid="change-theme">
+        <Button
+          onClick={changeTheme}
+          data-testid="change-theme"
+          className="w-44">
           <Iconed icon={isDarkTheme ? <Sun /> : <Moon />}>
             <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
           </Iconed>
