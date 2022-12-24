@@ -85,7 +85,7 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
           </Iconed>
         </Button>
         <Checkbox
-          data-testid="change-theme"
+          data-testid="auto-switch-theme"
           onClick={resetTheme}
           disabled={isThemeReset}
           checked={isThemeReset}>
