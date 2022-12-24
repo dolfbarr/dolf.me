@@ -19,14 +19,13 @@ const Skills: React.FC = (): ReactElement => {
       <Heading id="skills">Skills</Heading>
       <p className="flex flex-wrap justify-start gap-1 pb-2 font-extralight leading-tight dark:text-gray-300">
         {allSkills.map((skill, index) => (
-          <span key={skill}>
-            <span
-              data-testid="skill"
-              className={classNames('rounded-full py-0 pr-2')}>
-              {skill}
-            </span>
+          <span
+            data-testid="skill"
+            key={skill}
+            className={classNames('rounded-full py-0')}>
+            {skill}
             {index !== allSkills.length - 1 && (
-              <span className="inline-flex pr-1">·</span>
+              <span className="inline-flex pl-1">·</span>
             )}
           </span>
         ))}
