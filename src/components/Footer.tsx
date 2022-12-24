@@ -1,12 +1,13 @@
 import React, { ReactElement, PropsWithChildren } from 'react'
 import { ContactGroup, CONTACTS, SOCIALS } from '../content/data'
 import packageJson from '../../package.json'
-import { GitHub, Moon, RefreshCw, Sun } from 'react-feather'
+import { GitHub, Moon, Sun } from 'react-feather'
 import Iconed from './Iconed'
 import { useThemeModeContext } from '../contexts/ThemeModeProvider'
 import Button from './Button'
 import Section from './Section'
 import classNames from 'classnames'
+import Checkbox from './Checkbox'
 
 const Group: React.FC<{
   contactGroup: string[]
@@ -83,13 +84,13 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
             <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
           </Iconed>
         </Button>
-        {!isThemeReset && (
-          <Button onClick={resetTheme} data-testid="change-theme">
-            <Iconed icon={<RefreshCw />}>
-              <span>Enable auto switch for theme</span>
-            </Iconed>
-          </Button>
-        )}
+        <Checkbox
+          data-testid="change-theme"
+          onClick={resetTheme}
+          disabled={isThemeReset}
+          checked={isThemeReset}>
+          Enable auto-switch for theme
+        </Checkbox>
       </Section>
       {children}
     </footer>
