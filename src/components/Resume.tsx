@@ -1,5 +1,4 @@
 import React, { PropsWithChildren, ReactElement } from 'react'
-import Education from './sections/Education'
 import Experience from './sections/Experience'
 import Skills from './sections/Skills'
 
@@ -9,7 +8,6 @@ const Resume: React.FC<
   <>
     {children}
     <Experience />
-    <Education />
     <Skills />
   </>
 )
