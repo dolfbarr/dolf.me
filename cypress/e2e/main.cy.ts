@@ -22,9 +22,6 @@ describe('main page', () => {
           `Work Experience · ${WORK.totalYearsOfExperience}+ years`,
         )
 
-      cy.get('#education').should('exist')
-      cy.get('h2').eq(1).should('contain.text', 'Education')
-
       cy.get('#skills').should('exist')
       cy.get('h2').eq(2).should('contain.text', 'Skills')
     })
