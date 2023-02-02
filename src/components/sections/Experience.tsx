@@ -50,7 +50,7 @@ const Experience: React.FC = (): ReactElement => {
                     href={workplace.url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    data-goatcounter-click={`workplace-${workplace.company}`}
+                    data-goatcounter-click={`workplace - ${workplace.company}`}
                     data-goatcounter-title={workplace.company}
                     title={workplace.company}>
                     <IconedCompanyName companyName={workplace.company} />
