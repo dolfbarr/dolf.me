@@ -23,7 +23,7 @@ describe('main page', () => {
         )
 
       cy.get('#skills').should('exist')
-      cy.get('h2').eq(2).should('contain.text', 'Skills')
+      cy.get('h2').eq(1).should('contain.text', 'Skills')
     })
 
     it('renders footer  social links', () => {
