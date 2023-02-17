@@ -18,7 +18,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy:ci": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/dolfbarr/dolf.me.git",
-    "typecheck": "tsc --noEmit",
+    "type-check": "tsc --noEmit",
     "lint": "eslint ./src ./cypress",
     "test:cy:open": "cypress open",
     "test:e2e": "start-server-and-test develop http://localhost:8000 test:cy:open",
