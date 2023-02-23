@@ -26,6 +26,14 @@ describe('main page', () => {
       cy.get('h2').eq(1).should('contain.text', 'Skills')
     })
 
+    it('renders tagLines', () => {
+      const tagLines = cy.get('[data-testid="tagLine"]')
+      tagLines.should('have.length', '3')
+
+      const tagLineSeparators = cy.get('[data-testid="tagLine-separator"]')
+      tagLineSeparators.should('have.length', '2')
+    })
+
     it('renders footer  social links', () => {
       const footerLinks = cy.get('footer a[data-testid="social-link"]')
 

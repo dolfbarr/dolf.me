@@ -128,9 +128,13 @@ const Landing: React.FC = (): ReactElement => {
           <span
             key={tagLine + String(index)}
             className="flex flex-wrap justify-center gap-2">
-            <span className="inline-flex">{tagLine}</span>
+            <span className="inline-flex" data-testid="tagLine">
+              {tagLine}
+            </span>
             {index !== PERSONAL_DATA.tagLines.length - 1 && (
-              <span className="inline-flex">·</span>
+              <span className="inline-flex" data-testid="tagLine-separator">
+                ·
+              </span>
             )}
           </span>
         ))}
