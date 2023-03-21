@@ -7,8 +7,8 @@ pre-push:
   commands:
     lint:
       run: npm run lint
-    typecheck:
-      run: npm run typecheck
+    type-check:
+      run: npm run type-check
 #
 # pre-commit:
 #   parallel: true
