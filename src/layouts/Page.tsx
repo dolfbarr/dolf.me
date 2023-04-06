@@ -8,6 +8,10 @@ const Page: React.FC<PropsWithChildren> = ({ children }): ReactElement => (
       <main className="max-w-screen-md flex-1 px-2 sm:px-6">{children}</main>
       <Footer className="max-w-screen-md px-2 sm:px-6" />
     </div>
+
+    <noscript>
+      <img src="https://dolf.goatcounter.com/count?p=/test-noscript" />
+    </noscript>
   </ThemeModeProvider>
 )
 

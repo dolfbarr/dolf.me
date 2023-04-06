@@ -60,9 +60,6 @@ export const SEO: React.FC<SEOProps> = ({
         async
         src="//gc.zgo.at/count.js"
       />
-      <noscript>
-        <img src="https://dolf.goatcounter.com/count?p=/test-noscript" />
-      </noscript>
       {children}
     </>
   )
