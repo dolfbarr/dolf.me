@@ -76,7 +76,7 @@ const Landing: React.FC = (): ReactElement => {
           title={WORK.experience[0].company}
           target="_blank"
           rel="noopener noreferrer">
-          <Iconed icon={<AtSign />}>
+          <Iconed icon={<AtSign strokeWidth={3} />}>
             <span>{WORK.experience[0].company}</span>
           </Iconed>
         </a>{' '}
@@ -86,7 +86,7 @@ const Landing: React.FC = (): ReactElement => {
           title={WORK.experience[1].company}
           target="_blank"
           rel="noopener noreferrer">
-          <Iconed icon={<AtSign />}>
+          <Iconed icon={<AtSign strokeWidth={3} />}>
             <span>{WORK.experience[1].company}</span>
           </Iconed>
         </a>{' '}
