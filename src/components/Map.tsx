@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import { LatLngTuple } from 'leaflet'
 import React, { PropsWithChildren, ReactElement } from 'react'
+import { TileLayer } from 'react-leaflet'
 
 import { LOCATION } from '../content/data'
 const Map: React.FC<
@@ -26,6 +27,7 @@ const Map: React.FC<
         placeholder={<Placeholder />}
         scrollWheelZoom={false}>
         <TileLayer
+          detectRetina
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />

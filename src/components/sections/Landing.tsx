@@ -30,15 +30,6 @@ export const HeadingH1 = ({
 
 const Landing: React.FC = (): ReactElement => {
   const [isMapOpen, setIsMapOpen] = useState(false)
-  const [isMapAbsolute, setIsMapAbsolute] = useState(true)
-
-  useEffect(() => {
-    if (!isMapOpen) {
-      setTimeout(() => setIsMapAbsolute(true), 200)
-    } else {
-      setIsMapAbsolute(false)
-    }
-  }, [isMapOpen])
 
   return (
     <Section className="relative">
@@ -120,7 +111,6 @@ const Landing: React.FC = (): ReactElement => {
           isMapOpen
             ? 'mt-8 mb-8 max-h-96 opacity-100'
             : '-t-96 max-h-0 opacity-0',
-          isMapAbsolute && 'absolute',
           'map-wrapper h-96 rounded-lg drop-shadow-lg transition-all duration-200 ease-in',
         )}>
         <Map className="h-96 rounded-lg" />
