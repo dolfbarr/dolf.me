@@ -15,7 +15,10 @@ const Page: React.FC<PropsWithChildren> = ({ children }): ReactElement => (
     </div>
 
     <noscript>
-      <img src="https://dolf.goatcounter.com/count?p=/test-noscript" />
+      <img
+        src="https://dolf.goatcounter.com/count?p=/test-noscript"
+        alt="goatcounter pixel"
+      />
     </noscript>
   </ThemeModeProvider>
 )
