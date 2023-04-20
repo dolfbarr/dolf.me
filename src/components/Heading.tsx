@@ -45,7 +45,7 @@ const Heading: React.FC<HeadingProps> = ({
           !to && 'md:-ml-8',
         )}>
         {!to && (
-          <span className="instapaper_ignore not-sr-only hidden  flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">
+          <span className="instapaper_ignore not-sr-only hidden flex-col items-center justify-center opacity-0 group-hover:opacity-100 md:inline-flex md:w-8">
             <Hash strokeWidth={3} size={iconSize} />
           </span>
         )}
