@@ -1,10 +1,10 @@
 import type { GatsbyConfig } from 'gatsby'
-import { LOCATION, PERSONAL_DATA } from './src/content/data'
+import { LOCATION, PERSONAL_DATA, WORK } from './src/content/data'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: PERSONAL_DATA.fullName,
-    description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
+    title: `${PERSONAL_DATA.fullName}, ${PERSONAL_DATA.occupation} based in ${LOCATION.title}`,
+    description: `${PERSONAL_DATA.fullName}, a ${PERSONAL_DATA.occupation} at ${WORK.experience[0].company} & ${WORK.experience[1].company} with ${WORK.totalYearsOfExperience}+ years of experience based in ${LOCATION.title}. I'm passionate about web and, especially, frontend development.`,
     twitterUsername: `@${PERSONAL_DATA.nickname}`,
     siteUrl: 'https://dolf.me',
     lang: 'en',
