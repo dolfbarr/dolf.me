@@ -19,6 +19,7 @@ import Clock from '../Clock'
 import Button from '../Button'
 import classNames from 'classnames'
 import Map from '../Map'
+import StartOfContentAnchor from '../StartOfContentAnchor'
 
 export const HeadingH1 = ({
   children,
@@ -42,6 +43,7 @@ const Landing: React.FC = (): ReactElement => {
   return (
     <Section className="relative">
       <span className="align-center inline-flex flex-wrap">
+        <StartOfContentAnchor />
         <Heading
           headingTag={HeadingH1}
           id="greeting"
