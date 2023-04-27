@@ -1,14 +1,21 @@
 # dolf.me
-<img src="https://flat.badgen.net/github/status/dolfbarr/dolf.me">
-<img src="https://flat.badgen.net/github/license/dolfbarr/dolf.me">
-<img src="https://flat.badgen.net/badge/icon/typescript?icon=typescript&label&color=cyan">
+<div align="center">
+
+  <img src="https://badgen.net/github/status/dolfbarr/dolf.me">
+  <img src="https://badgen.net/github/checks/dolfbarr/dolf.me">
+  <img src="https://badgen.net/github/last-commit/dolfbarr/dolf.me">
+  <br>
+  <img src="https://badgen.net/github/license/dolfbarr/dolf.me">
+  <img src="https://badgen.net/badge/icon/typescript?icon=typescript&label&color=cyan">
+  <img src="https://badgen.net/badge/framework/Gatsby/purple">
+  <img src="https://badgen.net/badge/hosted/Github Pages/black">
+  <br>
+</div>
 
 
 ## Info
 
 - Personal site of [Dolf Barr](https://dolf.me)
-
-- Built with Gatsby, hosted via Github Pages
 
 - [Running locally aka 'Contributor’s guide](CONTRIBUTORS.md)
 
