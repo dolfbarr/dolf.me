@@ -24,6 +24,7 @@ const Card = ({
       <p className="md:hyphens pb-2 leading-normal">{description}</p>
     )}
     {children}
+    <div className="flex-grow" />
     {startDate && (
       <p className=" text-gray-500 dark:text-gray-400">
         <Iconed icon={<Calendar strokeWidth={3} />}>
