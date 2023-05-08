@@ -9,7 +9,7 @@ const IndexPage: React.FC = (): ReactElement => {
   return (
     <Page>
       <Landing />
-      <Resume />
+      <Resume showLinkToResume />
     </Page>
   )
 }

@@ -2,12 +2,19 @@ import React, { PropsWithChildren, ReactElement } from 'react'
 import Experience from './sections/Experience'
 import Skills from './sections/Skills'
 
-const Resume: React.FC<
-  PropsWithChildren & React.HTMLAttributes<HTMLDivElement>
-> = ({ children }): ReactElement => (
+interface ResumeProps
+  extends PropsWithChildren,
+    React.HTMLAttributes<HTMLDivElement> {
+  showLinkToResume?: boolean
+}
+
+const Resume: React.FC<ResumeProps> = ({
+  children,
+  showLinkToResume,
+}): ReactElement => (
   <>
     {children}
-    <Experience />
+    <Experience showLinkToResume={showLinkToResume} />
     <Skills />
   </>
 )
