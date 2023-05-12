@@ -5,6 +5,7 @@ import Card from '../Card'
 import Heading from '../Heading'
 import Iconed from '../Iconed'
 import Section from '../Section'
+import SkillsList from '../SkillsList'
 
 const Experience: React.FC = (): ReactElement => {
   const IconedCompanyName = ({
@@ -66,14 +67,19 @@ const Experience: React.FC = (): ReactElement => {
             endDate={workplace.endDate}
             description={workplace.description}>
             {workplace?.skills && workplace?.skills?.length > 0 && (
-              <p className="pb-2 font-extralight italic leading-tight dark:text-gray-300">
-                <span className="inline-flex items-baseline gap-1">
-                  <Iconed icon={<Cpu className="rotate-12" />}>
-                    <span className="sr-only">Tech: </span>
-                  </Iconed>
-                </span>{' '}
-                {workplace?.skills?.join(', ')}
-              </p>
+              <SkillsList
+                prepend={
+                  <>
+                    <Iconed
+                      icon={<Cpu className="rotate-12" />}
+                      className="self-center">
+                      <span className="sr-only">Tech: </span>
+                    </Iconed>
+                  </>
+                }
+                skills={workplace.skills}
+                className="leading-none"
+              />
             )}
           </Card>
         ))}
