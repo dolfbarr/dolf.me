@@ -15,7 +15,7 @@ const Skills: React.FC = (): ReactElement => {
   ]
 
   return (
-    <Section>
+    <Section data-testid="skills-section">
       <Heading id="skills">Skills</Heading>
       <SkillsList skills={allSkills} />
     </Section>

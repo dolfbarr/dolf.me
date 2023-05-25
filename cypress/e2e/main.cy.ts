@@ -43,7 +43,7 @@ describe('main page', () => {
     it('combines all skills', () => {
       const allSkills: string[] = []
 
-      cy.get('[data-testid="skill"]')
+      cy.get('[data-testid="skills-section"] [data-testid="skill"]')
         .should('have.length', '23')
         .each(($skill) => {
           allSkills.push(String($skill.text))
