@@ -1,9 +1,8 @@
 import classNames from 'classnames'
 import { LatLngTuple } from 'leaflet'
 import React, { PropsWithChildren, ReactElement } from 'react'
-import { TileLayer } from 'react-leaflet'
-
 import { LOCATION } from '../content/data'
+
 const Map: React.FC<
   PropsWithChildren & React.HTMLAttributes<HTMLButtonElement>
 > = ({ children, className, ...props }): ReactElement => {
