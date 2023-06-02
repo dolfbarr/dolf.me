@@ -9,7 +9,11 @@ import { HeadingH1 } from '../components/sections/Landing'
 import Section from '../components/Section'
 import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
-const ResumePage: React.FC = ({ intl }: { intl: IntlShape }): ReactElement => {
+export interface ResumePageProps {
+  intl: IntlShape
+}
+
+const ResumePage: React.FC<ResumePageProps> = ({ intl }): ReactElement => {
   return (
     <Page>
       <SEO lang={intl.locale} />

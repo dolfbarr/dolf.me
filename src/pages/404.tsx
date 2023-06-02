@@ -6,10 +6,12 @@ import { Home, Mail } from 'react-feather'
 import Iconed from '../components/Iconed'
 import SEO from '../components/SEO'
 
-const NotFoundBase: React.FC = ({
-  lang = 'en',
-}: {
+export interface NotFoundBaseProps {
   lang: string
+}
+
+const NotFoundBase: React.FC<NotFoundBaseProps> = ({
+  lang = 'en',
 }): ReactElement => {
   return (
     <Page>

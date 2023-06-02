@@ -6,7 +6,11 @@ import Resume from '../components/Resume'
 import SEO from '../components/SEO'
 import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
-const IndexPage: React.FC = ({ intl }: { intl: IntlShape }): ReactElement => {
+export interface IndexPageProps {
+  intl: IntlShape
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ intl }): ReactElement => {
   return (
     <Page>
       <SEO lang={intl.locale}>
