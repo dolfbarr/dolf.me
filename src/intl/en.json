@@ -28,6 +28,11 @@
       "title": "Email"
     }
   },
+  "tagLines": [
+    "💻 frontend engineer",
+    "☕️ coffee driven",
+    "🏡 remote advocate"
+  ],
   "work": [
     {
       "description": "Working on the frontend architecture and implementation business processes for web portal & inner tools.",

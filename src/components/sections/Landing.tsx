@@ -15,6 +15,8 @@ import Button from '../Button'
 import classNames from 'classnames'
 import Map from '../Map'
 import StartOfContentAnchor from '../StartOfContentAnchor'
+import { t } from '../../utils/translate'
+import { IntlShape, injectIntl } from 'gatsby-plugin-intl'
 
 export const HeadingH1 = ({
   children,
@@ -23,7 +25,11 @@ export const HeadingH1 = ({
   <h1 {...props}>{children}</h1>
 )
 
-const Landing: React.FC = (): ReactElement => {
+export interface LandingProps {
+  intl: IntlShape
+}
+
+const Landing: React.FC<LandingProps> = ({ intl }): ReactElement => {
   const [isMapOpen, setIsMapOpen] = useState(false)
 
   return (
@@ -116,7 +122,7 @@ const Landing: React.FC = (): ReactElement => {
             key={tagLine + String(index)}
             className="flex flex-wrap justify-center gap-2">
             <span className="inline-flex" data-testid="tagLine">
-              {tagLine}
+              {t(intl, `tagLines.${index}`, tagLine)}
             </span>
             {index !== PERSONAL_DATA.tagLines.length - 1 && (
               <span className="inline-flex" data-testid="tagLine-separator">
@@ -130,4 +136,4 @@ const Landing: React.FC = (): ReactElement => {
   )
 }
 
-export default Landing
+export default injectIntl(Landing)
