@@ -17,6 +17,7 @@ import Map from '../Map'
 import StartOfContentAnchor from '../StartOfContentAnchor'
 import { t } from '../../utils/translate'
 import { IntlShape, injectIntl } from 'gatsby-plugin-intl'
+import ReactHtmlParser from 'react-html-parser'
 
 export const HeadingH1 = ({
   children,
@@ -45,7 +46,11 @@ const Landing: React.FC<LandingProps> = ({ intl }): ReactElement => {
               <a
                 href={`mailto:${CONTACTS.email.url}`}
                 target="_blank"
-                title={CONTACTS.email.title + ': ' + SOCIALS.email}
+                title={
+                  t(intl, 'contacts.email.title', CONTACTS.email.title) +
+                  ': ' +
+                  SOCIALS.email
+                }
                 rel="noreferrer noopener"
                 className="hidden md:inline-block"
                 data-goatcounter-click="email-top"
@@ -54,17 +59,18 @@ const Landing: React.FC<LandingProps> = ({ intl }): ReactElement => {
               </a>
             </div>
           }>
-          <span>Hi!</span>
+          <span>{t(intl, 'landing.hello')}</span>
           <br className="sm:hidden" />
-          <span> I’m </span>
-          {PERSONAL_DATA.fullName}{' '}
+          <span> {t(intl, 'landing.i')} </span>
+          {t(intl, 'personal.fullName', PERSONAL_DATA.fullName)}{' '}
         </Heading>
         <span className="duration-2000 ml-4 hidden origin-bottom-right text-6xl transition-all ease-in-out hover:animate-wave sm:inline-flex">
           👋
         </span>
       </span>
       <p className="hyphens  text-xl leading-loose">
-        a <em>{PERSONAL_DATA.occupation}</em> at{' '}
+        {intl.locale === 'en' && 'a '}
+        <em>{PERSONAL_DATA.occupation}</em> {t(intl, 'landing.at', 'at')}{' '}
         <a
           href={WORK.experience[0].url}
           title={WORK.experience[0].company}
@@ -84,14 +90,16 @@ const Landing: React.FC<LandingProps> = ({ intl }): ReactElement => {
             <span>{WORK.experience[1].company}</span>
           </Iconed>
         </a>{' '}
-        with {WORK.totalYearsOfExperience}+&nbsp;years of experience based in{' '}
+        {t(intl, 'landing.with')} {WORK.totalYearsOfExperience}+&nbsp;
+        {t(intl, 'landing.years')}
+        {t(intl, 'landing.located')}{' '}
         <Button
           className="group/location text-base"
           title={LOCATION.flag + ' ' + LOCATION.title}
           onClick={() => setIsMapOpen(!isMapOpen)}>
           <Iconed icon={<MapPin />} className="relative inline-flex">
             <span className="inline-flex tracking-[.008em] opacity-100 transition-opacity group-hover/location:hidden">
-              {LOCATION.title}
+              {t(intl, 'location.title', LOCATION.title)}
             </span>
             <span className="hidden group-hover/location:inline-flex">
               {LOCATION.original}
@@ -100,12 +108,7 @@ const Landing: React.FC<LandingProps> = ({ intl }): ReactElement => {
         </Button>{' '}
         <Clock />
         {'. '}
-        <span>
-          I&apos;m <em>passionate about web</em> and, especially, frontend
-          development. I like to be on the edge of{' '}
-          <em>solving business problems</em> & appeal for users and believe that{' '}
-          <em>soft skills</em> and <em>clean code</em> matter.
-        </span>
+        <span>{ReactHtmlParser(t(intl, 'landing.description'))}</span>
       </p>
       <div
         className={classNames(

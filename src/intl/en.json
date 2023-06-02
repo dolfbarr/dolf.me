@@ -1,4 +1,19 @@
 {
+  "landing": {
+    "hello": "Hi!",
+    "i": "I’m",
+    "at": "at",
+    "with": "with",
+    "years": "years of experience",
+    "located": " based in",
+    "description": "I’m <em>passionate about web</em> and, especially, frontend development. I like to be on the edge of <em>solving business problems</em> & appeal for users and believe that <em>soft skills</em> and <em>clean code</em> matter."
+  },
+  "location": {
+    "title": "Belgrade, Serbia"
+  },
+  "personal": {
+    "fullName": "Dolf Barr"
+  },
   "skills": {
     "heading": "Skills"
   },
