@@ -10,6 +10,13 @@
     "lightTheme": "light",
     "darkTheme": "dark"
   },
+  "experience": {
+    "heading": "Work Experience",
+    "years": "years",
+    "link": "Go to resume page",
+    "contract": "contract",
+    "present": "Present"
+  },
   "contacts": {
     "resume": {
       "title": "Download resume in PDF"
@@ -20,5 +27,25 @@
     "email": {
       "title": "Email"
     }
-  }
+  },
+  "work": [
+    {
+      "description": "Working on the frontend architecture and implementation business processes for web portal & inner tools.",
+      "startDate": "Apr ’19"
+    },
+    {
+      "description": "Within different teams working on projects for QuantumSoft partners. Most of the time, I am responsible for the frontend architecture and development of the UI and application business logic.",
+      "startDate": "Oct ’15"
+    },
+    {
+      "description": "Responsibility for the frontend architecture and development of the UI and application business logic.",
+      "startDate": "Aug ’16",
+      "endDate": "Mar ’19"
+    },
+    {
+      "description": "Participated in the development of corporate and social services for students and employees of Tomsk State University.",
+      "startDate": "Nov ’13",
+      "endDate": "Sep ’15"
+    }
+  ]
 }

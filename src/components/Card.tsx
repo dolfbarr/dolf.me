@@ -8,6 +8,7 @@ interface CardProps extends React.PropsWithChildren {
   startDate?: string
   description?: React.ReactNode
   endDate?: string
+  present?: string
 }
 
 const Card = ({
@@ -17,6 +18,7 @@ const Card = ({
   startDate,
   endDate,
   skills,
+  present = 'Present',
 }: CardProps): JSX.Element => (
   <li className="flex flex-col">
     <h3 className="font-normal leading-normal">{title}</h3>
@@ -38,7 +40,7 @@ const Card = ({
             </Iconed>
           </>
         ) : (
-          'Present'
+          present
         )}
       </p>
     )}
