@@ -5,8 +5,20 @@
   "footer": {
     "themeSwitcher": "Включить автоматическую тему",
     "sourceCode": "Исходный код сайта",
+    "sourceCodeTitle": "Репозиторий на Github",
     "changeTheme": "Включить {theme} тему",
     "lightTheme": "светлую",
     "darkTheme": "тёмную"
+  },
+  "contacts": {
+    "resume": {
+      "title": "Скачать резюме как PDF"
+    },
+    "gpg": {
+      "title": "Скачать GPG ключ"
+    },
+    "email": {
+      "title": "Электронная почта"
+    }
   }
 }

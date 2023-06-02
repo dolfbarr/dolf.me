@@ -12,9 +12,13 @@ import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
 const Group: React.FC<{
   contactGroup: string[]
-}> = ({ contactGroup = [] }): ReactElement => (
+  intl: IntlShape
+}> = ({ intl, contactGroup = [] }): ReactElement => (
   <div className="flex flex-wrap justify-center gap-4">
     {contactGroup.map((contactKey: string) => {
+      const translationKey = `contacts.${contactKey}.title`
+      const translation = intl.formatMessage({ id: translationKey })
+
       return (
         <a
           key={contactKey}
@@ -23,7 +27,9 @@ const Group: React.FC<{
           }`}
           target="_blank"
           title={
-            CONTACTS[contactKey].title +
+            (translation === translationKey
+              ? CONTACTS[contactKey].title
+              : translation) +
             (SOCIALS[contactKey] ? `: ${String(SOCIALS[contactKey])}` : '')
           }
           rel="noreferrer noopener"
@@ -32,7 +38,9 @@ const Group: React.FC<{
           data-goatcounter-title={CONTACTS[contactKey].title}>
           <Iconed icon={CONTACTS[contactKey].icon} size={24}>
             <span className="sr-only">
-              {CONTACTS[contactKey].title}
+              {translation === translationKey
+                ? CONTACTS[contactKey].title
+                : translation}
               {SOCIALS[contactKey] && `: ${String(SOCIALS[contactKey])}`}
             </span>
           </Iconed>
@@ -70,9 +78,9 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <footer className={classNames('mt-8 w-full', className)}>
       <Section className="flex flex-wrap justify-evenly pb-4 text-primary">
-        <Group contactGroup={otherContacts} />
-        <Group contactGroup={socialContacts} />
-        <Group contactGroup={codeContacts} />
+        <Group contactGroup={otherContacts} intl={intl} />
+        <Group contactGroup={socialContacts} intl={intl} />
+        <Group contactGroup={codeContacts} intl={intl} />
       </Section>
       <Section className="flex flex-wrap justify-center gap-4 pb-2">
         <a
@@ -81,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({
           rel="noreferrer noopener"
           data-goatcounter-click={'site-repository-url'}
           data-goatcounter-title="Site source code"
-          title="Github repository">
+          title={intl.formatMessage({ id: 'footer.sourceCodeTitle' })}>
           <Iconed icon={<GitHub />}>
             <span>{intl.formatMessage({ id: 'footer.sourceCode' })}</span>
           </Iconed>

@@ -5,8 +5,20 @@
   "footer": {
     "themeSwitcher": "Enable auto-switch for theme",
     "sourceCode": "Site source code",
+    "sourceCodeTitle": "Github repository",
     "changeTheme": "Enable {theme} theme",
     "lightTheme": "light",
     "darkTheme": "dark"
+  },
+  "contacts": {
+    "resume": {
+      "title": "Download resume in PDF"
+    },
+    "gpg": {
+      "title": "Download GPG Key"
+    },
+    "email": {
+      "title": "Email"
+    }
   }
 }
