@@ -8,6 +8,7 @@ import Button from './Button'
 import Section from './Section'
 import classNames from 'classnames'
 import Checkbox from './Checkbox'
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
 const Group: React.FC<{
   contactGroup: string[]
@@ -41,9 +42,15 @@ const Group: React.FC<{
   </div>
 )
 
-const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
+export interface FooterProps extends PropsWithChildren {
+  className: string
+  intl: IntlShape
+}
+
+const Footer: React.FC<FooterProps> = ({
   children,
   className,
+  intl,
 }): ReactElement => {
   const { isDarkTheme, changeTheme, isThemeReset, resetTheme } =
     useThemeModeContext()
@@ -76,15 +83,24 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
           data-goatcounter-title="Site source code"
           title="Github repository">
           <Iconed icon={<GitHub />}>
-            <span>Site source code</span>
+            <span>{intl.formatMessage({ id: 'footer.sourceCode' })}</span>
           </Iconed>
         </a>
         <Button
           onClick={changeTheme}
           data-testid="change-theme"
-          className="w-44">
+          className={intl.locale === 'ru' ? 'w-54' : 'w-44'}>
           <Iconed icon={isDarkTheme ? <Sun /> : <Moon />}>
-            <span>Enable {isDarkTheme ? 'light' : 'dark'} theme</span>
+            <span>
+              {intl.formatMessage(
+                { id: 'footer.changeTheme' },
+                {
+                  theme: intl.formatMessage({
+                    id: isDarkTheme ? 'footer.lightTheme' : 'footer.darkTheme',
+                  }),
+                },
+              )}
+            </span>
           </Iconed>
         </Button>
         <Checkbox
@@ -92,7 +108,7 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
           onChange={resetTheme}
           disabled={isThemeReset}
           checked={isThemeReset}>
-          Enable auto-switch for theme
+          {intl.formatMessage({ id: 'footer.themeSwitcher' })}
         </Checkbox>
       </Section>
       {children}
@@ -100,4 +116,4 @@ const Footer: React.FC<{ className: string } & PropsWithChildren> = ({
   )
 }
 
-export default Footer
+export default injectIntl(Footer)

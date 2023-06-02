@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import { HeadFC } from 'gatsby'
 import Page from '../layouts/Page'
 
 import SEO from '../components/SEO'
@@ -8,10 +7,12 @@ import Heading from '../components/Heading'
 import { CONTACTS, PERSONAL_DATA, SOCIALS } from '../content/data'
 import { HeadingH1 } from '../components/sections/Landing'
 import Section from '../components/Section'
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
-const ResumePage: React.FC = (): ReactElement => {
+const ResumePage: React.FC = ({ intl }: { intl: IntlShape }): ReactElement => {
   return (
     <Page>
+      <SEO lang={intl.locale} />
       <Section className="relative">
         <Heading
           headingTag={HeadingH1}
@@ -40,6 +41,4 @@ const ResumePage: React.FC = (): ReactElement => {
   )
 }
 
-export default ResumePage
-
-export const Head: HeadFC = (): ReactElement => <SEO />
+export default injectIntl(ResumePage)

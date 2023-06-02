@@ -1,5 +1,12 @@
 {
   "skills": {
     "heading": "Skills"
+  },
+  "footer": {
+    "themeSwitcher": "Enable auto-switch for theme",
+    "sourceCode": "Site source code",
+    "changeTheme": "Enable {theme} theme",
+    "lightTheme": "light",
+    "darkTheme": "dark"
   }
 }

@@ -1,5 +1,12 @@
 {
   "skills": {
     "heading": "Навыки"
+  },
+  "footer": {
+    "themeSwitcher": "Включить автоматическую тему",
+    "sourceCode": "Исходный код сайта",
+    "changeTheme": "Включить {theme} тему",
+    "lightTheme": "светлую",
+    "darkTheme": "тёмную"
   }
 }

@@ -1,11 +1,15 @@
-import React, { ReactElement } from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import { WORK } from '../../content/data'
 import Heading from '../Heading'
 import Section from '../Section'
 import SkillsList from '../SkillsList'
-import { injectIntl } from 'gatsby-plugin-intl'
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
 
-const Skills: React.FC = ({ intl }): ReactElement => {
+export interface SkillsProps extends PropsWithChildren {
+  intl: IntlShape
+}
+
+const Skills: React.FC<SkillsProps> = ({ intl }): ReactElement => {
   const allSkills = [
     ...new Set([
       ...WORK.experience

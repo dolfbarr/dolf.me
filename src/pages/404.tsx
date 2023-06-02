@@ -1,14 +1,19 @@
 import React, { ReactElement } from 'react'
-import { HeadFC, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
 import { Home, Mail } from 'react-feather'
 import Iconed from '../components/Iconed'
 import SEO from '../components/SEO'
 
-const NotFoundPage: React.FC = (): ReactElement => {
+const NotFoundBase: React.FC = ({
+  lang = 'en',
+}: {
+  lang: string
+}): ReactElement => {
   return (
     <Page>
+      <SEO title="404: Not found" lang={lang} />
       <h1 className="pb-12 leading-snug">
         Oops! <br />
         There&apos;s no such page 💫
@@ -43,6 +48,4 @@ const NotFoundPage: React.FC = (): ReactElement => {
   )
 }
 
-export default NotFoundPage
-
-export const Head: HeadFC = (): ReactElement => <SEO title="404: Not found" />
+export default NotFoundBase
