@@ -9,6 +9,7 @@ import Section from './Section'
 import classNames from 'classnames'
 import Checkbox from './Checkbox'
 import { injectIntl, IntlShape } from 'gatsby-plugin-intl'
+import { t } from '../utils/translate'
 
 const Group: React.FC<{
   contactGroup: string[]
@@ -16,8 +17,11 @@ const Group: React.FC<{
 }> = ({ intl, contactGroup = [] }): ReactElement => (
   <div className="flex flex-wrap justify-center gap-4">
     {contactGroup.map((contactKey: string) => {
-      const translationKey = `contacts.${contactKey}.title`
-      const translation = intl.formatMessage({ id: translationKey })
+      const title = t(
+        intl,
+        `contacts.${contactKey}.title`,
+        CONTACTS[contactKey].title,
+      )
 
       return (
         <a
@@ -27,9 +31,7 @@ const Group: React.FC<{
           }`}
           target="_blank"
           title={
-            (translation === translationKey
-              ? CONTACTS[contactKey].title
-              : translation) +
+            title +
             (SOCIALS[contactKey] ? `: ${String(SOCIALS[contactKey])}` : '')
           }
           rel="noreferrer noopener"
@@ -38,9 +40,7 @@ const Group: React.FC<{
           data-goatcounter-title={CONTACTS[contactKey].title}>
           <Iconed icon={CONTACTS[contactKey].icon} size={24}>
             <span className="sr-only">
-              {translation === translationKey
-                ? CONTACTS[contactKey].title
-                : translation}
+              {title}
               {SOCIALS[contactKey] && `: ${String(SOCIALS[contactKey])}`}
             </span>
           </Iconed>
@@ -89,9 +89,9 @@ const Footer: React.FC<FooterProps> = ({
           rel="noreferrer noopener"
           data-goatcounter-click={'site-repository-url'}
           data-goatcounter-title="Site source code"
-          title={intl.formatMessage({ id: 'footer.sourceCodeTitle' })}>
+          title={t(intl, 'footer.sourceCodeTitle', 'Github repository')}>
           <Iconed icon={<GitHub />}>
-            <span>{intl.formatMessage({ id: 'footer.sourceCode' })}</span>
+            <span>{t(intl, 'footer.sourceCode', 'Site source code')}</span>
           </Iconed>
         </a>
         <Button
@@ -100,12 +100,16 @@ const Footer: React.FC<FooterProps> = ({
           className={intl.locale === 'ru' ? 'w-54' : 'w-44'}>
           <Iconed icon={isDarkTheme ? <Sun /> : <Moon />}>
             <span>
-              {intl.formatMessage(
-                { id: 'footer.changeTheme' },
+              {t(
+                intl,
+                'footer.changeTheme',
+                `Enable ${isDarkTheme ? 'light' : 'dark'} theme`,
                 {
-                  theme: intl.formatMessage({
-                    id: isDarkTheme ? 'footer.lightTheme' : 'footer.darkTheme',
-                  }),
+                  theme: t(
+                    intl,
+                    isDarkTheme ? 'footer.lightTheme' : 'footer.darkTheme',
+                    isDarkTheme ? 'light' : 'dark',
+                  ),
                 },
               )}
             </span>
@@ -116,7 +120,7 @@ const Footer: React.FC<FooterProps> = ({
           onChange={resetTheme}
           disabled={isThemeReset}
           checked={isThemeReset}>
-          {intl.formatMessage({ id: 'footer.themeSwitcher' })}
+          {t(intl, 'footer.themeSwitcher', 'Enable auto-switch for theme')}
         </Checkbox>
       </Section>
       {children}
