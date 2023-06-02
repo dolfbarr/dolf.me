@@ -3,6 +3,8 @@ import { LatLngTuple } from 'leaflet'
 import React, { PropsWithChildren, ReactElement } from 'react'
 import { LOCATION } from '../content/data'
 
+const DEFAULT_ZOOM = 4
+
 const Map: React.FC<
   PropsWithChildren & React.HTMLAttributes<HTMLButtonElement>
 > = ({ children, className, ...props }): ReactElement => {
@@ -20,7 +22,7 @@ const Map: React.FC<
     return (
       <MapContainer
         center={LOCATION.coordinates as LatLngTuple}
-        zoom={5}
+        zoom={DEFAULT_ZOOM}
         className={classNames(className)}
         zoomAnimation
         placeholder={<Placeholder />}
