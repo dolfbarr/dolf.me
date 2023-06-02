@@ -6,7 +6,6 @@ export interface SEOProps extends PropsWithChildren {
   pathname?: string
   title?: string
   description?: string
-  lang?: string
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -14,14 +13,13 @@ export const SEO: React.FC<SEOProps> = ({
   description,
   pathname,
   children,
-  lang,
+  intl,
 }): ReactElement => {
   const {
     title: defaultTitle,
     description: defaultDescription,
     siteUrl,
     twitterUsername,
-    lang: defaultLang,
   } = useSiteMetadata()
 
   const seo = {
@@ -29,14 +27,13 @@ export const SEO: React.FC<SEOProps> = ({
     description: description ?? defaultDescription,
     url: `${String(siteUrl)}${String(pathname) || ''}`,
     twitterUsername,
-    lang: lang ?? defaultLang,
   }
 
   return (
     <>
       <Helmet
         htmlAttributes={{
-          lang,
+          lang: intl.locale,
         }}
       />
       <title>{seo.title}</title>
@@ -64,3 +61,5 @@ export const SEO: React.FC<SEOProps> = ({
     </>
   )
 }
+
+export default injectIntl(SEO)

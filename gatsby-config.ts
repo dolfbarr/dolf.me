@@ -33,6 +33,16 @@ const config: GatsbyConfig = {
         emoji: '⌨️',
       },
     },
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        // eslint-disable-next-line n/no-path-concat
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'ru'],
+        defaultLanguage: 'en',
+        redirect: false,
+      },
+    },
   ],
 }
 

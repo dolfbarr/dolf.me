@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { HeadFC } from 'gatsby'
 import Page from '../layouts/Page'
 
-import { SEO } from '../components/SEO'
+import SEO from '../components/SEO'
 import Resume from '../components/Resume'
 import Heading from '../components/Heading'
 import { CONTACTS, PERSONAL_DATA, SOCIALS } from '../content/data'

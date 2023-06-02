@@ -4,7 +4,7 @@ import Page from '../layouts/Page'
 
 import Landing from '../components/sections/Landing'
 import Resume from '../components/Resume'
-import { SEO } from '../components/SEO'
+import SEO from '../components/SEO'
 const IndexPage: React.FC = (): ReactElement => {
   return (
     <Page>

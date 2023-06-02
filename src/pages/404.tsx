@@ -4,7 +4,7 @@ import Page from '../layouts/Page'
 import { SOCIALS } from '../content/data'
 import { Home, Mail } from 'react-feather'
 import Iconed from '../components/Iconed'
-import { SEO } from '../components/SEO'
+import SEO from '../components/SEO'
 
 const NotFoundPage: React.FC = (): ReactElement => {
   return (
